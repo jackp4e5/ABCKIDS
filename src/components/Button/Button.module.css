@@ -1,0 +1,23 @@
+.button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: .3s;
+    font-size: 16px;
+}
+
+.primary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.secondary {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
