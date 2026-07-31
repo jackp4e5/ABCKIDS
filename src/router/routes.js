@@ -4,7 +4,7 @@ export const ROUTES = {
 
     MODULE1: {
 
-        SCREEN01: "/module-1/screen-01",
+        SCREEN01: "/module-1/screen01",
 
         SCREEN02: "/module-1/screen-02",
 

@@ -1,7 +1,9 @@
-const Footer = () => {
+import Navigation from "../Navigation/Navigation";
+
+const Footer = ({ screen }) => {
   return (
     <>
-      <h2>Footer</h2>
+      <Navigation />
     </>
   );
 };
