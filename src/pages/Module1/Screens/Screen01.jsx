@@ -5,6 +5,7 @@ import ImageBlock from "../../../components/Blocks/ImageBlock/ImageBlock";
 import { screens } from "../../../data/Module1/screens";
 import TextBlock from "../../../components/Blocks/TextBlock/TextBlock";
 import useActivity from "../../../hooks/useActivity";
+import Activity01 from "../Activities/Activity01/Activity01";
 
 const Screen = () => {
   const { screenId } = useParams();
@@ -15,7 +16,7 @@ const Screen = () => {
   return (
     <Page>
       <ImageBlock {...image} />
-
+      <Activity01/>
       <TextBlock>{screen.text}</TextBlock>
     </Page>
   );
