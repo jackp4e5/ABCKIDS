@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Screen from "../pages/Module1/Screen/Screen";
 import MainLayout from "../Layouts/MainLayout/MainLayout";
+import Screen from "../pages/Module1/Screens";
 
 export const AppRouter = () => {
   return (

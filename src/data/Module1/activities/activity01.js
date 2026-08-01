@@ -1,19 +1,24 @@
 export const activity01 = {
+  id: "activity01",
 
-    id: "activity01",
+  title: "",
 
-    title: "",
+  instruction: "",
 
-    instruction: "",
+  instructionAudio: "",
 
-    instructionAudio: "",
+  figures: [
+    {
+      id: "circle",
+      name: "Círculo",
+      srcImgGray: "...",
+      srcImgActive: "...",
+    },
+  ],
 
-    figures: [],
+  controls: {},
 
-    controls: {},
+  validation: {},
 
-    validation: {},
-
-    config: {}
-
-}
+  config: {},
+};
