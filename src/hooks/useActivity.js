@@ -1,21 +1,33 @@
-import { useState } from "react";
+import {  useState } from "react";
 
 // Recibe los datos de una actividad
 const useActivity = (activityData) => {
   // Inicializa el estado
   const [state, setState] = useState({
     completed: false,
-    selectedFigure: null,
+    selectedFigures: [],
   });
 
   const selectFigure = (figureId) => {
-    setState((previousState) => ({
-      ...previousState,
-      selectedFigure: figureId,
-    }));
+    setState((previousState) => {
+      const figureAlreadySelected =
+        previousState.selectedFigures.includes(figureId);
+
+      if (figureAlreadySelected) {
+        return previousState;
+      }
+
+      const updatedFigures = [...previousState.selectedFigures, figureId];
+      const completed = updatedFigures.length === activityData.figures.length;
+
+      return {
+        ...previousState,
+        selectedFigures: updatedFigures,
+        completed,
+      };
+    });
   };
 
-  const data = activityData;
   const reset = () => {};
   // Expone las acciones //
   const actions = {
@@ -24,7 +36,7 @@ const useActivity = (activityData) => {
   };
   // Expone el estado, Expone los datos
   const session = {
-    data,
+    data: activityData,
     state,
     actions,
   };

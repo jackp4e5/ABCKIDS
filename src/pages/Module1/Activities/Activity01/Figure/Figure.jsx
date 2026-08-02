@@ -1,6 +1,8 @@
+import ImageBlock from "../../../../../components/Blocks/ImageBlock/ImageBlock";
+
 const Figure = ({name,src}) => {
   return (
-  <img src={src} alt={`Imagen de ${name}`} />
+  <ImageBlock src={src} alt={`Imagen de ${name}`} />
 )
 };
 

@@ -15,9 +15,7 @@ const Screen = () => {
 
   return (
     <Page>
-      <ImageBlock {...image} />
-      <Activity01/>
-      <TextBlock>{screen.text}</TextBlock>
+      <Activity01 />
     </Page>
   );
 };
