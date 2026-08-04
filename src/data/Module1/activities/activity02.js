@@ -1,4 +1,5 @@
 export const activity02 = {
+  id: "activity02",
   header: {
     title: "Relaciona",
     audio: "../../../../audio/Activity02/titleAudio.mp3",
@@ -23,8 +24,8 @@ export const activity02 = {
       shape: "esfera",
       color: "blue",
       assets: {
-        gray: "../../../../images/activity02/graySphere.png",
-        active: "../../../../images/activity02/paletteSphere.png",
+        gray: "../../../../public/images/activity02/graySphere.png",
+        active: "../../../../public/images/activity02/paletteSphere.png",
       },
     },
     {
@@ -33,18 +34,18 @@ export const activity02 = {
       shape: "cubo",
       color: "purple",
       assets: {
-        gray: "../../../../images/activity02/grayCube.png",
-        active: "../../../../images/activity02/paletteCube.png",
+        gray: "../../../../public/images/activity02/grayCube.png",
+        active: "../../../../public/images/activity02/paletteCube.png",
       },
     },
     {
-      id: "cilindro",
+      name: "cilindro",
       name: "Cilindro",
       shape: "cilindro",
       color: "orange",
       assets: {
-        gray: "../../../../images/activity02/grayCylindre.png",
-        active: "../../../../images/activity02/paletteCylindre.png",
+        gray: "../../../../public/images/activity02/grayCylinder.png",
+        active: "../../../../public/images/activity02/paletteCylinder.png",
       },
     },
     {
@@ -53,8 +54,8 @@ export const activity02 = {
       shape: "triangulo",
       color: "green",
       assets: {
-        gray: "../../../../images/activity02/grayTriangle.png",
-        active: "../../../../images/activity02/paletteTriangle.png",
+        gray: "../../../../public/images/activity02/grayTriangle.png",
+        active: "../../../../public/images/activity02/paletteTriangle.png",
       },
     },
     {
@@ -63,8 +64,8 @@ export const activity02 = {
       shape: "esfera",
       color: "blue",
       assets: {
-        gray: "../../../../images/activity02/grayBall.png",
-        active: "../../../../images/activity02/ActiveBall.png",
+        gray: "../../../../public/images/activity02/grayBall.png",
+        active: "../../../../public/images/activity02/ActiveBall.png",
       },
     },
     {
@@ -73,8 +74,8 @@ export const activity02 = {
       shape: "cubo",
       color: "purple",
       assets: {
-        gray: "../../../../images/activity02/grayDie.png",
-        active: "../../../../images/activity02/ActiveDie.png",
+        gray: "../../../../public/images/activity02/grayDie.png",
+        active: "../../../../public/images/activity02/ActiveDie.png",
       },
     },
     {
@@ -83,8 +84,8 @@ export const activity02 = {
       shape: "triangulo",
       color: "green",
       assets: {
-        gray: "../../../../images/activity02/grayConePartyHat.png",
-        active: "../../../../images/activity02/activeConePartyHat.png",
+        gray: "../../../../public/images/activity02/grayConePartyHat.png",
+        active: "../../../../public/images/activity02/activeConePartyHat.png",
       },
     },
     {
@@ -93,13 +94,54 @@ export const activity02 = {
       shape: "cilindro",
       color: "orange",
       assets: {
-        gray: "../../../../images/activity02/grayBottle.png",
-        active: "../../../../images/activity02/activeBottle.png",
+        gray: "../../../../public/images/activity02/grayBottle.png",
+        active: "../../../../public/images/activity02/activeBottle.png",
       },
     },
   ],
 
-  paletteFigures: ["esfera", "cubo", "cilindro", "triangle"],
+  paletteFigures: [
+    {
+      id: "esfera",
+      name: "Esfera",
+      shape: "esfera",
+      color: "blue",
+      assets: {
+        gray: "../../../../public/images/activity02/graySphere.png",
+        active: "../../../../public/images/activity02/paletteSphere.png",
+      },
+    },
+    {
+      id: "cubo",
+      name: "Cubo",
+      shape: "cubo",
+      color: "purple",
+      assets: {
+        gray: "../../../../public/images/activity02/grayCube.png",
+        active: "../../../../public/images/activity02/paletteCube.png",
+      },
+    },
+    {
+      id: "cilindro",
+      name: "Cilindro",
+      shape: "cilindro",
+      color: "orange",
+      assets: {
+        gray: "../../../../public/images/activity02/grayCylindre.png",
+        active: "../../../../public/images/activity02/paletteCylindre.png",
+      },
+    },
+    {
+      id: "triangulo",
+      name: "Triangulo",
+      shape: "triangulo",
+      color: "green",
+      assets: {
+        gray: "../../../../public/images/activity02/grayTriangle.png",
+        active: "../../../../public/images/activity02/paletteTriangle.png",
+      },
+    },
+  ],
 
   pencils: [
     {
@@ -107,13 +149,16 @@ export const activity02 = {
       name: "blue Pencil",
       color: "blue",
       assets: {
-        src: "../../../../images/activity02/pencils/bluePencil.png",
+        src: "../../../../public/images/activity02/pencils/bluePencil.png",
       },
     },
     {
       id: "greenPencil",
       name: "green Pencil",
-      src: "../../../../images/activity02/pencils/greenPencil.png",
+      color: "green",
+      assets: {
+        src: "../../../../images/activity02/pencils/greenPencil.png",
+      },
     },
     {
       id: "orangePencil",

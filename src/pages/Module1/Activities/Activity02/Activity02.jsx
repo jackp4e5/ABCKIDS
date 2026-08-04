@@ -1,11 +1,11 @@
-import { activity01 } from "../../../../data/Module1/activities/activity01";
+import { activity02 } from "../../../../data/Module1/activities/activity02";
 import useActivity from "../../../../hooks/useActivity";
 import ActivityBoard from "../components/ActivityBoard/ActivityBoard";
 import ActivityControls from "../components/ActivityControls/ActivityControls";
 import ActivityHeader from "../components/ActivityHeader/ActivityHeader";
 
-const Activity01 = () => {
-  const session = useActivity(activity01);
+const Activity02 = () => {
+ const session = useActivity(activity02);
 
   const { actions, data, state } = session;
 
@@ -20,4 +20,4 @@ const Activity01 = () => {
   );
 };
 
-export default Activity01;
+export default Activity02;

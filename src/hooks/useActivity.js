@@ -6,9 +6,29 @@ const useActivity = (activityData) => {
   const [state, setState] = useState({
     completed: false,
     selectedFigures: [],
+     selectedPencil: null,
   });
 
   const selectFigure = (figureId) => {
+    setState((previousState) => {
+      const figureAlreadySelected =
+        previousState.selectedFigures.includes(figureId);
+
+      if (figureAlreadySelected) {
+        return previousState;
+      }
+
+      const updatedFigures = [...previousState.selectedFigures, figureId];
+      const completed = updatedFigures.length === activityData.figures.length;
+
+      return {
+        ...previousState,
+        selectedFigures: updatedFigures,
+        completed,
+      };
+    });
+  };
+  const  selectPencil = (pencil) => {
     setState((previousState) => {
       const figureAlreadySelected =
         previousState.selectedFigures.includes(figureId);
@@ -33,6 +53,7 @@ const useActivity = (activityData) => {
   const actions = {
     reset,
     selectFigure,
+     selectPencil,
   };
   // Expone el estado, Expone los datos
   const session = {
