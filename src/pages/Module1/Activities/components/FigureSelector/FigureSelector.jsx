@@ -1,6 +1,6 @@
 import Figure from "../Figure/Figure";
 
-const FigureSelector = ({ figures, selectedFigures, selectFigure }) => {
+const FigureSelector = ({ figures, selectedFigures, selectFigure , selectedPencil}) => {
 
  
   

@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 
 // Recibe los datos de una actividad
 const useActivity = (activityData) => {
@@ -6,7 +6,8 @@ const useActivity = (activityData) => {
   const [state, setState] = useState({
     completed: false,
     selectedFigures: [],
-     selectedPencil: null,
+    selectedPencil: null,
+    paintedFigures: [],
   });
 
   const selectFigure = (figureId) => {
@@ -28,24 +29,52 @@ const useActivity = (activityData) => {
       };
     });
   };
-  const  selectPencil = (pencil) => {
-    setState((previousState) => {
-      const figureAlreadySelected =
-        previousState.selectedFigures.includes(figureId);
+  const selectPencil = (pencilId) => {
+    setState((previousState) => ({
+      ...previousState,
+      selectedPencil: pencilId,
+    }));
+  };
 
-      if (figureAlreadySelected) {
-        return previousState;
-      }
+  const findFigure = (figureId) => {
+    return activityData.figures.find((figure) => figure.id === figureId);
+  };
 
-      const updatedFigures = [...previousState.selectedFigures, figureId];
-      const completed = updatedFigures.length === activityData.figures.length;
+  const findPencil = (pencilId) => {
+    return activityData.pencils.find((pencil) => pencil.id === pencilId);
+  };
 
-      return {
-        ...previousState,
-        selectedFigures: updatedFigures,
-        completed,
-      };
-    });
+  const isCorrectMatch = (pencil, figure) => {
+    return pencil.color === figure.color;
+  };
+
+  const paintFigure = (figure) => {};
+
+  const checkCompleted = () => {};
+
+  const resetSelectedPencil = () => {};
+  
+  const dropPencilOnFigure = (pencilId, figureId) => {
+    const pencil = findPencil(pencilId);
+
+    const figure = findFigure(figureId);
+
+    if (!pencil || !figure) {
+      return;
+    }
+
+    const isCorrect = isCorrectMatch(pencil, figure);
+
+    if (!isCorrect) {
+      resetSelectedPencil();
+      return;
+    }
+
+    paintFigure(figure);
+
+    checkCompleted();
+
+    resetSelectedPencil();
   };
 
   const reset = () => {};
@@ -53,7 +82,7 @@ const useActivity = (activityData) => {
   const actions = {
     reset,
     selectFigure,
-     selectPencil,
+    selectPencil,
   };
   // Expone el estado, Expone los datos
   const session = {

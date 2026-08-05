@@ -3,6 +3,7 @@ import useActivity from "../../../../hooks/useActivity";
 import ActivityBoard from "../components/ActivityBoard/ActivityBoard";
 import ActivityControls from "../components/ActivityControls/ActivityControls";
 import ActivityHeader from "../components/ActivityHeader/ActivityHeader";
+import FigureSelector from "../components/FigureSelector/FigureSelector";
 
 const Activity01 = () => {
   const session = useActivity(activity01);
@@ -13,7 +14,13 @@ const Activity01 = () => {
     <>
       <ActivityHeader header={data.header} instruction={data.instruction} />
 
-      <ActivityBoard session={session} />
+      <ActivityBoard>
+        <FigureSelector
+          figures={data.figures}
+          selectedFigures={state.selectedFigures}
+          selectFigure={actions.selectFigure}
+        />
+      </ActivityBoard>
 
       <ActivityControls actions={actions} />
     </>

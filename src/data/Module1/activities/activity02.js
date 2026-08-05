@@ -157,7 +157,7 @@ export const activity02 = {
       name: "green Pencil",
       color: "green",
       assets: {
-        src: "../../../../images/activity02/pencils/greenPencil.png",
+        src: "../../../../public/images/activity02/pencils/greenPencil.png",
       },
     },
     {
@@ -165,7 +165,7 @@ export const activity02 = {
       name: "orange Pencil",
       color: "orange",
       assets: {
-        src: "../../../../images/activity02/pencils/orangePencil.png",
+        src: "../../../../public/images/activity02/pencils/orangePencil.png",
       },
     },
     {
@@ -173,7 +173,7 @@ export const activity02 = {
       name: "purple Pencil",
       color: "purple",
       assets: {
-        src: "../../../../images/activity02/pencils/purplePencil.png",
+        src: "../../../../public/images/activity02/pencils/purplePencil.png",
       },
     },
   ],
