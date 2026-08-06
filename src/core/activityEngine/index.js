@@ -1,0 +1,5 @@
+export {default as findFigure} from "./findFigure"
+export {default as findPencil} from "./findFigure"
+export {default as isCorrectMatch} from "./isCorrectMatch"
+export {default as paintFigure} from "./paintFigure"
+export {default as resetSelectedPencil} from "./resetSelectedPencil"

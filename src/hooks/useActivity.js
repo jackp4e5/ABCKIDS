@@ -1,4 +1,5 @@
 import { useState } from "react";
+import activityEngineDropPencilOnFigure from "../core/activityEngine/activityEngineDropPencilOnFigure";
 
 // Recibe los datos de una actividad
 const useActivity = (activityData) => {
@@ -36,46 +37,19 @@ const useActivity = (activityData) => {
     }));
   };
 
-  const findFigure = (figureId) => {
-    return activityData.figures.find((figure) => figure.id === figureId);
-  };
 
-  const findPencil = (pencilId) => {
-    return activityData.pencils.find((pencil) => pencil.id === pencilId);
-  };
+const dropPencilOnFigure  =(pencilId, figureId)=>{
 
-  const isCorrectMatch = (pencil, figure) => {
-    return pencil.color === figure.color;
-  };
-
-  const paintFigure = (figure) => {};
-
-  const checkCompleted = () => {};
-
-  const resetSelectedPencil = () => {};
-  
-  const dropPencilOnFigure = (pencilId, figureId) => {
-    const pencil = findPencil(pencilId);
-
-    const figure = findFigure(figureId);
-
-    if (!pencil || !figure) {
-      return;
-    }
-
-    const isCorrect = isCorrectMatch(pencil, figure);
-
-    if (!isCorrect) {
-      resetSelectedPencil();
-      return;
-    }
-
-    paintFigure(figure);
-
-    checkCompleted();
-
-    resetSelectedPencil();
-  };
+  setState((previousState) => {
+    return activityEngineDropPencilOnFigure (
+      previousState,
+      activityData.pencils,
+      activityData.figures,
+      pencilId,
+      figureId,
+    );
+  });
+}
 
   const reset = () => {};
   // Expone las acciones //
@@ -83,6 +57,7 @@ const useActivity = (activityData) => {
     reset,
     selectFigure,
     selectPencil,
+    dropPencilOnFigure
   };
   // Expone el estado, Expone los datos
   const session = {
