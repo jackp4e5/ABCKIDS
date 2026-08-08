@@ -4,7 +4,8 @@ import {
   isCorrectMatch,
   paintFigure,
   resetSelectedPencil,
-} from ".";
+  checkCompleted,
+} from "..";
 
 const activityEngineDropPencilOnFigure = (
   previousState,
@@ -24,10 +25,10 @@ const activityEngineDropPencilOnFigure = (
   const isCorrect = isCorrectMatch(pencil, figure);
 
   if (!isCorrect) {
-    return resetSelectedPencil(newState);
+    return resetSelectedPencil(previousState);
   }
-  let newState = previousState;
 
+  let newState = previousState;
   newState = paintFigure(newState, figureId);
   newState = checkCompleted(newState, figures);
   newState = resetSelectedPencil(newState);

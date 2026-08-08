@@ -1,5 +1,6 @@
 export const activity02 = {
   id: "activity02",
+  type: "dropPencil",
   header: {
     title: "Relaciona",
     audio: "../../../../audio/Activity02/titleAudio.mp3",
@@ -39,7 +40,7 @@ export const activity02 = {
       },
     },
     {
-      name: "cilindro",
+      id: "cilindro",
       name: "Cilindro",
       shape: "cilindro",
       color: "orange",
@@ -127,8 +128,8 @@ export const activity02 = {
       shape: "cilindro",
       color: "orange",
       assets: {
-        gray: "../../../../public/images/activity02/grayCylindre.png",
-        active: "../../../../public/images/activity02/paletteCylindre.png",
+        gray: "../../../../public/images/activity02/grayCylinder.png",
+        active: "../../../../public/images/activity02/paletteCylinder.png",
       },
     },
     {

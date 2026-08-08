@@ -1,5 +1,5 @@
 import { useState } from "react";
-import activityEngineDropPencilOnFigure from "../core/activityEngine/activityEngineDropPencilOnFigure";
+import activityEngineDropPencilOnFigure from "../core/activityEngine/precesses/activityEngineDropPencilOnFigure";
 
 // Recibe los datos de una actividad
 const useActivity = (activityData) => {
@@ -37,19 +37,17 @@ const useActivity = (activityData) => {
     }));
   };
 
-
-const dropPencilOnFigure  =(pencilId, figureId)=>{
-
-  setState((previousState) => {
-    return activityEngineDropPencilOnFigure (
-      previousState,
-      activityData.pencils,
-      activityData.figures,
-      pencilId,
-      figureId,
-    );
-  });
-}
+  const dropPencilOnFigure = (pencilId, figureId) => {
+    setState((previousState) => {
+      return activityEngineDropPencilOnFigure(
+        previousState,
+        activityData.pencils,
+        activityData.figures,
+        pencilId,
+        figureId,
+      );
+    });
+  };
 
   const reset = () => {};
   // Expone las acciones //
@@ -57,7 +55,7 @@ const dropPencilOnFigure  =(pencilId, figureId)=>{
     reset,
     selectFigure,
     selectPencil,
-    dropPencilOnFigure
+    dropPencilOnFigure,
   };
   // Expone el estado, Expone los datos
   const session = {

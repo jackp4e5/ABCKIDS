@@ -3,7 +3,9 @@ import useActivity from "../../../../hooks/useActivity";
 import ActivityBoard from "../components/ActivityBoard/ActivityBoard";
 import ActivityControls from "../components/ActivityControls/ActivityControls";
 import ActivityHeader from "../components/ActivityHeader/ActivityHeader";
+import FigureBoard from "../components/FigureBoard/FigureBoard";
 import FigureSelector from "../components/FigureSelector/FigureSelector";
+import Palette from "../components/Palette/Palette";
 import PencilSelector from "../components/PencilSelector/PencilSelector";
 
 const Activity02 = () => {
@@ -11,22 +13,26 @@ const Activity02 = () => {
 
   const { actions, data, state } = session;
 
+  const onFigureDrop = (data) => {
+    actions.dropPencilOnFigure(data.pencilId, data.figureId);
+  };
+
   return (
     <>
       <ActivityHeader header={data.header} instruction={data.instruction} />
 
       <ActivityBoard>
+        <Palette paletteFigures={data.paletteFigures} />
         <PencilSelector
           pencils={data.pencils}
           selectPencil={session.actions.selectPencil}
           selectedPencil={state.selectedPencil}
         />
 
-        <FigureSelector
+        <FigureBoard
+          paintedFigures={state.paintedFigures}
           figures={data.figures}
-          selectedFigures={state.selectedFigures}
-          selectFigure={actions.selectFigure}
-          selectedPencil={state.selectedPencil}
+          onFigureDrop={onFigureDrop}
         />
       </ActivityBoard>
 

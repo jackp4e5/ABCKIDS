@@ -6,3 +6,5 @@ const checkCompleted = (state, figures) => {
     completed,
   };
 };
+
+export default checkCompleted;

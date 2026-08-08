@@ -1,13 +1,15 @@
 import Figure from "../Figure/Figure";
 
-const FigureSelector = ({ figures, selectedFigures, selectFigure , selectedPencil}) => {
-
- 
-  
+const FigureSelector = ({
+  figures,
+  selectedFigures,
+  selectFigure,
+  selectedPencil,
+}) => {
   return (
     <div>
-      {figures.map((figure , index) => (
-        <button  onClick={() => selectFigure(figure.id)} key={figure.id + index}>
+      {figures.map((figure, index) => (
+        <button onClick={() => selectFigure(figure.id)} key={figure.id + index}>
           <Figure
             name={figure.name}
             src={
