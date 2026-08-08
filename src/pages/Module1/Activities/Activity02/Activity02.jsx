@@ -3,6 +3,7 @@ import useActivity from "../../../../hooks/useActivity";
 import ActivityBoard from "../components/ActivityBoard/ActivityBoard";
 import ActivityControls from "../components/ActivityControls/ActivityControls";
 import ActivityHeader from "../components/ActivityHeader/ActivityHeader";
+import FeedbackModal from "../components/FeedbackModal/FeedbackModal";
 import FigureBoard from "../components/FigureBoard/FigureBoard";
 import FigureSelector from "../components/FigureSelector/FigureSelector";
 import Palette from "../components/Palette/Palette";
@@ -16,6 +17,11 @@ const Activity02 = () => {
   const onFigureDrop = (data) => {
     actions.dropPencilOnFigure(data.pencilId, data.figureId);
   };
+
+  const handleContinue = ()=>{
+    console.log('Navegando ');
+    
+  }
 
   return (
     <>
@@ -36,7 +42,15 @@ const Activity02 = () => {
         />
       </ActivityBoard>
 
-      <ActivityControls actions={actions} />
+      <ActivityControls completed={state.completed} actions={actions} />
+
+      {state.submitted && (
+        <FeedbackModal
+          correct={state.correct}
+          actions={actions}
+          onContinue={handleContinue}
+        />
+      )}
     </>
   );
 };

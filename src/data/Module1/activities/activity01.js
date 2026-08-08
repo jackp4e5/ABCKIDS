@@ -13,7 +13,7 @@ export const activity01 = {
     audio: "../../../../public/audio/Activity01/instructionAudio.mp3",
     assets: {
       image: "../../../../public/images/Activity01/instruction.png",
-      iconAudio: "../../../../public/images/iconAudio.png",
+      iconAudio: "../../../../public/imagesBtns/iconAudio.png",
     },
   },
 

@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import activityEngineDropPencilOnFigure from "../core/activityEngine/precesses/activityEngineDropPencilOnFigure";
+import { checkActivity } from "../core/activityEngine";
 
 // Recibe los datos de una actividad
 const useActivity = (activityData) => {
   // Inicializa el estado
   const [state, setState] = useState({
+    submitted: false,
     completed: false,
     selectedFigures: [],
     selectedPencil: null,
@@ -49,13 +52,37 @@ const useActivity = (activityData) => {
     });
   };
 
-  const reset = () => {};
+  const submit = () => {
+    setState((previousState) => {
+      const newState = checkActivity({
+        state: previousState,
+        data: activityData,
+      });
+
+      return {
+        ...newState,
+        submitted: true,
+      };
+    });
+  };
+
+  const reset = () => {
+    setState({
+      submitted: false,
+      completed: false,
+      correct: false,
+      selectedFigures: [],
+      selectedPencil: null,
+      paintedFigures: [],
+    });
+  };
   // Expone las acciones //
   const actions = {
     reset,
     selectFigure,
     selectPencil,
     dropPencilOnFigure,
+    submit,
   };
   // Expone el estado, Expone los datos
   const session = {
