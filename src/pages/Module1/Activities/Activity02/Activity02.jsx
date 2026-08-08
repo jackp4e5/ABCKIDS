@@ -18,10 +18,11 @@ const Activity02 = () => {
     actions.dropPencilOnFigure(data.pencilId, data.figureId);
   };
 
-  const handleContinue = ()=>{
-    console.log('Navegando ');
-    
-  }
+ const navigate = useNavigate();
+
+const handleContinue = () => {
+  navigate("/module-1/activity-03");
+};
 
   return (
     <>

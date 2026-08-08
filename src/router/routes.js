@@ -1,23 +1,19 @@
 export const ROUTES = {
+  HOME: "/",
 
-    HOME: "/",
+  MODULE1: {
+    SCREEN01: "/module-1/screen01",
 
-    MODULE1: {
+    SCREEN02: "/module-1/screen02",
 
-        SCREEN01: "/module-1/screen01",
+    SCREEN03: "/module-1/screen03",
 
-        SCREEN02: "/module-1/screen-02",
+    ACTIVITY01: "/module-1/activity/activity01",
 
-        SCREEN03: "/module-1/screen-03",
+    ACTIVITY02: "/module-1/activity/activity02",
 
-        ACTIVITY01: "/module-1/activity-01",
+    ACTIVITY03: "/module-1/activity/activity03",
 
-        ACTIVITY02: "/module-1/activity-02",
-
-        ACTIVITY03: "/module-1/activity-03",
-
-        ACTIVITY04: "/module-1/activity-04",
-
-    }
-
-}
+    ACTIVITY04: "/module-1/activity/activity04",
+  },
+};
