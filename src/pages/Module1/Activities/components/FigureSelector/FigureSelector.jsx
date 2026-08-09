@@ -1,4 +1,5 @@
 import Figure from "../Figure/Figure";
+import styles from "./FigureSelector.module.css";
 
 const FigureSelector = ({
   figures,
@@ -7,7 +8,7 @@ const FigureSelector = ({
   selectedPencil,
 }) => {
   return (
-    <div>
+    <div className={styles.wrapperContent}>
       {figures.map((figure, index) => (
         <button onClick={() => selectFigure(figure.id)} key={figure.id + index}>
           <Figure

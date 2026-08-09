@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "../Layouts/MainLayout/MainLayout";
 import Screen from "../pages/Module1/Screens";
 import ActivityRender from "../pages/Module1/Activities/ActivityRender/ActivityRender";
+import ActivityLayout from "../pages/Module1/Activities/ActivityLayout/ActivityLayout";
 
 export const AppRouter = () => {
   return (
@@ -10,10 +11,9 @@ export const AppRouter = () => {
         <Route path="/" element={<MainLayout />}>
           <Route path="module-1/screen/:screenId" element={<Screen />} />
 
-          <Route
-            path="/module-1/activity/:activityId"
-            element={<ActivityRender />}
-          />
+          <Route path="module-1/activity" element={<ActivityLayout />}>
+            <Route path=":activityId" element={<ActivityRender />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

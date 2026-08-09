@@ -8,6 +8,8 @@ import FigureBoard from "../components/FigureBoard/FigureBoard";
 import FigureSelector from "../components/FigureSelector/FigureSelector";
 import Palette from "../components/Palette/Palette";
 import PencilSelector from "../components/PencilSelector/PencilSelector";
+import { useNavigate } from "react-router-dom";
+import styles from "./Activity02.module.css";
 
 const Activity02 = () => {
   const session = useActivity(activity02);
@@ -18,14 +20,14 @@ const Activity02 = () => {
     actions.dropPencilOnFigure(data.pencilId, data.figureId);
   };
 
- const navigate = useNavigate();
+  const navigate = useNavigate();
 
-const handleContinue = () => {
-  navigate("/module-1/activity-03");
-};
+  const handleContinue = () => {
+    navigate("/module-1/activity01");
+  };
 
   return (
-    <>
+    <div className={styles.container}>
       <ActivityHeader header={data.header} instruction={data.instruction} />
 
       <ActivityBoard>
@@ -52,7 +54,7 @@ const handleContinue = () => {
           onContinue={handleContinue}
         />
       )}
-    </>
+    </div>
   );
 };
 

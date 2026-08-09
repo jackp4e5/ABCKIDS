@@ -1,0 +1,10 @@
+.wrapperContent{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 50%;
+}
+.wrapperContent img{
+ 
+    width: 50%;
+}

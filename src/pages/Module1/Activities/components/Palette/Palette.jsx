@@ -1,8 +1,8 @@
 import Figure from "../Figure/Figure";
-
+import styles from "./Palette.module.css"
 const Palette = ({ paletteFigures }) => {
   return (
-    <div>
+    <aside className={styles.aside}>
       {paletteFigures.map((figure, index) => (
         <Figure
           key={figure.name + index}
@@ -10,7 +10,7 @@ const Palette = ({ paletteFigures }) => {
           src={figure.assets.active}
         />
       ))}
-    </div>
+    </aside>
   );
 };
 

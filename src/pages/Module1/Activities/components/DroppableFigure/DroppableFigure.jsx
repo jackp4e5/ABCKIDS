@@ -1,3 +1,6 @@
+import styles from "./DroppableFigure.module.css"
+
+
 const DroppableFigure = ({ children, id, onFigureDrop }) => {
   const handleDragOver = (event) => {
     event.preventDefault();
@@ -13,7 +16,7 @@ const DroppableFigure = ({ children, id, onFigureDrop }) => {
     onFigureDrop(dropData );
   };
   return (
-    <div onDragOver={handleDragOver} onDrop={handleDrop}>
+    <div className={styles.wrapper} onDragOver={handleDragOver} onDrop={handleDrop}>
       {children}
     </div>
   );

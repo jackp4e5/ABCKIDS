@@ -1,9 +1,9 @@
 import Pencil from "../Pencil/Pencil";
-
+import styles from "./PencilSelector.module.css"
 const PencilSelector = ({ pencils }) => {
  
   return (
-    <div>
+    <div className={styles.wrapper}>
       {pencils.map((pencil, index) => (
         <button key={pencil.id + index}>
           <Pencil

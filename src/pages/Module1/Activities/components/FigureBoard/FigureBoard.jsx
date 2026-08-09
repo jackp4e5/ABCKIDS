@@ -1,9 +1,10 @@
 import DroppableFigure from "../DroppableFigure/DroppableFigure";
 import Figure from "../Figure/Figure";
+import styles from "./FigureBoard.module.css"
 
 const FigureBoard = ({ paintedFigures, figures, onFigureDrop }) => {
   return (
-    <>
+    <div className={styles.wrapper}>
       {figures.map((figure) => (
         <DroppableFigure
           key={figure.id}
@@ -21,7 +22,7 @@ const FigureBoard = ({ paintedFigures, figures, onFigureDrop }) => {
           />
         </DroppableFigure>
       ))}
-    </>
+    </div>
   );
 };
 

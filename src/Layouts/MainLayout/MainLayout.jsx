@@ -6,13 +6,15 @@ import styles from "./MainLayout.module.css";
 const MainLayout = () => {
   return (
     <div className={styles.layout}>
-      <Header title={screen.title} />
+      <Header />
+
+   
 
       <main className={styles.main}>
         <Outlet context={{ screen }} />
       </main>
 
-      <Footer  />
+      <Footer />
     </div>
   );
 };

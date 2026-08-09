@@ -8,8 +8,6 @@ const ActivityRender = () => {
   const activities = {
     activity01: Activity01,
     activity02: Activity02,
-    activity03: Activity03,
-    activity04: Activity04,
   };
 
   const ActivityComponent = activities[activityId];

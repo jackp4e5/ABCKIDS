@@ -1,0 +1,9 @@
+.aside {
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+    position: absolute;
+    left: 20%;
+    top: -34%;
+    width: 6%;
+}

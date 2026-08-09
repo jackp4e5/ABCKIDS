@@ -4,14 +4,14 @@ import ActivityBoard from "../components/ActivityBoard/ActivityBoard";
 import ActivityControls from "../components/ActivityControls/ActivityControls";
 import ActivityHeader from "../components/ActivityHeader/ActivityHeader";
 import FigureSelector from "../components/FigureSelector/FigureSelector";
-
+import styles from "./Activity01.module.css"
 const Activity01 = () => {
   const session = useActivity(activity01);
 
   const { actions, data, state } = session;
 
   return (
-    <>
+    <div className={styles.container}>
       <ActivityHeader header={data.header} instruction={data.instruction} />
 
       <ActivityBoard>
@@ -23,7 +23,7 @@ const Activity01 = () => {
       </ActivityBoard>
 
       <ActivityControls actions={actions} />
-    </>
+    </div>
   );
 };
 
