@@ -4,6 +4,10 @@ body{
 
     color:var(--text);
 
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+
 }
 
 img{

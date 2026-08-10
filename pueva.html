@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background: #FFFFFF" class="cs-HTML theme-unified view-desktop ff-on ff-drop-in-base ff-js-api-basics ff-math-expressions ff-morph-transition ff-multiple-quiz-tracking ff-new-captions-format ff-player-size-option sidebar-left no-reset timeline-paused floating-sidebar sidebar-closed is-portrait" role="presentation">
+  <!-- 360 -->
+  <script>!function(){var e,i=/iPhone/i,o=/iPod/i,n=/iPad/i,t=/\biOS-universal(?:.+)Mac\b/i,r=/\bAndroid(?:.+)Mobile\b/i,a=/Android/i,d=/(?:SD4930UR|\bSilk(?:.+)Mobile\b)/i,p=/Silk/i,l=/Windows Phone/i,u=/\bWindows(?:.+)ARM\b/i,b=/BlackBerry/i,s=/BB10/i,c=/Opera Mini/i,f=/\b(CriOS|Chrome)(?:.+)Mobile/i,h=/Mobile(?:.+)Firefox\b/i,v=function(e){return void 0!==e&&"MacIntel"===e.platform&&"number"==typeof e.maxTouchPoints&&e.maxTouchPoints>1&&"undefined"==typeof MSStream};e=function(e){var m={userAgent:"",platform:"",maxTouchPoints:0};e||"undefined"==typeof navigator?"string"==typeof e?m.userAgent=e:e&&e.userAgent&&(m={userAgent:e.userAgent,platform:e.platform,maxTouchPoints:e.maxTouchPoints||0}):m={userAgent:navigator.userAgent,platform:navigator.platform,maxTouchPoints:navigator.maxTouchPoints||0};var g=m.userAgent,y=g.split("[FBAN");void 0!==y[1]&&(g=y[0]),void 0!==(y=g.split("Twitter"))[1]&&(g=y[0]);var A=function(e){return function(i){return i.test(e)}}(g),w={apple:{phone:A(i)&&!A(l),ipod:A(o),tablet:!A(i)&&(A(n)||v(m))&&!A(l),universal:A(t),device:(A(i)||A(o)||A(n)||A(t)||v(m))&&!A(l)},amazon:{phone:A(d),tablet:!A(d)&&A(p),device:A(d)||A(p)},android:{phone:!A(l)&&A(d)||!A(l)&&A(r),tablet:!A(l)&&!A(d)&&!A(r)&&(A(p)||A(a)),device:!A(l)&&(A(d)||A(p)||A(r)||A(a))||A(/\bokhttp\b/i)},windows:{phone:A(l),tablet:A(u),device:A(l)||A(u)},other:{blackberry:A(b),blackberry10:A(s),opera:A(c),firefox:A(h),chrome:A(f),device:A(b)||A(s)||A(c)||A(h)||A(f)},any:!1,phone:!1,tablet:!1};return w.any=w.apple.device||w.android.device||w.windows.device||w.other.device,w.phone=w.apple.phone||w.android.phone||w.windows.phone,w.tablet=w.apple.tablet||w.android.tablet||w.windows.tablet,w}(),"object"==typeof exports&&"undefined"!=typeof module?module.exports=e:"function"==typeof define&&define.amd?define((function(){return e})):this.isMobile=e}();
+    window.isMobile.apple.tablet = window.isMobile.apple.tablet ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    window.isMobile.apple.device = window.isMobile.apple.device || window.isMobile.apple.tablet;
+    window.isMobile.tablet = window.isMobile.tablet || window.isMobile.apple.tablet;
+    window.isMobile.any = window.isMobile.any || window.isMobile.apple.tablet;
+  </script>
+
+  <div id="focus-sink" tabindex="-1"></div>
+
+  <div id="preso" class="hide-slide-loader"><div id="lib" class="offscreen"><div><svg width="0" height="0" style="position:absolute;" focusable="false">
+      <defs>
+        <filter id="text-shadow" x="0%" y="0%" width="113%" height="113%">
+          <feGaussianBlur stdDeviation="1 1" result="text-shadow"></feGaussianBlur>
+          <feOffset dx="1.5" dy="1.5"></feOffset>
+        </filter>
+        <linearGradient id="timer-blue-grad" class="cs-duration">
+          <stop offset="0%" "=""></stop>
+          <stop offset="100%"></stop>
+        </linearGradient>
+        <linearGradient id="timer-yellow-grad" class="cs-elapsed">
+          <stop offset="0%"></stop>
+          <stop offset="100%"></stop>
+        </linearGradient>
+        <linearGradient id="drop-list-gradient" gradientTransform="rotate(90)">
+          <stop offset="0%"></stop>
+          <stop offset="100%"></stop>
+        </linearGradient>
+        <linearGradient id="dragdrop-gradient" gradientTransform="rotate(90)">
+          <stop offset="0%"></stop>
+          <stop offset="100%"></stop>
+        </linearGradient>
+        <linearGradient id="dragdrop-hover-gradient" gradientTransform="rotate(90)">
+          <stop offset="0%"></stop>
+          <stop offset="100%"></stop>
+        </linearGradient>
+        <linearGradient id="wordbank-droparea-stroke-gradient" gradientTransform="rotate(90)">
+          <stop offset="0%"></stop>
+          <stop offset="100%"></stop>
+        </linearGradient>
+        <filter id="dragdrop-inner-stroke">
+          <feFlood flood-color="#fff" result="strokeColor"></feFlood>
+          <feMorphology operator="erode" radius="2" in="SourceAlpha" result="innerMorph"></feMorphology>
+          <feMorphology operator="erode" radius="1" in="SourceAlpha" result="outerMorph"></feMorphology>
+          <feComposite in="innerMorph" in2="outerMorph" operator="xor" result="morph"></feComposite>
+          <feComposite in="strokeColor" in2="morph" operator="in" result="innerStroke"></feComposite>
+          <feComposite in="innerStroke" in2="SourceGraphic" operator="over"></feComposite>
+        </filter>
+      </defs>
+    </svg></div><div>
+    <svg width="0" height="0" style="position:absolute;" focusable="false">
+      <defs></defs>
+    </svg></div><div id="video-pen" class="offscreen" aria-hidden="true"></div><div><canvas role="presentation" width="1920" height="1080"></canvas></div><div id="presentation-canvas"></div><div id="zoomimage-container"></div><div id="mask-library"></div></div><div id="media-loader-container" class="media-loader-container"><svg width="1" focusable="false" height="1"><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5ZXUIYtcGAw.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6XGfuLNVBVG.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5huePPgRwJT.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6SQSE7ND386.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5nuIxCP3n6f.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5V3hn9vzdEg.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6RI3CBFZjtR.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5v5B35hCSAs.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5hW44YL2uFM.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5cbJcmnoP0P.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5VC0ICi4dIx.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5XMv7nxYlSZ.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6SFaMbbPfBC.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/66YOyWgleyZ.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5cZKt46pNBA.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5gfwIoojRxR.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5rRpQNjboHX.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6RLmYjQmjHf.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6fMOOIjgQ2F.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6cC6XNIiIeI.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5kXLDBjef7h.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6crhdViDTjy.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/69X4KvGresi.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5YKzCzOWI1c.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/614DckJMRSA.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6HCuMJxSbQK.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5Voh6QMyNLY.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6a4A89aqxI8.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5bsM3QHhHmE.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5hHAFxBiy9z.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6UFyqWLDR6C.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5jkrFBNGAlg.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5neoGVuQolg.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6p8TgjFfeQ6.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5WN7XKRpCaE.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6a2XuGkSkC3.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6mEkOcaoE2V.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5urs6iEbX5M.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5qVdsFk8qMe.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5hfbkeYD6jT.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5rtacJPajEQ.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6REy50eGZlE.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5c5mb1gvrW5.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6o0IgVUfud8.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6aeXm0AwkBK.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6NJb0BONHcy.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5nDeet8whDU.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6h8j4QNpbjG.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/66AtBtJHjgd.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6HYHCfRCMUJ.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6CJmLW5k61E.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/61YqLhdbfOw.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6RQvSpq8DHh.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6dHmMAXNIzf.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5vG4U8LAuUD.png"></image><image xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5X7DYOk0x2X.png"></image></svg></div><div id="wrapper" class="cs-base cs-npnxnanbnsnfns00001100001 fn-npnxnanbnsnfns00001100001 cs-custom-theme" style="position: absolute; left: 0px; top: 0px; overflow: hidden; transform-origin: center center; font-size: 100%; width: 179px; height: 548px; transform: translate(0px, 0px);"><div id="frame" class="cs-base cs-npnxnanbnsnfns00001100001 fn-npnxnanbnsnfns00001100001" style="position: absolute; left: 0px; top: 0px; overflow: hidden; transform-origin: center center; width: 179px; height: 548px; transform: translate(0px, 0px);"><div class="top-ui-bg"></div><div class="bottom-ui-bg"></div><div class="left-ui-bg"></div><div class="right-ui-bg"></div><div id="frame-blocker" class="frame-blocker-container" style="position: absolute; left: 0px; top: 0px; overflow: hidden; transform-origin: center center; z-index: 1000; pointer-events: none; visibility: hidden; width: 179px; height: 548px; transform: translate(0px, 0px); grid-template-columns: 10px 159px 10px; grid-template-rows: 229px 89px 230px;"><div class="frame-blocker-slide"></div><div class="frame-blocker-top"></div><div class="frame-blocker-bottom"></div><div class="frame-blocker-right"></div><div class="frame-blocker-left"></div></div><button class="sidebar-overlay btn" aria-label="Cerrar" tabindex="-1" style="left: 0px; top: 0px; overflow: hidden; transform-origin: center center; cursor: pointer; width: 179px; height: 548px; transform: translate(0px, 0px); opacity: 0;" data-tabindex="-1"></button><div id="slide" class="window-slide _frame-slide primary-slide" style="position: absolute; left: 0px; top: 0px; overflow: hidden; transform-origin: 0px 0px; z-index: 1; width: 159px; height: 89px; transform: translate(10px, 229px);"><div id="slide-label" data-ref="label" aria-live="polite">slide: Actividad 2</div>
+      <main class="slide-container" data-ref="container" aria-live="off" tabindex="-1" data-tabindex="-1"><div id="slide-window" data-display-name="SlideWindow" data-dv_comp="27"><div class="slide-window-slide-container cs-slide-container"><div class="slide-container" data-display-name="SlideContainer" data-dv_comp="26" style="overflow: visible; transform: translate(0px, 0px); width: 159px; height: 89.4375px;"><span data-dv_keys="true"><div class="slide-transition-container" data-display-name="Slide" data-dv_comp="35" style="width: 159px; height: 89.4375px; z-index: 0;"><div class="slide cs-6Ux21WL90ww" role="presentation" data-rollout-highest-node="true" data-id="6Ux21WL90ww" data-has-capture="" style="z-index: 0; width: 159px; height: 89.4375px;"><div data-dv_ref="zoomPanTarget"><svg width="159" height="89.4375" viewBox="0 0 1920 1080" focusable="false" data-display-name="SlideBackground" data-dv_comp="38"><defs><linearGradient id="pattern-fill-6Ux21WL90ww" gradientTransform="rotate(90 0.5 0.5)" data-display-name="LinearBackgroundGradient" data-dv_comp="37"><stop offset="0%" stop-color="rgb(255,255,255)" stop-opacity="1"></stop></linearGradient></defs><rect id="slide-bg-6Ux21WL90ww" width="1920" height="1080" fill="url(#pattern-fill-6Ux21WL90ww)"></rect></svg><div class="zoom-bg-container"></div><div class="acc-shadow-dom" data-display-name="AccShadowDom" data-dv_comp="40" style="width: 1920px; height: 1080px; transform: scale(0.0828125); transform-origin: 0px 0px;"><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 2 objetos.png" id="acc-5xhmaK0TxHf" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.5xhmaK0TxHf" style="left: -0.5px; top: -0.5px; width: 1921px; height: 1081px; visibility: visible; z-index: 0;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Relaciona.png" id="acc-5gZBp7i5yhN" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.5gZBp7i5yhN" style="left: 778.5px; top: 41.5px; width: 257px; height: 48px; visibility: visible; z-index: 4;"></div><button class="acc-shadow-el acc-button" id="acc-6BReC2KLisN" tabindex="0" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.6BReC2KLisN" type="button" aria-label="Grupo de 8 objetos.png" data-display-name="AccButton" data-dv_comp="41" style="left: 568.5px; top: 96.5px; width: 72px; height: 72px; visibility: visible; z-index: 7;">Grupo de 8 objetos.png</button><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Colorea cada figura como se in.png" id="acc-5mqfUz3mnbP" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.5mqfUz3mnbP" style="left: 654.5px; top: 113.5px; width: 591px; height: 43px; visibility: visible; z-index: 3;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 5 objetos (1).png" id="acc-5XOyYhTq3Uf" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.5XOyYhTq3Uf" style="left: 47.5px; top: 201.5px; width: 205px; height: 843px; visibility: visible; z-index: 5;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 6 objetos (3).png" id="acc-6Mc3EPHwMP3" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.6Mc3EPHwMP3" style="left: 451.5px; top: 201.5px; width: 133px; height: 61px; visibility: visible; z-index: 9;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 6 objetos (2).png" id="acc-5WwQnXlDa8S" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.5WwQnXlDa8S" style="left: 701.5px; top: 201.5px; width: 132px; height: 61px; visibility: visible; z-index: 8;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 6 objetos (1).png" id="acc-6RzsjfSnfhi" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.6RzsjfSnfhi" style="left: 979.5px; top: 201.5px; width: 132px; height: 61px; visibility: visible; z-index: 6;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 6 objetos.png" id="acc-5ekHvNUDOKx" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.5ekHvNUDOKx" style="left: 1263.5px; top: 209.5px; width: 133px; height: 61px; visibility: visible; z-index: 10;"></div><div data-display-name="AccText" data-dv_comp="45"><p data-dv_ref="focusTarget" class="acc-shadow-el acc-text" id="acc-6LR7ns4ujKi" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.6LR7ns4ujKi.6LR7ns4ujKi">Rectángulo 1</p></div><div data-display-name="AccText" data-dv_comp="45"><p data-dv_ref="focusTarget" class="acc-shadow-el acc-text" id="acc-5kmzFMqcepO" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.6LR7ns4ujKi.5kmzFMqcepO" aria-hidden="true">Rectángulo 1</p></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 8 objetos.png" id="acc-62gpAAtBXrZ" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.62gpAAtBXrZ" style="left: 283.5px; top: 305.5px; width: 1366px; height: 740px; visibility: visible; z-index: 11;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 2 objetos (1).png" id="acc-5X43H1g4r0t" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.5X43H1g4r0t.5X43H1g4r0t" style="left: 1339.5px; top: 329.5px; width: 272px; height: 326px; visibility: visible; z-index: 28;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 2 objetos (1).png" id="acc-5iB3hJ7a7es" tabindex="-1" data-has-capture="" aria-hidden="true" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.5X43H1g4r0t.5iB3hJ7a7es" style="left: 1339.5px; top: 329.5px; width: 272px; height: 326px; visibility: hidden; z-index: 29;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 4 objetos.png" id="acc-6q663gr4ZHq" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.6q663gr4ZHq.6q663gr4ZHq" style="left: 1024.5px; top: 351.5px; width: 227px; height: 283px; visibility: visible; z-index: 25;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 4 objetos.png" id="acc-67nPQSPDxz7" tabindex="-1" data-has-capture="" aria-hidden="true" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.6q663gr4ZHq.67nPQSPDxz7" style="left: 1024.5px; top: 351.5px; width: 227px; height: 283px; visibility: hidden; z-index: 26;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 5 objetos (2).png" id="acc-6MgFRy4Js7y" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.6MgFRy4Js7y.6MgFRy4Js7y" style="left: 649.5px; top: 357.5px; width: 289px; height: 273px; visibility: visible; z-index: 34;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 5 objetos.png" id="acc-6CxbDBrfjL3" tabindex="-1" data-has-capture="" aria-hidden="true" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.6MgFRy4Js7y.6CxbDBrfjL3" style="left: 649.5px; top: 357.5px; width: 289px; height: 273px; visibility: hidden; z-index: 35;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 24 objetos.png" id="acc-5oQhnvemSXC" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.5oQhnvemSXC.5oQhnvemSXC" style="left: 317.5px; top: 357.5px; width: 272px; height: 272px; visibility: visible; z-index: 22;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 24 objetos.png" id="acc-6XRA9OcoLno" tabindex="-1" data-has-capture="" aria-hidden="true" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.5oQhnvemSXC.6XRA9OcoLno" style="left: 317.5px; top: 357.5px; width: 272px; height: 272px; visibility: hidden; z-index: 23;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 2 objetos (1).png" id="acc-5uoLjEe8RiO" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.5uoLjEe8RiO" style="left: 1718.5px; top: 655.5px; width: 159px; height: 273px; visibility: visible; z-index: 1;"></div><button class="acc-shadow-el acc-button" id="acc-6lIetKVF3hQ" tabindex="0" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.6lIetKVF3hQ" type="button" aria-label="Grupo de 5 objetos.png" data-display-name="AccButton" data-dv_comp="41" style="left: 1752.5px; top: 688.5px; width: 91px; height: 90px; visibility: visible; z-index: 36;">Grupo de 5 objetos.png</button><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 2 objetos.png" id="acc-6eVHuOdqct7" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.6eVHuOdqct7.6eVHuOdqct7" style="left: 997.5px; top: 717.5px; width: 272px; height: 284px; visibility: visible; z-index: 31;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 2 objetos.png" id="acc-6IbXPZSUIjl" tabindex="-1" data-has-capture="" aria-hidden="true" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.6eVHuOdqct7.6IbXPZSUIjl" style="left: 997.5px; top: 717.5px; width: 272px; height: 284px; visibility: hidden; z-index: 32;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 23 objetos.png" id="acc-6ZgPbq2zYub" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.6ZgPbq2zYub.6ZgPbq2zYub" style="left: 686.5px; top: 721.5px; width: 213px; height: 284px; visibility: visible; z-index: 19;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 23 objetos.png" id="acc-5oSKEXWncGd" tabindex="-1" data-has-capture="" aria-hidden="true" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.6ZgPbq2zYub.5oSKEXWncGd" style="left: 686.5px; top: 721.5px; width: 213px; height: 284px; visibility: hidden; z-index: 20;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 13 objetos.png" id="acc-6jquKYUxzsv" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.6jquKYUxzsv.6jquKYUxzsv" style="left: 304.5px; top: 727.5px; width: 299px; height: 273px; visibility: visible; z-index: 16;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 13 objetos.png" id="acc-5qUMEEzHPmP" tabindex="-1" data-has-capture="" aria-hidden="true" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.6jquKYUxzsv.5qUMEEzHPmP" style="left: 304.5px; top: 727.5px; width: 299px; height: 273px; visibility: hidden; z-index: 17;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 10 objetos.png" id="acc-65k72VtE8GH" tabindex="-1" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.65k72VtE8GH.65k72VtE8GH" style="left: 1337.5px; top: 727.5px; width: 272px; height: 272px; visibility: visible; z-index: 13;"></div><div data-display-name="AccImage" data-dv_comp="44"><img class="acc-shadow-el acc-image" data-dv_ref="focusTarget" aria-label="Grupo de 10 objetos.png" id="acc-5Vkb4jlhcvM" tabindex="-1" data-has-capture="" aria-hidden="true" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.65k72VtE8GH.5Vkb4jlhcvM" style="left: 1337.5px; top: 727.5px; width: 272px; height: 272px; visibility: hidden; z-index: 14;"></div><button class="acc-shadow-el acc-button" id="acc-6467cVK4Ws1" tabindex="0" data-has-capture="" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.6467cVK4Ws1" type="button" aria-label="Grupo de 5 objetos (1).png" data-display-name="AccButton" data-dv_comp="41" style="left: 1752.5px; top: 807.5px; width: 91px; height: 90px; visibility: visible; z-index: 2;">Grupo de 5 objetos (1).png</button><button class="acc-shadow-el acc-button" id="acc-69wdDDh1g2B" tabindex="0" data-has-capture="" aria-hidden="true" data-represents="_player.6Ho19fUZ9A3.6Ux21WL90ww.69wdDDh1g2B" type="button" aria-label="Grupo de 2 objetos.png" data-display-name="AccButton" data-dv_comp="41" style="left: 0px; top: 0px; width: 0px; height: 0px; visibility: hidden; z-index: 37;">Grupo de 2 objetos.png</button><button class="acc-shadow-el acc-button" style="display: none;"></button></div><div class="acc-blocker" aria-hidden="true"></div><div data-dv_ref="contentArea" class="slide-layer base-layer shown" data-display-name="SlideLayer" data-dv_comp="36" style="pointer-events: none; z-index: 0; width: 159px; height: 89.4375px;"><span><div class="slide-object slide-object-vectorshape shown       " data-model-id="5xhmaK0TxHf" data-acc-text="Grupo de 2 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 1; width: 159px; height: 89.4375px; opacity: 1; transform-origin: 79.5px 44.7188px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 89.4375px; width: 159px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="89.4375" width="159" focusable="false" viewBox="0 0 1920 1080" data-commandset-id="0" data-accepts="events" data-dv_ref="ref-13317"><g class="eventable" data-accepts="events"><path d="M0,0L1920,0 1920,1080 0,1080z" id="uniqueDomId-13318" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13319" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5ZXUIYtcGAw.png" height="1080" width="1920" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape shown       " data-model-id="5uoLjEe8RiO" data-acc-text="Grupo de 2 objetos (1).png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 2; width: 13.0844px; height: 22.525px; opacity: 1; transform-origin: 6.54219px 11.2625px; transform: translate(142px, 54px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 22.525px; width: 13.0844px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="22.525" width="13.084375" focusable="false" viewBox="0 0 158 272" data-commandset-id="14" data-accepts="events" data-dv_ref="ref-13320"><g class="eventable" data-accepts="events"><path d="M0,0L158,0 158,272 0,272z" id="uniqueDomId-13321" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13322" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6XGfuLNVBVG.png" height="272" width="158" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape shown cursor-hover      " data-model-id="6467cVK4Ws1" data-acc-text="Grupo de 5 objetos (1).png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 3; width: 7.45312px; height: 7.37031px; opacity: 1; transform-origin: 3.72656px 3.68516px; transform: translate(145px, 67px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 7.37031px; width: 7.45312px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="7.3703125" width="7.453125" focusable="false" viewBox="0 0 90 89" data-commandset-id="15" data-accepts="events" data-dv_ref="ref-13323"><g class="eventable" data-accepts="events"><path d="M0,0L90,0 90,89 0,89z" id="uniqueDomId-13324" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13325" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5huePPgRwJT.png" height="89" width="90" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape shown       " data-model-id="5mqfUz3mnbP" data-acc-text="Colorea cada figura como se in.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 4; width: 48.8594px; height: 3.47812px; opacity: 1; transform-origin: 24.4297px 1.73906px; transform: translate(54px, 9px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 3.47812px; width: 48.8594px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="3.478125" width="48.859375" focusable="false" viewBox="0 0 590 42" data-commandset-id="34" data-accepts="events" data-dv_ref="ref-13326"><g class="eventable" data-accepts="events"><path d="M0,0L590,0 590,42 0,42z" id="uniqueDomId-13327" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13328" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6SQSE7ND386.png" height="42" width="590" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape shown       " data-model-id="5gZBp7i5yhN" data-acc-text="Relaciona.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 5; width: 21.2px; height: 3.89219px; opacity: 1; transform-origin: 10.6px 1.94609px; transform: translate(65px, 3px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 3.89219px; width: 21.2px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="3.8921875" width="21.2" focusable="false" viewBox="0 0 256 47" data-commandset-id="35" data-accepts="events" data-dv_ref="ref-13329"><g class="eventable" data-accepts="events"><path d="M0,0L256,0 256,47 0,47z" id="uniqueDomId-13330" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13331" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5nuIxCP3n6f.png" height="47" width="256" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape shown       " data-model-id="5XOyYhTq3Uf" data-acc-text="Grupo de 5 objetos (1).png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 6; width: 16.8938px; height: 69.7281px; opacity: 1; transform-origin: 8.44688px 34.8641px; transform: translate(4px, 17px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 69.7281px; width: 16.8938px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="69.72812499999999" width="16.89375" focusable="false" viewBox="0 0 204 842" data-commandset-id="36" data-accepts="events" data-dv_ref="ref-13332"><g class="eventable" data-accepts="events"><path d="M0,0L204,0 204,842 0,842z" id="uniqueDomId-13333" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13334" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5V3hn9vzdEg.png" height="842" width="204" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape shown cursor-hover   draggable   " data-model-id="6RzsjfSnfhi" data-acc-text="Grupo de 6 objetos (1).png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 7; width: 10.8484px; height: 4.96875px; opacity: 1; transform-origin: 5.42422px 2.48438px; transform: translate(81px, 17px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 4.96875px; width: 10.8484px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="4.96875" width="10.8484375" focusable="false" viewBox="0 0 131 60" data-commandset-id="37" data-accepts="events" data-dv_ref="ref-13335"><g class="eventable" data-accepts="events"><path d="M0,0L131,0 131,60 0,60z" id="uniqueDomId-13336" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13337" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6RI3CBFZjtR.png" height="60" width="131" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape shown cursor-hover      " data-model-id="6BReC2KLisN" data-acc-text="Grupo de 8 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 8; width: 5.87969px; height: 5.87969px; opacity: 1; transform-origin: 2.93984px 2.93984px; transform: translate(47px, 8px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 5.87969px; width: 5.87969px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="5.8796875" width="5.8796875" focusable="false" viewBox="0 0 71 71" data-commandset-id="29" data-accepts="events" data-dv_ref="ref-13338"><g class="eventable" data-accepts="events"><path d="M0,0L71,0 71,71 0,71z" id="uniqueDomId-13339" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13340" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5v5B35hCSAs.png" height="71" width="71" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape shown cursor-hover   draggable   " data-model-id="5WwQnXlDa8S" data-acc-text="Grupo de 6 objetos (2).png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 9; width: 10.8484px; height: 4.96875px; opacity: 1; transform-origin: 5.42422px 2.48438px; transform: translate(58px, 17px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 4.96875px; width: 10.8484px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="4.96875" width="10.8484375" focusable="false" viewBox="0 0 131 60" data-commandset-id="37" data-accepts="events" data-dv_ref="ref-13341"><g class="eventable" data-accepts="events"><path d="M0,0L131,0 131,60 0,60z" id="uniqueDomId-13342" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13343" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5hW44YL2uFM.png" height="60" width="131" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape shown cursor-hover   draggable   " data-model-id="6Mc3EPHwMP3" data-acc-text="Grupo de 6 objetos (3).png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 10; width: 10.9313px; height: 4.96875px; opacity: 1; transform-origin: 5.46563px 2.48438px; transform: translate(37px, 17px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 4.96875px; width: 10.9313px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="4.96875" width="10.93125" focusable="false" viewBox="0 0 132 60" data-commandset-id="38" data-accepts="events" data-dv_ref="ref-13344"><g class="eventable" data-accepts="events"><path d="M0,0L132,0 132,60 0,60z" id="uniqueDomId-13345" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13346" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5cbJcmnoP0P.png" height="60" width="132" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape shown cursor-hover   draggable   " data-model-id="5ekHvNUDOKx" data-acc-text="Grupo de 6 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 11; width: 10.9313px; height: 4.96875px; opacity: 1; transform-origin: 5.46563px 2.48438px; transform: translate(105px, 17px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 4.96875px; width: 10.9313px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="4.96875" width="10.93125" focusable="false" viewBox="0 0 132 60" data-commandset-id="38" data-accepts="events" data-dv_ref="ref-13347"><g class="eventable" data-accepts="events"><path d="M0,0L132,0 132,60 0,60z" id="uniqueDomId-13348" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13349" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5VC0ICi4dIx.png" height="60" width="132" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape shown       " data-model-id="62gpAAtBXrZ" data-acc-text="Grupo de 8 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 12; width: 113.039px; height: 61.1984px; opacity: 1; transform-origin: 56.5195px 30.5992px; transform: translate(24px, 25px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 61.1984px; width: 113.039px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="61.1984375" width="113.0390625" focusable="false" viewBox="0 0 1365 739" data-commandset-id="39" data-accepts="events" data-dv_ref="ref-13350"><g class="eventable" data-accepts="events"><path d="M0,0L1365,0 1365,739 0,739z" id="uniqueDomId-13351" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13352" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5XMv7nxYlSZ.png" height="739" width="1365" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-stategroup shown       " data-model-id="65k72VtE8GH" data-acc-text="" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 13; width: 22.4422px; height: 22.4422px; opacity: 1; transform-origin: 11.2211px 11.2211px; transform: translate(111px, 60px) rotate(0deg) scale(1, 1);"><div class="group " data-display-name="StateGroupSlideObject" data-dv_comp="9" style="width: 22.4422px; height: 22.4422px;"><div class="slide-object slide-object-vectorshape shown       " data-model-id="65k72VtE8GH" data-acc-text="Grupo de 10 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 1; width: 22.4422px; height: 22.4422px; opacity: 1; transform-origin: 11.2211px 11.2211px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 22.4422px; width: 22.4422px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="22.4421875" width="22.4421875" focusable="false" viewBox="0 0 271 271" data-commandset-id="40" data-accepts="events" data-dv_ref="ref-13353"><g class="eventable" data-accepts="events"><path d="M0,0L271,0 271,271 0,271z" id="uniqueDomId-13354" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13355" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6SFaMbbPfBC.png" height="271" width="271" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape hidden       " data-model-id="5Vkb4jlhcvM" data-acc-text="Grupo de 10 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 2; width: 22.4422px; height: 22.4422px; opacity: 1; transform-origin: 11.2211px 11.2211px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 22.4422px; width: 22.4422px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="22.4421875" width="22.4421875" focusable="false" viewBox="0 0 271 271" data-commandset-id="40" data-accepts="events" data-dv_ref="ref-13356"><g class="eventable" data-accepts="events"><path d="M0,0L271,0 271,271 0,271z" id="uniqueDomId-13357" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13358" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/66YOyWgleyZ.png" height="271" width="271" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="state-group-top-level"></div></div></div><div class="slide-object slide-object-stategroup shown       " data-model-id="6jquKYUxzsv" data-acc-text="" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 14; width: 24.6781px; height: 22.525px; opacity: 1; transform-origin: 12.3391px 11.2625px; transform: translate(25px, 60px) rotate(0deg) scale(1, 1);"><div class="group " data-display-name="StateGroupSlideObject" data-dv_comp="9" style="width: 24.6781px; height: 22.525px;"><div class="slide-object slide-object-vectorshape shown       " data-model-id="6jquKYUxzsv" data-acc-text="Grupo de 13 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 1; width: 24.6781px; height: 22.525px; opacity: 1; transform-origin: 12.3391px 11.2625px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 22.525px; width: 24.6781px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="22.525" width="24.678124999999998" focusable="false" viewBox="0 0 298 272" data-commandset-id="41" data-accepts="events" data-dv_ref="ref-13359"><g class="eventable" data-accepts="events"><path d="M0,0L298,0 298,272 0,272z" id="uniqueDomId-13360" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13361" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5cZKt46pNBA.png" height="272" width="298" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape hidden       " data-model-id="5qUMEEzHPmP" data-acc-text="Grupo de 13 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 2; width: 24.6781px; height: 22.525px; opacity: 1; transform-origin: 12.3391px 11.2625px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 22.525px; width: 24.6781px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="22.525" width="24.678124999999998" focusable="false" viewBox="0 0 298 272" data-commandset-id="41" data-accepts="events" data-dv_ref="ref-13362"><g class="eventable" data-accepts="events"><path d="M0,0L298,0 298,272 0,272z" id="uniqueDomId-13363" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13364" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5gfwIoojRxR.png" height="272" width="298" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="state-group-top-level"></div></div></div><div class="slide-object slide-object-stategroup shown       " data-model-id="6ZgPbq2zYub" data-acc-text="" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 15; width: 17.5562px; height: 23.4359px; opacity: 1; transform-origin: 8.77812px 11.718px; transform: translate(57px, 60px) rotate(0deg) scale(1, 1);"><div class="group " data-display-name="StateGroupSlideObject" data-dv_comp="9" style="width: 17.5562px; height: 23.4359px;"><div class="slide-object slide-object-vectorshape shown       " data-model-id="6ZgPbq2zYub" data-acc-text="Grupo de 23 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 1; width: 17.5562px; height: 23.4359px; opacity: 1; transform-origin: 8.77812px 11.718px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 23.4359px; width: 17.5562px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="23.435937499999998" width="17.55625" focusable="false" viewBox="0 0 212 283" data-commandset-id="42" data-accepts="events" data-dv_ref="ref-13365"><g class="eventable" data-accepts="events"><path d="M0,0L212,0 212,283 0,283z" id="uniqueDomId-13366" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13367" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5rRpQNjboHX.png" height="283" width="212" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape hidden       " data-model-id="5oSKEXWncGd" data-acc-text="Grupo de 23 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 2; width: 17.5562px; height: 23.4359px; opacity: 1; transform-origin: 8.77812px 11.718px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 23.4359px; width: 17.5562px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="23.435937499999998" width="17.55625" focusable="false" viewBox="0 0 212 283" data-commandset-id="42" data-accepts="events" data-dv_ref="ref-13368"><g class="eventable" data-accepts="events"><path d="M0,0L212,0 212,283 0,283z" id="uniqueDomId-13369" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13370" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6RLmYjQmjHf.png" height="283" width="212" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="state-group-top-level"></div></div></div><div class="slide-object slide-object-stategroup shown       " data-model-id="5oQhnvemSXC" data-acc-text="" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 16; width: 22.4422px; height: 22.4422px; opacity: 1; transform-origin: 11.2211px 11.2211px; transform: translate(26px, 30px) rotate(0deg) scale(1, 1);"><div class="group " data-display-name="StateGroupSlideObject" data-dv_comp="9" style="width: 22.4422px; height: 22.4422px;"><div class="slide-object slide-object-vectorshape shown       " data-model-id="5oQhnvemSXC" data-acc-text="Grupo de 24 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 1; width: 22.4422px; height: 22.4422px; opacity: 1; transform-origin: 11.2211px 11.2211px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 22.4422px; width: 22.4422px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="22.4421875" width="22.4421875" focusable="false" viewBox="0 0 271 271" data-commandset-id="40" data-accepts="events" data-dv_ref="ref-13371"><g class="eventable" data-accepts="events"><path d="M0,0L271,0 271,271 0,271z" id="uniqueDomId-13372" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13373" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6fMOOIjgQ2F.png" height="271" width="271" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape hidden       " data-model-id="6XRA9OcoLno" data-acc-text="Grupo de 24 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 2; width: 22.4422px; height: 22.4422px; opacity: 1; transform-origin: 11.2211px 11.2211px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 22.4422px; width: 22.4422px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="22.4421875" width="22.4421875" focusable="false" viewBox="0 0 271 271" data-commandset-id="40" data-accepts="events" data-dv_ref="ref-13374"><g class="eventable" data-accepts="events"><path d="M0,0L271,0 271,271 0,271z" id="uniqueDomId-13375" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13376" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6cC6XNIiIeI.png" height="271" width="271" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="state-group-top-level"></div></div></div><div class="slide-object slide-object-stategroup shown       " data-model-id="6q663gr4ZHq" data-acc-text="" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 17; width: 18.7156px; height: 23.3531px; opacity: 1; transform-origin: 9.35781px 11.6766px; transform: translate(85px, 29px) rotate(0deg) scale(1, 1);"><div class="group " data-display-name="StateGroupSlideObject" data-dv_comp="9" style="width: 18.7156px; height: 23.3531px;"><div class="slide-object slide-object-vectorshape shown       " data-model-id="6q663gr4ZHq" data-acc-text="Grupo de 4 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 1; width: 18.7156px; height: 23.3531px; opacity: 1; transform-origin: 9.35781px 11.6766px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 23.3531px; width: 18.7156px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="23.353125" width="18.715625" focusable="false" viewBox="0 0 226 282" data-commandset-id="43" data-accepts="events" data-dv_ref="ref-13377"><g class="eventable" data-accepts="events"><path d="M0,0L226,0 226,282 0,282z" id="uniqueDomId-13378" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13379" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5kXLDBjef7h.png" height="282" width="226" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape hidden       " data-model-id="67nPQSPDxz7" data-acc-text="Grupo de 4 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 2; width: 18.7156px; height: 23.3531px; opacity: 1; transform-origin: 9.35781px 11.6766px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 23.3531px; width: 18.7156px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="23.353125" width="18.715625" focusable="false" viewBox="0 0 226 282" data-commandset-id="43" data-accepts="events" data-dv_ref="ref-13380"><g class="eventable" data-accepts="events"><path d="M0,0L226,0 226,282 0,282z" id="uniqueDomId-13381" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13382" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6crhdViDTjy.png" height="282" width="226" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="state-group-top-level"></div></div></div><div class="slide-object slide-object-stategroup shown       " data-model-id="5X43H1g4r0t" data-acc-text="" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 18; width: 22.4422px; height: 26.9141px; opacity: 1; transform-origin: 11.2211px 13.457px; transform: translate(111px, 27px) rotate(0deg) scale(1, 1);"><div class="group " data-display-name="StateGroupSlideObject" data-dv_comp="9" style="width: 22.4422px; height: 26.9141px;"><div class="slide-object slide-object-vectorshape shown       " data-model-id="5X43H1g4r0t" data-acc-text="Grupo de 2 objetos (1).png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 1; width: 22.4422px; height: 26.9141px; opacity: 1; transform-origin: 11.2211px 13.457px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 26.9141px; width: 22.4422px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="26.9140625" width="22.4421875" focusable="false" viewBox="0 0 271 325" data-commandset-id="44" data-accepts="events" data-dv_ref="ref-13383"><g class="eventable" data-accepts="events"><path d="M0,0L271,0 271,325 0,325z" id="uniqueDomId-13384" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13385" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/69X4KvGresi.png" height="325" width="271" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape hidden       " data-model-id="5iB3hJ7a7es" data-acc-text="Grupo de 2 objetos (1).png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 2; width: 22.4422px; height: 26.9141px; opacity: 1; transform-origin: 11.2211px 13.457px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 26.9141px; width: 22.4422px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="26.9140625" width="22.4421875" focusable="false" viewBox="0 0 271 325" data-commandset-id="44" data-accepts="events" data-dv_ref="ref-13386"><g class="eventable" data-accepts="events"><path d="M0,0L271,0 271,325 0,325z" id="uniqueDomId-13387" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13388" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5YKzCzOWI1c.png" height="325" width="271" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="state-group-top-level"></div></div></div><div class="slide-object slide-object-stategroup shown       " data-model-id="6eVHuOdqct7" data-acc-text="" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 19; width: 22.4422px; height: 23.4359px; opacity: 1; transform-origin: 11.2211px 11.718px; transform: translate(83px, 59px) rotate(0deg) scale(1, 1);"><div class="group " data-display-name="StateGroupSlideObject" data-dv_comp="9" style="width: 22.4422px; height: 23.4359px;"><div class="slide-object slide-object-vectorshape shown       " data-model-id="6eVHuOdqct7" data-acc-text="Grupo de 2 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 1; width: 22.4422px; height: 23.4359px; opacity: 1; transform-origin: 11.2211px 11.718px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 23.4359px; width: 22.4422px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="23.435937499999998" width="22.4421875" focusable="false" viewBox="0 0 271 283" data-commandset-id="45" data-accepts="events" data-dv_ref="ref-13389"><g class="eventable" data-accepts="events"><path d="M0,0L271,0 271,283 0,283z" id="uniqueDomId-13390" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13391" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/614DckJMRSA.png" height="283" width="271" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape hidden       " data-model-id="6IbXPZSUIjl" data-acc-text="Grupo de 2 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 2; width: 22.4422px; height: 23.4359px; opacity: 1; transform-origin: 11.2211px 11.718px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 23.4359px; width: 22.4422px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="23.435937499999998" width="22.4421875" focusable="false" viewBox="0 0 271 283" data-commandset-id="45" data-accepts="events" data-dv_ref="ref-13392"><g class="eventable" data-accepts="events"><path d="M0,0L271,0 271,283 0,283z" id="uniqueDomId-13393" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13394" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6HCuMJxSbQK.png" height="283" width="271" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="state-group-top-level"></div></div></div><div class="slide-object slide-object-stategroup shown       " data-model-id="6MgFRy4Js7y" data-acc-text="" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 20; width: 23.85px; height: 22.525px; opacity: 1; transform-origin: 11.925px 11.2625px; transform: translate(54px, 30px) rotate(0deg) scale(1, 1);"><div class="group " data-display-name="StateGroupSlideObject" data-dv_comp="9" style="width: 23.85px; height: 22.525px;"><div class="slide-object slide-object-vectorshape shown       " data-model-id="6MgFRy4Js7y" data-acc-text="Grupo de 5 objetos (2).png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 1; width: 23.85px; height: 22.525px; opacity: 1; transform-origin: 11.925px 11.2625px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 22.525px; width: 23.85px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="22.525" width="23.849999999999998" focusable="false" viewBox="0 0 288 272" data-commandset-id="46" data-accepts="events" data-dv_ref="ref-13395"><g class="eventable" data-accepts="events"><path d="M0,0L288,0 288,272 0,272z" id="uniqueDomId-13396" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13397" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5Voh6QMyNLY.png" height="272" width="288" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape hidden       " data-model-id="6CxbDBrfjL3" data-acc-text="Grupo de 5 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 2; width: 23.85px; height: 22.525px; opacity: 1; transform-origin: 11.925px 11.2625px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 22.525px; width: 23.85px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="22.525" width="23.849999999999998" focusable="false" viewBox="0 0 288 272" data-commandset-id="46" data-accepts="events" data-dv_ref="ref-13398"><g class="eventable" data-accepts="events"><path d="M0,0L288,0 288,272 0,272z" id="uniqueDomId-13399" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13400" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/6a4A89aqxI8.png" height="272" width="288" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="state-group-top-level"></div></div></div><div class="slide-object slide-object-vectorshape shown cursor-hover      " data-model-id="6lIetKVF3hQ" data-acc-text="Grupo de 5 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 21; width: 7.45312px; height: 7.37031px; opacity: 1; transform-origin: 3.72656px 3.68516px; transform: translate(145px, 57px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 7.37031px; width: 7.45312px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="7.3703125" width="7.453125" focusable="false" viewBox="0 0 90 89" data-commandset-id="15" data-accepts="events" data-dv_ref="ref-13401"><g class="eventable" data-accepts="events"><path d="M0,0L90,0 90,89 0,89z" id="uniqueDomId-13402" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13403" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5bsM3QHhHmE.png" height="89" width="90" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-vectorshape hidden cursor-hover      " data-model-id="69wdDDh1g2B" data-acc-text="Grupo de 2 objetos.png" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 22; width: 15.8172px; height: 8.69531px; opacity: 1; transform-origin: 7.90859px 4.34766px; transform: translate(141px, 79px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 8.69531px; width: 15.8172px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="8.6953125" width="15.8171875" focusable="false" viewBox="0 0 191 105" data-commandset-id="28" data-accepts="events" data-dv_ref="ref-13404"><g class="eventable" data-accepts="events"><path d="M0,0L191,0 191,105 0,105z" id="uniqueDomId-13405" fill="none" data-accepts="events"></path><image transform="scale(1, 1)" id="uniqueDomId-13406" data-original-image="01" x="0" y="0" opacity="1" xlink:href="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/mobile/5hHAFxBiy9z.png" height="105" width="191" preserveAspectRatio="none" data-accepts="events"></image></g></svg></div></div><div class="slide-object slide-object-stategroup shown       " data-model-id="6LR7ns4ujKi" data-acc-text="" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 23; width: 115.606px; height: 66.5812px; opacity: 1; transform-origin: 57.8031px 33.2906px; transform: translate(22px, 22px) rotate(0deg) scale(1, 1);"><div class="group " data-display-name="StateGroupSlideObject" data-dv_comp="9" style="width: 115.606px; height: 66.5812px;"><div class="slide-object slide-object-vectorshape shown       " data-model-id="6LR7ns4ujKi" data-acc-text="Rectángulo 1" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 1; width: 0px; height: 0px; opacity: 1; transform-origin: 57.8031px 33.2906px; transform: translate(0px, 0px) rotate(0deg) scale(1, 1);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 0.165625px; width: 0.165625px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="0.0828125" width="0.0828125" focusable="false" viewBox="0 0 1 1" data-commandset-id="25" data-accepts="events" data-dv_ref="ref-13407"><g data-accepts="events"></g></svg></div></div><div class="slide-object slide-object-vectorshape hidden       " data-model-id="5kmzFMqcepO" data-acc-text="Rectángulo 1" tabindex="-1" aria-hidden="true" data-display-name="SlideObject" data-dv_comp="25" style="z-index: 2; width: 115.606px; height: 66.5812px; opacity: 1; transform-origin: 57.8031px 33.2906px; transform: matrix(1, 0, 0, 1, 0, 0);"><div class="slideobject-maskable" data-display-name="VectorSlideObject" data-dv_comp="5" style="height: 66.5812px; width: 115.606px; transform: translate(0px, 0px);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-xmlns-xlink="http://www.w3.org/1999/xlink" version="1.1" baseprofile="full" height="66.58125" width="115.60625" focusable="false" viewBox="0 0 1396 804" data-commandset-id="47" data-accepts="events" data-dv_ref="ref-13408"><g class="eventable" data-accepts="events"><path d="M0,0L1396,0 1396,803.5 0,803.5z" id="uniqueDomId-13409" fill="#FEF5F1" fill-opacity="1" data-accepts="events"></path></g></svg></div></div><div class="state-group-top-level"></div></div></div></span><div data-dv_ref="allAudio" class="hidden"><span data-display-name="AudioPlayer" data-dv_comp="58"></span><span data-display-name="AudioPlayer" data-dv_comp="58"></span><span data-display-name="AudioPlayer" data-dv_comp="58"></span></div></div><div data-dv_ref="contentArea" class="slide-layer  hidden" data-display-name="SlideLayer" data-dv_comp="36" style="pointer-events: none; z-index: 0; width: 159px; height: 89.4375px;"><span></span><div data-dv_ref="allAudio" class="hidden"><span data-display-name="AudioPlayer" data-dv_comp="58"></span></div></div><div data-dv_ref="contentArea" class="slide-layer  hidden" data-display-name="SlideLayer" data-dv_comp="36" style="pointer-events: none; z-index: 0; width: 159px; height: 89.4375px;"><span></span><div data-dv_ref="allAudio" class="hidden"><span data-display-name="AudioPlayer" data-dv_comp="58"></span></div></div><div data-dv_ref="contentArea" class="slide-top-container slide-top-container-main"></div><div class="slide-text-fix"></div><div data-dv_ref="mouse-blocker" class="mouse-blocker truly-visible"></div></div></div></div></span><div class="load-container" style="width: 159px;"><div class="slide-loader"><div class="mobile-loader-dot dot1"></div><div class="mobile-loader-dot dot2"></div><div class="mobile-loader-dot dot3"></div></div></div></div></div></div></main></div><button id="skipnav" aria-label="Volver a la diapositiva" data-tabindex="0" tabindex="0" style="position: absolute; left: 0px; top: 0px; overflow: hidden; transform-origin: center center; cursor: pointer; width: 24px; height: 24px; transform: translate(-100px, -100px); display: block;">Volver a la diapositiva</button><section id="bottom-bar" style="position: absolute; left: 0px; top: 0px; overflow: visible; transform-origin: center center; height: 65px; z-index: 3; display: block; width: 179px; transform: translate(0px, 483px);"><div id="playback-controls" aria-label="playback controls" role="region" tabindex="-1" style="position: absolute; left: 0px; top: 0px; overflow: hidden; transform-origin: center center; width: 0px; height: 65px; transform: translate(0px, 0px); visibility: hidden; pointer-events: none;" data-tabindex="-1"><button id="play-pause" class="content-center cs-button" aria-pressed="true" aria-label="Reproducir (Ctrl+Alt+P)" data-tabindex="0" tabindex="0" style="position: absolute; left: 0px; top: 0px; overflow: hidden; transform-origin: center center; z-index: 1; background: transparent; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; cursor: pointer; width: 34px; height: 34px; transform: translate(0px, 16px); display: none;"><div class="view-content" tabindex="-1" style="position: relative; text-align: center; top: 0px; width: 34px; height: 34px;" data-tabindex="-1"><svg id="icon-play" class="cs-icon play-icon" width="14" height="16" viewBox="0 0 14 16" focusable="false">
+    <path d="M1.4 15.4C0.8 15.8 0 15.3 0 14.5L0 1.4C0 0.6 0.8 0.1 1.4 0.5L12.9 7.1C13.5 7.5 13.5 8.4 12.9 8.8L8.0 11.6L1.4 15.4Z" stroke="none"></path>
+  </svg></div></button><div id="seek" tabindex="-1" class="progress-bar cs-seekcontrol" style="position: absolute; left: 0px; top: 0px; overflow: visible; transform-origin: center center; width: 0px; height: 30px; transform: translate(0px, 18px); display: none;" data-tabindex="-1">
+      <style>
+        #seek:before {
+          border: 1px solid rgba(0, 0, 0, 0);
+          background-image: none;
+          background-repeat: no-repeat !important;
+        }
+      </style>
+
+      <div class="cs-seekbar-inner progress-bar-inner slide-lockable">
+        <div data-ref="seek" class="cs-seek progress-bar-seek">
+          <div class="progress-bar-fill-preview cs-fill" data-ref="progressPreview"></div>
+          <input tabindex="0" type="range" aria-hidden="true" aria-label="progreso de la diapositiva" data-ref="progressBar" data-tabindex="0" max="12250" step="100" aria-valuetext="100%">
+          <div class="cs-fill cs-brandhighlight-bg progress-bar-fill" style="width: 100%;" data-ref="progressBarFill">
+            <div class="prev-progress-bar-fill-preview cs-fill" data-ref="prevProgressPreview"></div>
+          </div>
+        </div>
+      </div>
+    </div><button id="reset" class="content-center cs-button" aria-label="Volver a reproducir (Ctrl+Alt+R)" data-tabindex="0" tabindex="0" style="position: absolute; left: 0px; top: 0px; overflow: hidden; transform-origin: center center; z-index: 1; background: transparent; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; cursor: pointer; width: 30px; height: 30px; transform: translate(0px, 18px); display: none;"><svg class="cs-icon" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" focusable="false">
+    <path fill="#FFFFFF" stroke="none" d="
+      M 10.95 8.75
+      Q 11 9 11 9.25 10.95 11.15 9.7 12.4 8.4 13.7 6.5 13.75 4.6 13.7 3.3 12.4 2.05 11.15 2 9.25 2.05 7.3 3.3 6.05 4.398828125 4.998828125 6 4.75
+      L 6 6.9
+      Q 6.05 7.75 6.85 7.35
+      L 11.35 4.3
+      Q 11.7 4.05 11.7 3.75 11.7 3.45 11.35 3.2
+      L 6.85 0.15
+      Q 6.05 -0.3 6 0.6
+      L 6 2.75
+      Q 3.4517578125 3.001171875 1.8 4.75 0.05 6.6 0 9.25 0.05 12 1.9 13.85 3.75 15.65 6.5 15.75 9.25 15.65 11.1 13.85 12.95 12 13 9.25 13 9 13 8.75
+      L 10.95 8.75 Z"></path>
+    </svg></button></div><div id="misc-controls" aria-label="misc controls" role="region" style="position: absolute; left: 0px; top: 0px; overflow: visible; transform-origin: center center; width: 0px; height: 65px; transform: translate(139px, 0px);"><div id="volume" class="btn cs-volume cs-button volume-panel volume" style="position: absolute; left: 0px; top: 17px; overflow: visible; transform-origin: center center; width: 30px; height: 30px; transform: translate(0px, 0px); display: none;"><button data-ref="button" class="cs-button" aria-label="Silenciar (Ctrl+Alt+M)" aria-pressed="false" tabindex="0" data-tabindex="0"><svg class="cs-icon volume-icon " width="16px" height="14px" viewBox="0 0 16 14" focusable="false">
+      <rect x="0" y="4" width="3" height="6"></rect>
+      <polygon points="4 4 9 0 9 14 4 10"></polygon>
+      <g transform="translate(10, 0)">
+        <mask id="vol-mask" fill="white">
+          <rect id="path-1" x="0" y="0" width="8" height="14" style="fill: white;"></rect>
+        </mask>
+        <circle strokewidth="1.5" style="opacity: 1;" mask="url(#vol-mask)" fill="none" cx="-1" cy="7" r="6.5"></circle>
+        <circle strokewidth="1.5" style="opacity: 1;" mask="url(#vol-mask)" fill="none" cx="-1" cy="7" r="3.5"></circle>
+      </g>
+    
+  </svg></button>
+      <div data-ref="sliderBar" class="slider-bar btn" style="width: 30px; height: 75px">
+        <input type="range" class="cs-volume volume-range" data-ref="volumeRange" aria-label="volume" min="0" max="10" step="1" value="8" tabindex="0" aria-orientation="vertical" data-tabindex="0">
+        <div class="volume-track"></div>
+        <div data-ref="volumeProgress" class="volume-progress cs-brandhighlight-bg" style="background: none 0% 0% / auto repeat scroll padding-box border-box rgb(72, 147, 184); height: 44px;"></div>
+        <div data-ref="volumeDot" class="volume-dot" style="top: 11px;"></div>
+      </div></div><div id="playback-speed" class="btn cs-button cs-settings" style="position: absolute; left: 0px; top: 0px; overflow: visible; transform-origin: center center; width: 30px; height: 30px; transform: translate(0px, 18px); display: none;">
+        <button data-ref="toggleBtn" aria-expanded="false" class="cs-button" aria-label="Velocidad de reproducción" tabindex="0" data-tabindex="0">
+          
+    <svg class="cs-icon" width="15" height="15" viewBox="0 0 15 15" focusable="false">
+      <path d="M5.9 4.0L10.4 7.4L5.9 10.8V4.0ZM1.5 8.2H0.0C0.1 9.6 0.6 10.9 1.5 12.0L2.6 11.0C2.0 10.1 1.6 9.2 1.5 8.2H1.5ZM15 7.4H14.9C14.9 5.6 14.3 3.8 13.0 2.4C11.8 1.0 10.0 0.1 8.2 0.0V1.5C10.1 1.7 11.8 2.9 12.8 4.7C13.7 6.4 13.7 8.5 12.8 10.2C11.8 12.0 10.1 13.1 8.2 13.4V14.9C10.0 14.7 11.8 13.8 13.0 12.5C14.3 11.1 14.9 9.3 14.9 7.4L15 7.4ZM3.6 12.1L2.5 13.1C3.7 14.1 5.1 14.8 6.7 14.9V13.4V13.4C5.5 13.3 4.5 12.8 3.6 12.1V12.1ZM2.6 3.9L1.5 2.8C0.6 3.9 0.1 5.3 0 6.7H1.5H1.5C1.6 5.7 2.0 4.7 2.6 3.9H2.6ZM6.7 1.5V0.0C5.1 0.1 3.7 0.7 2.5 1.7L3.6 2.8C4.5 2.1 5.5 1.6 6.7 1.5V1.5Z" stroke="none"></path>
+    </svg>
+  
+        </button>
+        <div data-ref="contentPanel" class="settings-panel" tabindex="-1" style="left: 10px;" data-tabindex="-1">
+          <div class="content">
+            <div data-ref="playbackSpeedTitle" class="cs-heading title">Velocidad de reproducción</div>
+            <ul data-ref="playbackSpeedWrapper" aria-label="Velocidad de reproducción" role="menu">
+              
+            <li tabindex="-1" data-tabindex="-1">
+              <div class="cs-listitem menu-choice " data-speed="2" data-index="0" tabindex="-1" role="menuitemcheckbox" aria-checked="false" aria-label="2" data-tabindex="-1">
+                <div class="selected-icon" style="fill:rgb(72, 147, 184);">
+                  <svg width="12" height="9" viewBox="0 0 12 9">
+                    <path d="M10 0.3 L11.5 1.7 L4.3 8.9 L0 4.7 L1.4 3.2 L4.3 6.1 L10 0.3 Z" stroke="none"></path>
+                  </svg>
+                </div>
+                <div class="label">2</div>
+              </div>
+            </li>
+          
+            <li tabindex="-1" data-tabindex="-1">
+              <div class="cs-listitem menu-choice " data-speed="1.75" data-index="1" tabindex="-1" role="menuitemcheckbox" aria-checked="false" aria-label="1.75" data-tabindex="-1">
+                <div class="selected-icon" style="fill:rgb(72, 147, 184);">
+                  <svg width="12" height="9" viewBox="0 0 12 9">
+                    <path d="M10 0.3 L11.5 1.7 L4.3 8.9 L0 4.7 L1.4 3.2 L4.3 6.1 L10 0.3 Z" stroke="none"></path>
+                  </svg>
+                </div>
+                <div class="label">1.75</div>
+              </div>
+            </li>
+          
+            <li tabindex="-1" data-tabindex="-1">
+              <div class="cs-listitem menu-choice " data-speed="1.5" data-index="2" tabindex="-1" role="menuitemcheckbox" aria-checked="false" aria-label="1.5" data-tabindex="-1">
+                <div class="selected-icon" style="fill:rgb(72, 147, 184);">
+                  <svg width="12" height="9" viewBox="0 0 12 9">
+                    <path d="M10 0.3 L11.5 1.7 L4.3 8.9 L0 4.7 L1.4 3.2 L4.3 6.1 L10 0.3 Z" stroke="none"></path>
+                  </svg>
+                </div>
+                <div class="label">1.5</div>
+              </div>
+            </li>
+          
+            <li tabindex="-1" data-tabindex="-1">
+              <div class="cs-listitem menu-choice " data-speed="1.25" data-index="3" tabindex="-1" role="menuitemcheckbox" aria-checked="false" aria-label="1.25" data-tabindex="-1">
+                <div class="selected-icon" style="fill:rgb(72, 147, 184);">
+                  <svg width="12" height="9" viewBox="0 0 12 9">
+                    <path d="M10 0.3 L11.5 1.7 L4.3 8.9 L0 4.7 L1.4 3.2 L4.3 6.1 L10 0.3 Z" stroke="none"></path>
+                  </svg>
+                </div>
+                <div class="label">1.25</div>
+              </div>
+            </li>
+          
+            <li tabindex="-1" data-tabindex="-1">
+              <div data-ref="ariaNormal" class="cs-listitem menu-choice selected" data-speed="1" data-index="4" tabindex="0" role="menuitemcheckbox" aria-checked="true" aria-label="Normal" data-tabindex="0">
+                <div class="selected-icon" style="fill:rgb(72, 147, 184);">
+                  <svg width="12" height="9" viewBox="0 0 12 9">
+                    <path d="M10 0.3 L11.5 1.7 L4.3 8.9 L0 4.7 L1.4 3.2 L4.3 6.1 L10 0.3 Z" stroke="none"></path>
+                  </svg>
+                </div>
+                <div class="label" data-ref="labelNormal">Normal</div>
+              </div>
+            </li>
+          
+            <li tabindex="-1" data-tabindex="-1">
+              <div class="cs-listitem menu-choice " data-speed="0.75" data-index="5" tabindex="-1" role="menuitemcheckbox" aria-checked="false" aria-label="0.75" data-tabindex="-1">
+                <div class="selected-icon" style="fill:rgb(72, 147, 184);">
+                  <svg width="12" height="9" viewBox="0 0 12 9">
+                    <path d="M10 0.3 L11.5 1.7 L4.3 8.9 L0 4.7 L1.4 3.2 L4.3 6.1 L10 0.3 Z" stroke="none"></path>
+                  </svg>
+                </div>
+                <div class="label">0.75</div>
+              </div>
+            </li>
+          
+            <li tabindex="-1" data-tabindex="-1">
+              <div class="cs-listitem menu-choice " data-speed="0.5" data-index="6" tabindex="-1" role="menuitemcheckbox" aria-checked="false" aria-label="0.5" data-tabindex="-1">
+                <div class="selected-icon" style="fill:rgb(72, 147, 184);">
+                  <svg width="12" height="9" viewBox="0 0 12 9">
+                    <path d="M10 0.3 L11.5 1.7 L4.3 8.9 L0 4.7 L1.4 3.2 L4.3 6.1 L10 0.3 Z" stroke="none"></path>
+                  </svg>
+                </div>
+                <div class="label">0.5</div>
+              </div>
+            </li>
+          
+            <li tabindex="-1" data-tabindex="-1">
+              <div class="cs-listitem menu-choice " data-speed="0.25" data-index="7" tabindex="-1" role="menuitemcheckbox" aria-checked="false" aria-label="0.25" data-tabindex="-1">
+                <div class="selected-icon" style="fill:rgb(72, 147, 184);">
+                  <svg width="12" height="9" viewBox="0 0 12 9">
+                    <path d="M10 0.3 L11.5 1.7 L4.3 8.9 L0 4.7 L1.4 3.2 L4.3 6.1 L10 0.3 Z" stroke="none"></path>
+                  </svg>
+                </div>
+                <div class="label">0.25</div>
+              </div>
+            </li>
+          
+            </ul>
+          </div>
+          <div class="panel-down-arrow" style="height: 18px; width: 18px; position: absolute;">
+            <div data-ref="contentPanelArrow" style="height: 100%; width: 100%; transform: translateX(-10px);">
+              
+    <div style="height: 100%; width: 100%; background-color: rgb(250, 250, 250); border-right: 1px solid; border-bottom: 1px solid; border-color: rgb(250, 250, 250); border-bottom-right-radius: 3px; transform: rotate(45deg);">
+    
+            </div>
+          </div>
+        </div>
+        </div></div></div><nav id="nav-controls" aria-label="slide navigation" style="position: absolute; left: 0px; top: 0px; overflow: hidden; transform-origin: center center; width: 30px; height: 65px; transform: translate(139px, 0px);"><button id="full-screen-toggle" class="cs-button btn fullscreen-open-btn" data-tabindex="0" tabindex="0" aria-label="Poner a pantalla completa (Ctrl+Alt+F)" style="position: absolute; left: 0px; top: 0px; overflow: hidden; transform-origin: center center; z-index: 1; cursor: pointer; width: 30px; height: 58px; transform: translate(0px, 4px); display: block;"><div class="view-content" tabindex="-1" style="position: relative; text-align: center; top: 0px;" data-tabindex="-1">
+    <svg class="cs-icon enter-fullscreen-icon" width="14" height="14" viewBox="0 0 14 14" focusable="false">
+      <path d="M1.99055 2.3H5.1V0.4H0.1V5.2H1.9L1.9 2.3Z" stroke="none"></path>
+      <path d="M5.1 11.8H1.9V8.9H0.1V13.6H5.1L5.1 11.8Z" stroke="none"></path>
+      <path d="M11.5 11.8H8.4V13.6H13.3V8.9H11.5L11.5 11.8Z" stroke="none"></path>
+      <path d="M8.4 2.3H11.5V5.2H13.3V0.4H8.4L8.4 2.3Z" stroke="none"></path>
+    </svg>
+  </div></button><button id="prev" class="cs-button btn" aria-label="Anterior (Ctrl+Alt+coma)" data-tabindex="0" tabindex="0" style="position: absolute; left: 0px; top: 0px; overflow: visible; transform-origin: center center; cursor: pointer; width: 70px; height: 30px; transform: translate(40px, 18px); display: none;" aria-disabled="false"><div class="view-content" tabindex="-1" style="position: relative; text-align: center; top: 0px;" data-tabindex="-1"><span data-ref="icon" class="btn-icon">
+  <svg class="cs-icon prev-icon" width="10px" height="18px" viewBox="0 -1 10 18" focusable="false">
+    <path transform="translate(0, 1)" d="M2.81685219,7.60265083 L9.00528946,1.41421356 L7.5910759,-1.27897692e-13 L1.55431223e-13,7.5910759 L0.0115749356,7.60265083 L1.55431223e-13,7.61422577 L7.5910759,15.2053017 L9.00528946,13.7910881 L2.81685219,7.60265083 Z" stroke="none" fillrule="evenodd"></path>
+  </svg>
+</span>
+<span data-ref="label" class="text ">ANT</span></div></button><button id="next" class="cs-button btn " aria-label="Siguiente (Ctrl+Alt+punto)" data-tabindex="0" tabindex="0" style="position: absolute; left: 0px; top: 0px; overflow: visible; transform-origin: center center; cursor: pointer; width: 66px; height: 30px; transform: translate(120px, 18px); display: none;"><div class="view-content" tabindex="-1" style="position: relative; text-align: center; top: 0px;" data-tabindex="-1"><span data-ref="label" class="text ">SIG</span>
+<span data-ref="icon" class="btn-icon">
+  <svg class="cs-icon next-icon" width="10px" height="18px" viewBox="0 -1 10 18" focusable="false">
+    <path transform="rotate(180, 5, 8)" d="M2.81685219,7.60265083 L9.00528946,1.41421356 L7.5910759,-1.27897692e-13 L1.55431223e-13,7.5910759 L0.0115749356,7.60265083 L1.55431223e-13,7.61422577 L7.5910759,15.2053017 L9.00528946,13.7910881 L2.81685219,7.60265083 Z" stroke="none" fillrule="evenodd"></path>
+  </svg></span></div></button><button id="submit" class="cs-button btn " aria-label="Enviar (Ctrl+Alt+S)" data-tabindex="0" tabindex="0" style="position: absolute; left: 0px; top: 0px; overflow: visible; transform-origin: center center; cursor: pointer; width: 101px; height: 30px; transform: translate(0px, 18px); display: none;"><div class="view-content" tabindex="-1" style="position: relative; text-align: center; top: 0px;" data-tabindex="-1"><span data-ref="label" class="text ">ENVIAR</span>
+<span data-ref="icon" class="btn-icon">
+   <svg class="cs-icon check-icon" width="17px" height="18px" viewBox="0 0 17 16" focusable="false">
+    <path stroke="none" transform="translate(0, 1)" d="M 17 1.4 L 15.6 0 5.7 9.9 1.4 5.65 0 7.05 5.65 12.75 5.7 12.75 17 1.4 Z"></path>
+  </svg></span></div></button></nav></section><section id="sidebar" class="cs-left area-secondary-wrapper" aria-label="sidebar" style="position: absolute; left: 0px; top: 0px; overflow: visible; transform-origin: center center; width: 245px; height: 548px; transform: translate(0px, 0px) translateX(-245px); display: block;"><div class="view-content" tabindex="-1" style="position: relative; text-align: center; top: 0px; translate: none; rotate: none; scale: none; transform: translate(-30px, 0px); opacity: 0;" data-tabindex="-1" aria-hidden="true">
+      <style>
+        .selected-animation-done:after {
+          background: rgb(72, 147, 184);
+        }
+      </style>
+      <div class="slider-mask" data-ref="sliderMask" style="height: 65px;">
+        <div class="tab-selected-slider cs-brandhighlight-bg" data-ref="tabSelectedSlider" style="translate: none; rotate: none; scale: none; width: 42px; transform: translate(20px, 64px); display: none; opacity: 1;"></div>
+      </div>
+    <div id="tabs" role="tablist" tabindex="-1" aria-label="sidebar-tabs" class="tabs" style="position: absolute; left: 0px; top: 0px; overflow: visible; transform-origin: center center; width: 245px; height: 65px; transform: translate(0px, 0px);" data-tabindex="-1"><button id="outline-tab" class="tab cs-tabs cs-selected selected-animation-done" role="tab" aria-selected="true" aria-label="Menú" aria-controls="outline-panel" data-tabindex="-1" tabindex="-1" style="position: absolute; left: 0px; top: 0px; overflow: hidden; transform-origin: center center; cursor: pointer; width: 42px; height: 65px; transform: translate(20px, 0px); display: block;"><div class="view-content" tabindex="-1" style="position: relative; text-align: center; top: 0px;" data-tabindex="-1">Menú</div></button></div><div id="sidebar-panels" style="position: absolute; left: 0px; top: 0px; overflow: hidden; transform-origin: center center; z-index: 1; width: 245px; height: 483px; transform: translate(0px, 65px);"><div id="outline-panel" class="cs-menu cs-panel is-scrollable panel" aria-labelledby="outline-tab" role="tabpanel" tabindex="-1" style="position: absolute; left: 0px; top: 0px; overflow: hidden; transform-origin: center center; display: block; width: 245px; height: 483px; transform: translate(0px, 0px); visibility: visible;" data-tabindex="-1"><div id="outline-search-content" class="outline-search " tabindex="-1" style="position: absolute; left: 0px; top: 0px; overflow: hidden; transform-origin: center center; width: 243px; height: 481px; transform: translate(0px, 0px);" data-tabindex="-1"><nav id="outline-content" class="is-scrollable cs-outline " tabindex="-1" aria-label="outline-container" style="position: absolute; left: 0px; top: 0px; overflow: auto; transform-origin: center center; width: 243px; height: 471px; transform: translate(0px, 10px);" data-tabindex="-1">
+      <style id="sceneStyle">.item-collapsible:not(.item-collapsed) .is-scene {<br>      color: rgb(39, 43, 44) !important;<br>    }<br>  <br>    .is-scene:not(.item-collapsed) .cs-icon-carrot * {<br>      fill: rgb(39, 43, 44) !important;<br>    }<br>      .cs-listitem.cs-selected {<br>        background-position: left top !important;<br>        background-repeat: no-repeat !important;<br>        background-size: 6px 100% !important;<br>        background-image: url("data:image/svg+xml;base64,CiAgICAgIDxzdmcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2ZXJzaW9uPScxLjEnCiAgICAgICAgICAgIHdpZHRoPSc2cHgnIGhlaWdodD0nNDBweCcgdmlld0JveD0nMCAwIDYgNDAnIHByZXNlcnZlQXNwZWN0UmF0aW89J25vbmUnPgogICAgICAgIDxnIHN0cm9rZT0nbm9uZScgZmlsbD0ncmdiKDcyLCAxNDcsIDE4NCknPgogICAgICAgICAgPHBvbHlnb24gcG9pbnRzPScwIDAgNiAwIDYgMjAgNiA0MCAwIDQwJz48L3BvbHlnb24+CiAgICAgICAgPC9nPgogICAgICA8L3N2Zz4=") !important;    <br>      }</style>
+      <ul tabindex="-1" aria-label="Menú" role="tree" data-tabindex="-1"><li tabindex="-1" role="treeitem" aria-expanded="true" class="item-collapsible" data-tabindex="-1">
+              <div class="cs-listitem listitem is-scene no-wrap false cs-viewed" style="padding-left: 34px;" data-ref="_player.6Ho19fUZ9A3" data-slide-title="6.1 Nociones espaciales" data-is-scene="true" data-has-links="true" title="6.1 Nociones espaciales" tabindex="-1" role="none" data-tabindex="-1">
+                <span style="position: absolute; opacity: 0;">6.1 Nociones espaciales</span>
+
+                
+    <svg style="left:calc(1px);" class="cs-icon cs-icon-carrot carrot" width="30" height="30" viewBox="0 0 30 30" focusable="false">
+      <g transform="translate(8, 8)">
+        <polygon style="fill:currentColor !important" points="1,1.5 5,5 1,8.5"></polygon>
+      </g>
+  </svg>
+                <span class="linkText" aria-hidden="true">
+                  6.1 Nociones espaciales
+                </span>
+                <span class="outline-states" aria-hidden="true">
+                  <span class="visitedIcon" aria-label="visitado">
+                    <svg class="cs-icon check-icon" focusable="false" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <polygon style="fill:currentColor !important" points="12.04 4 13.45 5.41 6.25 12.62 2 8.36 3.41 6.95 6.25 9.79"></polygon>
+      </g>
+    </svg>
+                  </span>
+                  <span class="lockedIcon" aria-label="bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                  <span class="lockedViewedIcon" aria-label="visitado, bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M7.11248548,6.17405922 C7.38175483,6.47268397 7.38175483,6.92847965 7.0966461,7.21138731 L4.53066757,9.75755627 C4.38811321,9.8990101 4.19804072,9.96187847 4.02380761,9.96187847 C3.83373513,9.96187847 3.65950202,9.8990101 3.51694766,9.75755627 L2.34544071,8.45018243 C2.06033199,8.16727477 2.06033199,7.71147909 2.34544071,7.42857143 C2.63054944,7.14566377 3.08989127,7.14566377 3.375,7.42857143 L4.02380761,8.21728122 L6.08292619,6.17405922 C6.36803491,5.89115155 6.82737675,5.89115155 7.11248548,6.17405922 Z M4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                </span>
+              </div>
+            <ul tabindex="-1" role="group" data-tabindex="-1"><li tabindex="-1" role="treeitem" data-tabindex="-1">
+              <div class="cs-listitem listitem no-wrap false cs-viewed" style="padding-left: 49px;" data-ref="_player.6Ho19fUZ9A3.5nWM1bTEQqu" data-slide-title="Portada" title="Portada" tabindex="-1" role="none" data-tabindex="-1">
+                <span style="position: absolute; opacity: 0;">Portada visitado</span>
+
+                
+                <span class="linkText" aria-hidden="true">
+                  Portada
+                </span>
+                <span class="outline-states" aria-hidden="true">
+                  <span class="visitedIcon" aria-label="visitado">
+                    <svg class="cs-icon check-icon" focusable="false" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <polygon style="fill:currentColor !important" points="12.04 4 13.45 5.41 6.25 12.62 2 8.36 3.41 6.95 6.25 9.79"></polygon>
+      </g>
+    </svg>
+                  </span>
+                  <span class="lockedIcon" aria-label="bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                  <span class="lockedViewedIcon" aria-label="visitado, bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M7.11248548,6.17405922 C7.38175483,6.47268397 7.38175483,6.92847965 7.0966461,7.21138731 L4.53066757,9.75755627 C4.38811321,9.8990101 4.19804072,9.96187847 4.02380761,9.96187847 C3.83373513,9.96187847 3.65950202,9.8990101 3.51694766,9.75755627 L2.34544071,8.45018243 C2.06033199,8.16727477 2.06033199,7.71147909 2.34544071,7.42857143 C2.63054944,7.14566377 3.08989127,7.14566377 3.375,7.42857143 L4.02380761,8.21728122 L6.08292619,6.17405922 C6.36803491,5.89115155 6.82737675,5.89115155 7.11248548,6.17405922 Z M4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                </span>
+              </div>
+            </li><li tabindex="-1" role="treeitem" data-tabindex="-1">
+              <div class="cs-listitem listitem  no-wrap false " style="padding-left: 49px;" data-ref="_player.6Ho19fUZ9A3.6JYQzFwGUSn" data-slide-title="Tabla de contenido" title="Tabla de contenido" tabindex="-1" role="none" data-tabindex="-1">
+                <span style="position: absolute; opacity: 0;">Tabla de contenido </span>
+
+                
+                <span class="linkText" aria-hidden="true">
+                  Tabla de contenido
+                </span>
+                <span class="outline-states" aria-hidden="true">
+                  <span class="visitedIcon" aria-label="visitado">
+                    <svg class="cs-icon check-icon" focusable="false" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <polygon style="fill:currentColor !important" points="12.04 4 13.45 5.41 6.25 12.62 2 8.36 3.41 6.95 6.25 9.79"></polygon>
+      </g>
+    </svg>
+                  </span>
+                  <span class="lockedIcon" aria-label="bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                  <span class="lockedViewedIcon" aria-label="visitado, bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M7.11248548,6.17405922 C7.38175483,6.47268397 7.38175483,6.92847965 7.0966461,7.21138731 L4.53066757,9.75755627 C4.38811321,9.8990101 4.19804072,9.96187847 4.02380761,9.96187847 C3.83373513,9.96187847 3.65950202,9.8990101 3.51694766,9.75755627 L2.34544071,8.45018243 C2.06033199,8.16727477 2.06033199,7.71147909 2.34544071,7.42857143 C2.63054944,7.14566377 3.08989127,7.14566377 3.375,7.42857143 L4.02380761,8.21728122 L6.08292619,6.17405922 C6.36803491,5.89115155 6.82737675,5.89115155 7.11248548,6.17405922 Z M4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                </span>
+              </div>
+            </li><li tabindex="-1" role="treeitem" data-tabindex="-1">
+              <div class="cs-listitem listitem  no-wrap false " style="padding-left: 49px;" data-ref="_player.6Ho19fUZ9A3.62z0BzSHjPl" data-slide-title="Portada subtema" title="Portada subtema" tabindex="-1" role="none" data-tabindex="-1">
+                <span style="position: absolute; opacity: 0;">Portada subtema </span>
+
+                
+                <span class="linkText" aria-hidden="true">
+                  Portada subtema
+                </span>
+                <span class="outline-states" aria-hidden="true">
+                  <span class="visitedIcon" aria-label="visitado">
+                    <svg class="cs-icon check-icon" focusable="false" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <polygon style="fill:currentColor !important" points="12.04 4 13.45 5.41 6.25 12.62 2 8.36 3.41 6.95 6.25 9.79"></polygon>
+      </g>
+    </svg>
+                  </span>
+                  <span class="lockedIcon" aria-label="bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                  <span class="lockedViewedIcon" aria-label="visitado, bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M7.11248548,6.17405922 C7.38175483,6.47268397 7.38175483,6.92847965 7.0966461,7.21138731 L4.53066757,9.75755627 C4.38811321,9.8990101 4.19804072,9.96187847 4.02380761,9.96187847 C3.83373513,9.96187847 3.65950202,9.8990101 3.51694766,9.75755627 L2.34544071,8.45018243 C2.06033199,8.16727477 2.06033199,7.71147909 2.34544071,7.42857143 C2.63054944,7.14566377 3.08989127,7.14566377 3.375,7.42857143 L4.02380761,8.21728122 L6.08292619,6.17405922 C6.36803491,5.89115155 6.82737675,5.89115155 7.11248548,6.17405922 Z M4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                </span>
+              </div>
+            </li><li tabindex="-1" role="treeitem" data-tabindex="-1">
+              <div class="cs-listitem listitem no-wrap false cs-viewed" style="padding-left: 49px;" data-ref="_player.6Ho19fUZ9A3.64UpVswigrT" data-slide-title="Actividad 1" title="Actividad 1" tabindex="-1" role="none" data-tabindex="-1">
+                <span style="position: absolute; opacity: 0;">Actividad 1 visitado</span>
+
+                
+                <span class="linkText" aria-hidden="true">
+                  Actividad 1
+                </span>
+                <span class="outline-states" aria-hidden="true">
+                  <span class="visitedIcon" aria-label="visitado">
+                    <svg class="cs-icon check-icon" focusable="false" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <polygon style="fill:currentColor !important" points="12.04 4 13.45 5.41 6.25 12.62 2 8.36 3.41 6.95 6.25 9.79"></polygon>
+      </g>
+    </svg>
+                  </span>
+                  <span class="lockedIcon" aria-label="bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                  <span class="lockedViewedIcon" aria-label="visitado, bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M7.11248548,6.17405922 C7.38175483,6.47268397 7.38175483,6.92847965 7.0966461,7.21138731 L4.53066757,9.75755627 C4.38811321,9.8990101 4.19804072,9.96187847 4.02380761,9.96187847 C3.83373513,9.96187847 3.65950202,9.8990101 3.51694766,9.75755627 L2.34544071,8.45018243 C2.06033199,8.16727477 2.06033199,7.71147909 2.34544071,7.42857143 C2.63054944,7.14566377 3.08989127,7.14566377 3.375,7.42857143 L4.02380761,8.21728122 L6.08292619,6.17405922 C6.36803491,5.89115155 6.82737675,5.89115155 7.11248548,6.17405922 Z M4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                </span>
+              </div>
+            </li><li tabindex="-1" role="treeitem" data-tabindex="-1">
+              <div class="cs-listitem listitem no-wrap false cs-viewed cs-selected" style="padding-left: 49px;" data-ref="_player.6Ho19fUZ9A3.6Ux21WL90ww" data-slide-title="Actividad 2" title="Actividad 2" tabindex="-1" role="none" data-tabindex="-1">
+                <span style="position: absolute; opacity: 0;">Actividad 2 visitado</span>
+
+                
+                <span class="linkText" aria-hidden="true">
+                  Actividad 2
+                </span>
+                <span class="outline-states" aria-hidden="true">
+                  <span class="visitedIcon" aria-label="visitado">
+                    <svg class="cs-icon check-icon" focusable="false" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <polygon style="fill:currentColor !important" points="12.04 4 13.45 5.41 6.25 12.62 2 8.36 3.41 6.95 6.25 9.79"></polygon>
+      </g>
+    </svg>
+                  </span>
+                  <span class="lockedIcon" aria-label="bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                  <span class="lockedViewedIcon" aria-label="visitado, bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M7.11248548,6.17405922 C7.38175483,6.47268397 7.38175483,6.92847965 7.0966461,7.21138731 L4.53066757,9.75755627 C4.38811321,9.8990101 4.19804072,9.96187847 4.02380761,9.96187847 C3.83373513,9.96187847 3.65950202,9.8990101 3.51694766,9.75755627 L2.34544071,8.45018243 C2.06033199,8.16727477 2.06033199,7.71147909 2.34544071,7.42857143 C2.63054944,7.14566377 3.08989127,7.14566377 3.375,7.42857143 L4.02380761,8.21728122 L6.08292619,6.17405922 C6.36803491,5.89115155 6.82737675,5.89115155 7.11248548,6.17405922 Z M4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                </span>
+              </div>
+            </li><li tabindex="-1" role="treeitem" data-tabindex="-1">
+              <div class="cs-listitem listitem  no-wrap false " style="padding-left: 49px;" data-ref="_player.6Ho19fUZ9A3.6afmSDYLwKM" data-slide-title="Actividad 2" title="Actividad 2" tabindex="-1" role="none" data-tabindex="-1">
+                <span style="position: absolute; opacity: 0;">Actividad 2 </span>
+
+                
+                <span class="linkText" aria-hidden="true">
+                  Actividad 2
+                </span>
+                <span class="outline-states" aria-hidden="true">
+                  <span class="visitedIcon" aria-label="visitado">
+                    <svg class="cs-icon check-icon" focusable="false" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <polygon style="fill:currentColor !important" points="12.04 4 13.45 5.41 6.25 12.62 2 8.36 3.41 6.95 6.25 9.79"></polygon>
+      </g>
+    </svg>
+                  </span>
+                  <span class="lockedIcon" aria-label="bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                  <span class="lockedViewedIcon" aria-label="visitado, bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M7.11248548,6.17405922 C7.38175483,6.47268397 7.38175483,6.92847965 7.0966461,7.21138731 L4.53066757,9.75755627 C4.38811321,9.8990101 4.19804072,9.96187847 4.02380761,9.96187847 C3.83373513,9.96187847 3.65950202,9.8990101 3.51694766,9.75755627 L2.34544071,8.45018243 C2.06033199,8.16727477 2.06033199,7.71147909 2.34544071,7.42857143 C2.63054944,7.14566377 3.08989127,7.14566377 3.375,7.42857143 L4.02380761,8.21728122 L6.08292619,6.17405922 C6.36803491,5.89115155 6.82737675,5.89115155 7.11248548,6.17405922 Z M4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                </span>
+              </div>
+            </li><li tabindex="-1" role="treeitem" data-tabindex="-1">
+              <div class="cs-listitem listitem  no-wrap false " style="padding-left: 49px;" data-ref="_player.6Ho19fUZ9A3.68ySuKm6xQ7" data-slide-title="Actividad 3" title="Actividad 3" tabindex="-1" role="none" data-tabindex="-1">
+                <span style="position: absolute; opacity: 0;">Actividad 3 </span>
+
+                
+                <span class="linkText" aria-hidden="true">
+                  Actividad 3
+                </span>
+                <span class="outline-states" aria-hidden="true">
+                  <span class="visitedIcon" aria-label="visitado">
+                    <svg class="cs-icon check-icon" focusable="false" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <polygon style="fill:currentColor !important" points="12.04 4 13.45 5.41 6.25 12.62 2 8.36 3.41 6.95 6.25 9.79"></polygon>
+      </g>
+    </svg>
+                  </span>
+                  <span class="lockedIcon" aria-label="bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                  <span class="lockedViewedIcon" aria-label="visitado, bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M7.11248548,6.17405922 C7.38175483,6.47268397 7.38175483,6.92847965 7.0966461,7.21138731 L4.53066757,9.75755627 C4.38811321,9.8990101 4.19804072,9.96187847 4.02380761,9.96187847 C3.83373513,9.96187847 3.65950202,9.8990101 3.51694766,9.75755627 L2.34544071,8.45018243 C2.06033199,8.16727477 2.06033199,7.71147909 2.34544071,7.42857143 C2.63054944,7.14566377 3.08989127,7.14566377 3.375,7.42857143 L4.02380761,8.21728122 L6.08292619,6.17405922 C6.36803491,5.89115155 6.82737675,5.89115155 7.11248548,6.17405922 Z M4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                </span>
+              </div>
+            </li><li tabindex="-1" role="treeitem" data-tabindex="-1">
+              <div class="cs-listitem listitem  no-wrap false " style="padding-left: 49px;" data-ref="_player.6Ho19fUZ9A3.6ZzbB5wApAz" data-slide-title="Actividad 3" title="Actividad 3" tabindex="-1" role="none" data-tabindex="-1">
+                <span style="position: absolute; opacity: 0;">Actividad 3 </span>
+
+                
+                <span class="linkText" aria-hidden="true">
+                  Actividad 3
+                </span>
+                <span class="outline-states" aria-hidden="true">
+                  <span class="visitedIcon" aria-label="visitado">
+                    <svg class="cs-icon check-icon" focusable="false" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <polygon style="fill:currentColor !important" points="12.04 4 13.45 5.41 6.25 12.62 2 8.36 3.41 6.95 6.25 9.79"></polygon>
+      </g>
+    </svg>
+                  </span>
+                  <span class="lockedIcon" aria-label="bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                  <span class="lockedViewedIcon" aria-label="visitado, bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M7.11248548,6.17405922 C7.38175483,6.47268397 7.38175483,6.92847965 7.0966461,7.21138731 L4.53066757,9.75755627 C4.38811321,9.8990101 4.19804072,9.96187847 4.02380761,9.96187847 C3.83373513,9.96187847 3.65950202,9.8990101 3.51694766,9.75755627 L2.34544071,8.45018243 C2.06033199,8.16727477 2.06033199,7.71147909 2.34544071,7.42857143 C2.63054944,7.14566377 3.08989127,7.14566377 3.375,7.42857143 L4.02380761,8.21728122 L6.08292619,6.17405922 C6.36803491,5.89115155 6.82737675,5.89115155 7.11248548,6.17405922 Z M4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                </span>
+              </div>
+            </li><li tabindex="-1" role="treeitem" data-tabindex="-1">
+              <div class="cs-listitem listitem  no-wrap false " style="padding-left: 49px;" data-ref="_player.6Ho19fUZ9A3.6GsoYHEr0lH" data-slide-title="Actividad 3" title="Actividad 3" tabindex="-1" role="none" data-tabindex="-1">
+                <span style="position: absolute; opacity: 0;">Actividad 3 </span>
+
+                
+                <span class="linkText" aria-hidden="true">
+                  Actividad 3
+                </span>
+                <span class="outline-states" aria-hidden="true">
+                  <span class="visitedIcon" aria-label="visitado">
+                    <svg class="cs-icon check-icon" focusable="false" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <polygon style="fill:currentColor !important" points="12.04 4 13.45 5.41 6.25 12.62 2 8.36 3.41 6.95 6.25 9.79"></polygon>
+      </g>
+    </svg>
+                  </span>
+                  <span class="lockedIcon" aria-label="bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                  <span class="lockedViewedIcon" aria-label="visitado, bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M7.11248548,6.17405922 C7.38175483,6.47268397 7.38175483,6.92847965 7.0966461,7.21138731 L4.53066757,9.75755627 C4.38811321,9.8990101 4.19804072,9.96187847 4.02380761,9.96187847 C3.83373513,9.96187847 3.65950202,9.8990101 3.51694766,9.75755627 L2.34544071,8.45018243 C2.06033199,8.16727477 2.06033199,7.71147909 2.34544071,7.42857143 C2.63054944,7.14566377 3.08989127,7.14566377 3.375,7.42857143 L4.02380761,8.21728122 L6.08292619,6.17405922 C6.36803491,5.89115155 6.82737675,5.89115155 7.11248548,6.17405922 Z M4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                </span>
+              </div>
+            </li><li tabindex="-1" role="treeitem" data-tabindex="-1">
+              <div class="cs-listitem listitem  no-wrap false " style="padding-left: 49px;" data-ref="_player.6Ho19fUZ9A3.6oZL3oRXFpz" data-slide-title="Actividad 4" title="Actividad 4" tabindex="-1" role="none" data-tabindex="-1">
+                <span style="position: absolute; opacity: 0;">Actividad 4 </span>
+
+                
+                <span class="linkText" aria-hidden="true">
+                  Actividad 4
+                </span>
+                <span class="outline-states" aria-hidden="true">
+                  <span class="visitedIcon" aria-label="visitado">
+                    <svg class="cs-icon check-icon" focusable="false" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <polygon style="fill:currentColor !important" points="12.04 4 13.45 5.41 6.25 12.62 2 8.36 3.41 6.95 6.25 9.79"></polygon>
+      </g>
+    </svg>
+                  </span>
+                  <span class="lockedIcon" aria-label="bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                  <span class="lockedViewedIcon" aria-label="visitado, bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M7.11248548,6.17405922 C7.38175483,6.47268397 7.38175483,6.92847965 7.0966461,7.21138731 L4.53066757,9.75755627 C4.38811321,9.8990101 4.19804072,9.96187847 4.02380761,9.96187847 C3.83373513,9.96187847 3.65950202,9.8990101 3.51694766,9.75755627 L2.34544071,8.45018243 C2.06033199,8.16727477 2.06033199,7.71147909 2.34544071,7.42857143 C2.63054944,7.14566377 3.08989127,7.14566377 3.375,7.42857143 L4.02380761,8.21728122 L6.08292619,6.17405922 C6.36803491,5.89115155 6.82737675,5.89115155 7.11248548,6.17405922 Z M4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                </span>
+              </div>
+            </li><li tabindex="-1" role="treeitem" data-tabindex="-1">
+              <div class="cs-listitem listitem  no-wrap false " style="padding-left: 49px;" data-ref="_player.6Ho19fUZ9A3.6ejWdepxlUr" data-slide-title="Actividad 4" title="Actividad 4" tabindex="-1" role="none" data-tabindex="-1">
+                <span style="position: absolute; opacity: 0;">Actividad 4 </span>
+
+                
+                <span class="linkText" aria-hidden="true">
+                  Actividad 4
+                </span>
+                <span class="outline-states" aria-hidden="true">
+                  <span class="visitedIcon" aria-label="visitado">
+                    <svg class="cs-icon check-icon" focusable="false" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <polygon style="fill:currentColor !important" points="12.04 4 13.45 5.41 6.25 12.62 2 8.36 3.41 6.95 6.25 9.79"></polygon>
+      </g>
+    </svg>
+                  </span>
+                  <span class="lockedIcon" aria-label="bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                  <span class="lockedViewedIcon" aria-label="visitado, bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M7.11248548,6.17405922 C7.38175483,6.47268397 7.38175483,6.92847965 7.0966461,7.21138731 L4.53066757,9.75755627 C4.38811321,9.8990101 4.19804072,9.96187847 4.02380761,9.96187847 C3.83373513,9.96187847 3.65950202,9.8990101 3.51694766,9.75755627 L2.34544071,8.45018243 C2.06033199,8.16727477 2.06033199,7.71147909 2.34544071,7.42857143 C2.63054944,7.14566377 3.08989127,7.14566377 3.375,7.42857143 L4.02380761,8.21728122 L6.08292619,6.17405922 C6.36803491,5.89115155 6.82737675,5.89115155 7.11248548,6.17405922 Z M4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                </span>
+              </div>
+            </li><li tabindex="-1" role="treeitem" data-tabindex="-1">
+              <div class="cs-listitem listitem  no-wrap false " style="padding-left: 49px;" data-ref="_player.6Ho19fUZ9A3.6Uj6GKsJOHM" data-slide-title="Final" title="Final" tabindex="-1" role="none" data-tabindex="-1">
+                <span style="position: absolute; opacity: 0;">Final </span>
+
+                
+                <span class="linkText" aria-hidden="true">
+                  Final
+                </span>
+                <span class="outline-states" aria-hidden="true">
+                  <span class="visitedIcon" aria-label="visitado">
+                    <svg class="cs-icon check-icon" focusable="false" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <polygon style="fill:currentColor !important" points="12.04 4 13.45 5.41 6.25 12.62 2 8.36 3.41 6.95 6.25 9.79"></polygon>
+      </g>
+    </svg>
+                  </span>
+                  <span class="lockedIcon" aria-label="bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                  <span class="lockedViewedIcon" aria-label="visitado, bloqueado">
+                    <svg width="16px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+            <path style="fill:currentColor !important" d="M7.875,4 L7.3125,4 L7.3125,2.85714286 C7.3125,1.28 6.0525,0 4.5,0 C2.9475,0 1.6875,1.28 1.6875,2.85714286 L1.6875,4 L1.125,4 C0.50625,4 0,4.51428571 0,5.14285714 L0,10.8571429 C0,11.4857143 0.50625,12 1.125,12 L7.875,12 C8.49375,12 9,11.4857143 9,10.8571429 L9,5.14285714 C9,4.51428571 8.49375,4 7.875,4 Z M7.11248548,6.17405922 C7.38175483,6.47268397 7.38175483,6.92847965 7.0966461,7.21138731 L4.53066757,9.75755627 C4.38811321,9.8990101 4.19804072,9.96187847 4.02380761,9.96187847 C3.83373513,9.96187847 3.65950202,9.8990101 3.51694766,9.75755627 L2.34544071,8.45018243 C2.06033199,8.16727477 2.06033199,7.71147909 2.34544071,7.42857143 C2.63054944,7.14566377 3.08989127,7.14566377 3.375,7.42857143 L4.02380761,8.21728122 L6.08292619,6.17405922 C6.36803491,5.89115155 6.82737675,5.89115155 7.11248548,6.17405922 Z M4.5,1.08571429 C5.461875,1.08571429 6.24375,1.88 6.24375,2.85714286 L6.24375,4 L2.75625,4 L2.75625,2.85714286 C2.75625,1.88 3.538125,1.08571429 4.5,1.08571429 Z"></path>
+        </g>
+    </g>
+</svg>
+                  </span>
+                </span>
+              </div>
+            </li></ul></li></ul></nav><div id="outline-scroll-id" class="scrollarea-scrollbar micro-scrollbar outline-scroll" tabindex="-1" style="margin-top: 12px;" data-tabindex="-1"><div class="scrollarea-btn micro-scrollbar-btn" style="height: 372.887px; top: 0px;"></div></div></div></div></div></div><button id="hamburger" aria-expanded="false" aria-controls="sidebar" aria-label="Mostrar/ocultar barra lateral" tabindex="0" style="position: absolute; left: 0px; top: 0px; overflow: hidden; transform-origin: center center; cursor: pointer; width: 50px; height: 65px; transform: translate(245px, 0px);" data-tabindex="0">
+      <div class="menu-icon-wrapper" data-ref="wrapper">
+        
+    <svg class="cs-icon" width="30px" height="12px" viewBox="0 10 30 12" focusable="false">
+      <path transform="translate(0, 1)" d="M0,15 L17,15 L17,17 L0,17 L0,15 Z M0,11 L17,11 L17,13 L0,13 L0,11 Z M0,19 L17,19 L17,21 L0,21 L0,19 Z"></path>
+    </svg>
+  
+      </div>
+    </button></section><section id="top-bar" aria-label="top bar" style="position: absolute; left: 0px; top: 0px; overflow: visible; transform-origin: center center; width: 179px; height: 65px; transform: translate(0px, 0px);"><h1 class="presentation-title cs-title" style="position: absolute; left: 0px; top: 0px; overflow: visible; transform-origin: center center; display: none; width: 4px; height: 22px; transform: translate(61px, 22px);"><div class="view-content" tabindex="-1" style="position: relative; text-align: center; top: 0px;" data-tabindex="-1"><div data-ref="label" class="presentation-title-text"></div><div data-ref="separator" class="top-tabs-line" style="height:26.00001px; display:none"></div></div></h1><div id="top-tabs" role="navigation" style="position: absolute; left: 0px; top: 0px; overflow: visible; transform-origin: center center; width: 179px; height: 65px; transform: translate(0px, 0px);"><div id="arrow-shadow" style="position: absolute; left: 0px; top: 0px; overflow: visible; transform-origin: center center; display: none; width: 17px; height: 17px; transform: translate(0px, 0px);">
+    <div class="panel-arrow" data-ref="arrow" style="height: 17px; width: 17px; position: absolute;">
+      <div class="panel-arrow-path" style="
+          height: 100%;
+          width: 100%;
+          background-color: rgb(250, 250, 250);
+          border-left: 1px solid;
+          border-top: 1px solid;
+          border-color: rgb(250, 250, 250);
+          border-top-left-radius: 3px;
+          transform: rotate(45deg);
+          ">
+    </div></div></div><div id="links-right" tabindex="-1" style="position: absolute; left: -1px; top: 0px; overflow: visible; transform-origin: center center; z-index: 5; width: 99px; height: 22px; transform: translate(70px, 22px);" data-tabindex="-1"><button id="resources-link" class="cs-topmenu-item cs-tabs top-tab panel-link" data-tabindex="0" tabindex="0" aria-controls="resources-panel" aria-expanded="false" style="position: absolute; left: 0px; top: 0px; overflow: hidden; transform-origin: center center; z-index: 2; cursor: pointer; width: 86px; height: 24px; transform: translate(3px, 0px); display: block;"><div class="view-content" tabindex="-1" style="position: relative; text-align: center; top: 0px;" data-tabindex="-1"><span data-ref="label" class="cs-tab top-tab-text">Recursos</span></div></button><div id="resources-panel" class="cs-topmenu-item topmenu-item active cs-menu cs-panel panel top-tabs-drop topmenu-panel-align-right" tabindex="-1" style="position: absolute; left: 0px; top: 0px; overflow: visible; transform-origin: center center; z-index: 2; border-color: rgb(250, 250, 250); background: rgb(250, 250, 250); display: none; width: 302px; height: 200px; transform: translate(0px, 33px);" data-tabindex="-1">
+    <div class="panel-arrow" data-ref="arrow" style="height: 17px; width: 17px; position: absolute; left: 35px;">
+      <div class="panel-arrow-path" style="
+          height: 100%;
+          width: 100%;
+          background-color: rgb(250, 250, 250);
+          border-left: 1px solid;
+          border-top: 1px solid;
+          border-color: rgb(250, 250, 250);
+          border-top-left-radius: 3px;
+          transform: rotate(45deg);
+          ">
+    </div></div><div id="resources-content" class="cs-resource  resources" tabindex="-1" style="position: absolute; left: 0px; top: 0px; transform-origin: center center; width: 302px; height: 190px; transform: translate(0px, 0px);" data-tabindex="-1">
+      <div class="resources-content scrolling-panel panel-content">
+        <ul class="resources-list" role="menu">
+          
+        </ul>
+      </div></div><div id="resources-scroll-id" class="scrollarea-scrollbar micro-scrollbar resources-scroll hidden" tabindex="0" style="margin-top: 12px;" data-tabindex="0"><div class="scrollarea-btn micro-scrollbar-btn"></div></div></div></div></div><div id="top-ellipsis" style="position: absolute; left: 0px; top: 0px; overflow: visible; transform-origin: center center; display: none; width: 58px; height: 65px; transform: translate(169px, 0px);">
+      <button class="top-tabs-drop-icon cs-button btn" data-ref="icon" aria-expanded="false" aria-controls="top-ellipsis-panel" aria-label="top_links">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+
+      
+    <div class="panel-arrow" data-ref="arrow" style="height: 17px; width: 17px; position: absolute; display: none;">
+      <div class="panel-arrow-path" style="
+          height: 100%;
+          width: 100%;
+          background-color: rgb(250, 250, 250);
+          border-left: 1px solid;
+          border-top: 1px solid;
+          border-color: rgb(250, 250, 250);
+          border-top-left-radius: 3px;
+          transform: rotate(45deg);
+          ">
+    </div>
+    </div><div id="top-ellipsis-panel" class="top-ellipsis-panel top-tabs-drop" aria-expanded="false" aria-controls="temp-container" style="position: absolute; left: 0px; top: 0px; overflow: visible; transform-origin: center center; display: none; width: 100px; height: 100px; transform: translate(-10px, 55px);">
+      <div class="panel-links" data-ref="links">
+      </div>
+    </div></div></section></div></div><div class="caption-container" style="position: absolute; left: 0px; top: 0px; overflow: hidden; transform-origin: center center; z-index: 2; font-size: 100%; width: 179px; height: 418px; transform: translate(0px, 65px);"><div class="caption" data-display-name="Captions" data-dv_comp="31" style="bottom: 0%; margin-bottom: 0px; top: unset;"></div></div><div id="app-top" style="position: absolute; left: 0px; top: 0px;"><div id="app-top-overlay"></div><div id="app-top-container"></div><div id="app-focus-container" class="focus-container"></div><div id="tooltip" class="cs-base cs-npnxnanbnsnfns00001100001" style="left: 0px; top: 460.5px; border-color: rgb(88, 88, 88); display: none;"></div></div></div><div id="mobile-start-container" class="fn-npnxnanbnsnfns00001100001" style="display: none;"><div class="mobile-start-overlay hidden" aria-modal="true" aria-labelledby="mobile-start-title" data-display-name="MobileStartOverlay" data-dv_comp="30"><div class="mobile-load-title-overlay" style="opacity: 0;"><div class="mobile-load-title" id="mobile-start-title">Nociones espaciales - Primera parte</div></div><div class="mobile-start-course-title"><h1 style="font-size: 20.28px;">Nociones espaciales - Primera parte</h1></div><div></div><button id="mobile-start-button" role="button" aria-label="Comenzar el curso" data-has-capture="" tabindex="0" style="z-index: 1;"><svg class="play-icon" data-dv_ref="playIcon" focusable="false" viewBox="0 0 125 125" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.8" cx="62.5" cy="62.5" r="61.5" fill="black" stroke="white" stroke-width="2"></circle><path d="M51.8745 83.6249C52.6245 83.9999 53.3745 84.1249 54.1245 84.1249C54.9995 84.1249 55.9995 83.8749 56.7495 83.2499L81.9995 65.9999C83.2495 65.1249 83.9995 63.6249 83.9995 62.1249C83.9995 60.6249 83.2495 59.1249 81.8745 58.2499L56.6245 41.4999C55.1245 40.4999 53.3745 40.4999 51.7495 41.2499C50.2495 42.1249 49.2495 43.6249 49.2495 45.3749V79.3749C49.3745 81.2499 50.2495 82.8749 51.8745 83.6249Z" fill="white"></path></svg></button></div></div>
+  <script>
+    (function() {
+
+      var classTypes = [ 'desktop', 'mobile', 'phone', 'tablet' ];
+
+      var addDeviceClasses = function(prefix, testObj) {
+        var curr, i;
+        for (i = 0; i < classTypes.length; i++) {
+          curr = classTypes[i];
+          if (testObj[curr]) {
+            document.body.classList.add(prefix + curr);
+          }
+        }
+      };
+
+      var params = window.globals.parseParams(),
+          isDevicePreview = params.devicepreview === '1',
+          isPhoneOverride = params.deviceType === 'phone' || (isDevicePreview && params.phone == '1'),
+          isTabletOverride = (params.deviceType === 'tablet' || isDevicePreview) && !isPhoneOverride,
+          isMobileOverride = isPhoneOverride || isTabletOverride;
+
+      var deviceView = {
+        desktop: !window.isMobile.any && !isMobileOverride,
+        mobile: window.isMobile.any || isMobileOverride,
+        phone: isPhoneOverride || (window.isMobile.phone && !isTabletOverride),
+        tablet: isTabletOverride || window.isMobile.tablet
+      };
+
+      window.globals.deviceView = deviceView;
+      window.isMobile.desktop = !window.isMobile.any;
+      window.isMobile.mobile = window.isMobile.any;
+
+      addDeviceClasses('view-', deviceView);
+
+    })();
+  </script>
+  
+  <script src="story_content/triggers.js" type="text/javascript"></script>
+<script src="story_content/user.js" type="text/javascript"></script>
+  <div class="slide-loader" style="display: none; opacity: 0;"><div class="mobile-loader-dot dot1" style="background-color: rgb(140, 140, 140);"></div><div class="mobile-loader-dot dot2" style="background-color: rgb(140, 140, 140);"></div><div class="mobile-loader-dot dot3" style="background-color: rgb(140, 140, 140);"></div></div>
+
+  <script>
+    var doc = document, loader = doc.body.querySelector('.slide-loader'); [ 1, 2, 3 ].forEach(function(n) { var d = doc.createElement('div'); d.style.backgroundColor = window.globals.preloaderColor; d.classList.add('mobile-loader-dot'); d.classList.add('dot' + n); loader.appendChild(d); });
+  </script>
+
+  
+
+  <div class="mobile-chrome-warning"></div>
+
+  
+<style>
+  .warn-connection-dialog {
+    display: none;
+    background: transparent;
+    pointer-events: all;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+
+  .warn-connection-content {
+    pointer-events: all;
+    border-radius: 4px;
+    background: white;
+    border: 1px solid #E7E7E7;
+    color: #333333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    transition: all 150ms ease-out;
+    position: absolute;
+    white-space: nowrap;
+  }
+
+  .view-phone.is-landscape .warn-connection-content {
+    left: 23px;
+    bottom: 23px;
+  }
+
+  .view-tablet.is-landscape .warn-connection-content {
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+  }
+
+  .view-mobile.is-portrait .warn-connection-content {
+    transform: translate(-50%, calc(-100% - 15px));
+  }
+
+  .warn-connection-content p {
+    display: inline-block;
+    margin: 0 8px 0 0;
+    line-height: 33px;
+    font-size: 11px;
+  }
+
+  .warn-connection-content svg {
+    position: relative;
+    vertical-align: middle;
+    margin: 0 2px 2px 8px;
+  }
+
+  .view-desktop .warn-connection-content {
+    left: 1.5em;
+    bottom: 1.5em;
+  }
+
+  .view-desktop .warn-connection-content p {
+    font-size: 1.1em;
+  }
+
+  .is-offline .warn-connection-dialog {
+    display: block;
+  }
+
+  .is-offline .cs-panel * {
+    pointer-events: none !important;
+  }
+
+  .is-offline .cs-panel {
+    pointer-events: all !important;
+  }
+
+  .is-offline #nav-controls * {
+    pointer-events: none !important;
+  }
+
+  .is-offline #nav-controls {
+    pointer-events: all !important;
+  }
+</style>
+
+<div class="warn-connection-dialog" role="alertdialog" aria-modal="true" tabindex="0" aria-labelledby="warn-connection-message">
+  <div class="warn-connection-content">
+    <svg width="17" height="15" viewBox="0 0 17 15" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#8F0000" stroke="white" d="M16.07,12.98 L15.88,12.23 L9.51,1.21 C8.97,0.26,7.6,0.26,7.06,1.21 L0.69,12.23 C0.15,13.16,0.81,14.36,1.91,14.36 H14.65 C15.47,14.36,16.05,13.7,16.07,12.98 Z"></path>
+      <path fill="white" stroke="white" d="M8.58,5.5 C8.35,5.28,8.5,5.35,8.21,5.32 C8.09,5.35,7.97,5.49,7.96,5.67 C7.97,5.79,7.98,5.92,7.98,6.04 L7.98,6.04 C7.99,6.17,8,6.31,8.01,6.43 L8.01,6.44 C8.03,6.92,8.06,7.41,8.09,7.9 L8.09,7.9 C8.12,8.39,8.14,8.88,8.17,9.37 C8.17,9.39,8.18,9.42,8.2,9.44 C8.23,9.46,8.25,9.47,8.28,9.47 C8.31,9.47,8.34,9.46,8.35,9.44 C8.37,9.43,8.38,9.4,8.39,9.35 L8.39,9.34 C8.39,9.24,8.4,9.15,8.4,9.05 L8.4,9.05 C8.41,8.96,8.41,8.86,8.42,8.75 C8.43,8.44,8.45,8.12,8.47,7.81 L8.47,7.81 C8.49,7.49,8.51,7.18,8.53,6.87 C8.55,6.46,8.56,6.05,8.59,5.64 L8.6,5.62 C8.6,5.57,8.59,5.53,8.58,5.5 L8.21,5.32 Z"></path>
+      <circle fill="white" stroke="white" cx="8.3" cy="11.35" r="0.3"></circle>
+    </svg>
+    <p id="warn-connection-message">You are offline. Trying to reconnect...</p>
+  </div>
+</div>
+
+<script>
+  (function() {
+    window.DS.connection = {
+      warningShown: false,
+      assets: {},
+      loadingAssetGroup: false,
+      retryDelay: 500
+    };
+
+    var connectionSettings = window.globals.connectionSettings || {};
+
+    var useConnectionMessages = window.AbortController != null &&
+      window.location.protocol != 'file:' &&
+      connectionSettings.mode === 'normal';
+
+    window.DS.connection.useConnectionMessages = useConnectionMessages;
+
+    var assetCount = 0;
+    var checkLoadedId;
+
+
+    if (useConnectionMessages && connectionSettings != null) {
+      var contentEl = document.querySelector('.warn-connection-content');
+      var messageEl = contentEl.querySelector('p');
+
+      if (connectionSettings.useDarkTheme) {
+        contentEl.style.borderColor = '#BABBBA';
+        contentEl.style.backgroundColor = '#282828';
+        contentEl.style.color = '#FFFFFF';
+      }
+
+      if (connectionSettings.message != null) {
+        messageEl.textContent = window.decodeURIComponent(connectionSettings.message);
+      }
+    }
+
+    function checkAssetsReady() {
+      for (var i in DS.connection.assets) {
+        if (!DS.connection.assets[i].success) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function stopAssetGroup() {
+      if (!useConnectionMessages) { return; }
+
+      assetCount = 0;
+
+      DS.connection.oldAssetGroup = DS.connection.assets;
+      DS.connection.assets = {};
+      DS.connection.loadingAssetGroup = false;
+      clearInterval(checkLoadedId);
+    }
+
+    function startAssetGroup() {
+      if (!useConnectionMessages) { return; }
+      var ticks = 0;
+      clearInterval(checkLoadedId);
+      checkLoadedId = setInterval(function() {
+        var loaded = 0;
+        if (assetCount === 0 && loaded === 0) {
+          clearInterval(checkLoadedId);
+          return;
+        }
+
+        for (var i in DS.connection.assets) {
+          if (DS.connection.assets[i].success) {
+            loaded++;
+          }
+        }
+
+        if (assetCount === loaded && checkAssetsReady()) {
+          for (var i in DS.connection.assets) {
+            if (DS.connection.assets[i].action) {
+              DS.connection.assets[i].action();
+            }
+          }
+          hideWarning();
+          stopAssetGroup();
+        }
+      }, 100)
+    }
+
+    function requiredAsset(url, action, retry, type) {
+      if (!useConnectionMessages) { return; }
+      if (DS.connection.assets[url]) { return; }
+
+      DS.connection.assets[url] = {
+        success: false, action: action, retry: retry, type: type
+      };
+      assetCount = Object.keys(DS.connection.assets).length;
+      if (!DS.connection.loadingAssetGroup) {
+        startAssetGroup();
+      }
+      DS.connection.loadingAssetGroup = true;
+    }
+
+    function assetLoaded(url) {
+      if (!useConnectionMessages) { return; }
+      if (DS.connection.assets[url]) {
+        DS.connection.assets[url].success = true;
+      }
+    }
+
+    function assetFailed(url) {
+      if (!useConnectionMessages) { return; }
+      if (!DS.connection.assets[url]) {
+        if (/\.js$/.test(url) && url.indexOf('transcripts') === -1) {
+          setTimeout(function() {
+            if (DS.connection.lastSlideLoaded != null) {
+              DS.connection.lastSlideLoaded();
+            }
+          }, DS.connection.retryDelay);
+        }
+        return;
+      }
+      if (!DS.connection.warningShown) { showWarning(); }
+      if (DS.connection.assets[url].retry) {
+        setTimeout(function() {
+          if (!DS.connection.assets[url].success) {
+            DS.connection.assets[url].retry()
+          }
+        }, DS.connection.retryDelay);
+      }
+    }
+
+    function hideWarning() {
+      document.body.classList.remove('is-offline');
+      DS.connection.warningShown = false;
+      enableKeys();
+    }
+    DS.connection.hideWarning = hideWarning
+
+    function showWarning(btn) {
+      document.body.classList.add('is-offline')
+      DS.connection.warningShown = true;
+      updateWarningPosition();
+      disableKeys();
+    }
+
+    function updateWarningPosition() {
+      if (!DS.connection.warningShown) {
+        return;
+      }
+
+      var isPortrait = document.body.classList.contains('is-portrait');
+      var isMobile = document.body.classList.contains('view-mobile');
+      var warningEl = document.querySelector('.warn-connection-content');
+
+      if (isPortrait && isMobile) {
+        var slide = document.querySelector('.primary-slide');
+        var slideRect = slide != null
+          ? slide.getBoundingClientRect()
+          : { top: window.innerHeight, left: 0, width: window.innerWidth };
+
+        warningEl.style.top = `${slideRect.top}px`
+        warningEl.style.left = `${slideRect.left + slideRect.width / 2}px`
+      } else {
+        warningEl.style.top = null;
+        warningEl.style.left = null;
+      }
+
+      window.requestAnimationFrame(updateWarningPosition);
+    }
+
+    function onDisableKeyDown(e) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+    }
+
+    function onDisableKeyUp(e) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+    }
+
+    var accStyle = document.createElement('style');
+    var warnDialogEl = document.querySelector('.warn-connection-dialog');
+
+    function disableKeys() {
+      if (DS.views && DS.views.nsStack && DS.views.nsStack.length === 1) {
+        DS.views.nsStack[0].tabReachable = false
+        DS.views.nsStack[0].updateTabIndex(true, true);
+      }
+
+      accStyle.innerHTML = '.acc-shadow-dom { display: none; }';
+      document.body.appendChild(accStyle);
+
+      warnDialogEl.parentNode.append(warnDialogEl);
+      warnDialogEl.focus();
+    }
+
+    function enableKeys() {
+      accStyle.remove();
+      if (DS.views && DS.views.nsStack && DS.views.nsStack.length === 1 && DS.views.nsStack[0].name === '_frame') {
+        DS.views.nsStack[0].tabReachable = true;
+        DS.views.nsStack[0].updateTabIndex();
+      }
+    }
+
+    // these will all be noops if the feature flag isn't set in
+    // the data and `window.globals.features`
+    DS.connection.requiredAsset = requiredAsset;
+    DS.connection.assetLoaded = assetLoaded;
+    DS.connection.assetFailed = assetFailed;
+    DS.connection.stopAssetGroup = stopAssetGroup;
+    DS.connection.startAssetGroup = startAssetGroup;
+  })();
+</script>
+
+
+  <script>
+    
+    if (window.autoSpider && window.vInterfaceObject) {
+      document.querySelector('.mobile-load-title-overlay').style.display = 'none';
+    }
+  </script>
+
+  
+
+  <link rel="stylesheet" href="html5/data/css/output.min.css" data-noprefix="">
+
+<script src="html5/lib/scripts/bootstrapper.min.js"></script><div id="focusBoxes"><div class="tab-focus-box" style="inset: 229px 0px 0px 10px; width: 158.996px; height: 88.9959px;"></div></div>
+
+<div id="transcript-container"></div><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/5xZEPkNdrYC_44100_56_0.mp3"></audio><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/6nLJx5sB3ia_44100_56_0.mp3"></audio><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/6XIFPM6c22C_44100_56_0.mp3"></audio><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/6qKBo09o7cO_44100_56_0.mp3"></audio><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/6Tqe0ryvSUd_44100_56_0.mp3"></audio><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/5zGUDQs9BVR_44100_56_0.mp3"></audio><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/5Z9nNmOs1L1_44100_56_0.mp3"></audio><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/6oKJDpdxscl_44100_56_0.mp3"></audio><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/6H5zyeOPinB_44100_56_0.mp3"></audio><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/5Z25EebCGRd_44100_56_0.mp3"></audio><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/5lLhobERwv3_44100_56_0.mp3"></audio><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/6Ei6ZGqzA4g_44100_56_0.mp3"></audio><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/6n64FrUTYgk_44100_56_0.mp3"></audio><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/5vsPBRGdc17_44100_56_0.mp3"></audio><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/6CuXD2RHQoL_44100_56_0.mp3"></audio><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/6SXXX2cpYde_44100_56_0.mp3"></audio><audio preload="auto" src="data:audio/mp3;base64,//MgxAAAAANIAAAAAExBTUUzLjk3VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zIsQnAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//MgxE8AAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zIMR2AAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/8yDEnQAAA0gAAAAAVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVEFHOWVmMTRlNzg4YzVhNDQ5AAAAAAAAAAAAAAAAAAAAYjZiYWQ3ZjY2NjFkZWZhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="></audio><audio preload="auto" src="data:audio/mp3;base64,//MgxAAAAANIAAAAAExBTUUzLjk3VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zIsQnAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//MgxE8AAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zIMR2AAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/8yDEnQAAA0gAAAAAVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVEFHOWVmMTRlNzg4YzVhNDQ5AAAAAAAAAAAAAAAAAAAAYjZiYWQ3ZjY2NjFkZWZhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="></audio><audio preload="auto" src="data:audio/mp3;base64,//MgxAAAAANIAAAAAExBTUUzLjk3VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zIsQnAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//MgxE8AAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zIMR2AAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/8yDEnQAAA0gAAAAAVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVEFHOWVmMTRlNzg4YzVhNDQ5AAAAAAAAAAAAAAAAAAAAYjZiYWQ3ZjY2NjFkZWZhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="></audio><audio preload="auto" src="data:audio/mp3;base64,//MgxAAAAANIAAAAAExBTUUzLjk3VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zIsQnAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//MgxE8AAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zIMR2AAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/8yDEnQAAA0gAAAAAVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVEFHOWVmMTRlNzg4YzVhNDQ5AAAAAAAAAAAAAAAAAAAAYjZiYWQ3ZjY2NjFkZWZhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="></audio><style>
+    .nested-panel-shown .cs-npnxnanbnsnfns00001100001 .top-tabs-drop:not(.panel) {
+      box-shadow: none !important;
+      background: transparent;
+      border: transparent !important;
+    }
+    .nested-panel-shown .cs-npnxnanbnsnfns00001100001 .top-tabs-drop .top-tab {
+      visibility: hidden;
+    }
+  </style><audio preload="auto" src="data:audio/mp3;base64,//MgxAAAAANIAAAAAExBTUUzLjk3VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zIsQnAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//MgxE8AAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zIMR2AAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/8yDEnQAAA0gAAAAAVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVEFHOWVmMTRlNzg4YzVhNDQ5AAAAAAAAAAAAAAAAAAAAYjZiYWQ3ZjY2NjFkZWZhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="></audio><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/5ztCboIXgdp_44100_56_0.mp3"></audio><audio preload="auto" src="/C:/Users/USUARIO/OneDrive/Desktop/Nociones%20espaciales%20-%20Primera%20parte/story_content/6n64FrUTYgk_44100_56_0.mp3"></audio></body>
+</html>

@@ -11,7 +11,7 @@ import PencilSelector from "../components/PencilSelector/PencilSelector";
 import { useNavigate } from "react-router-dom";
 import styles from "./Activity02.module.css";
 
-const Activity02 = () => {
+const Activity02 = ({onContinue }) => {
   const session = useActivity(activity02);
 
   const { actions, data, state } = session;
@@ -23,7 +23,7 @@ const Activity02 = () => {
   const navigate = useNavigate();
 
   const handleContinue = () => {
-    navigate("/module-1/activity01");
+    onContinue();
   };
 
   return (
