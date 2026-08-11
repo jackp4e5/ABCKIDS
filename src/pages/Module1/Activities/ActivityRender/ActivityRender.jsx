@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import Activity01 from "../Activity01/Activity01";
 import Activity02 from "../Activity02/Activity02";
-import activitiesNavigation from "../../../../components/Aside/activitiesNavigation";
+import activitiesNavigation from "../activitiesNavigation";
 
 const ActivityRender = () => {
   const navigate = useNavigate();

@@ -21,6 +21,7 @@ export const activity01 = {
     {
       id: "esfera",
       name: "Esfera",
+      audio: "../../../../public/audio/Activity01/audioEsfera.mp3",
 
       assets: {
         gray: "../../../../public/images/Activity01/grayCircle.png",
@@ -30,6 +31,7 @@ export const activity01 = {
     {
       id: "cubo",
       name: "Cubo",
+       audio: "../../../../public/audio/Activity01/audioCubo.mp3",
       assets: {
         gray: "../../../../public/images/Activity01/grayCube.png",
         active: "../../../../public/images/Activity01/activeCube.png",
@@ -38,6 +40,7 @@ export const activity01 = {
     {
       id: "cilindro",
       name: "Cilindro",
+      audio: "../../../../public/audio/Activity01/audioCilindro.mp3",
       assets: {
         gray: "../../../../public/images/Activity01/grayCilindre.png",
         active: "../../../../public/images/Activity01/activeCilindre.png",
@@ -46,6 +49,7 @@ export const activity01 = {
     {
       id: "cono",
       name: "Cono",
+      audio: "../../../../public/audio/Activity01/audioCono.mp3",
       assets: {
         gray: "../../../../public/images/Activity01/grayTriangle.png",
         active: "../../../../public/images/Activity01/activeTriangle.png",

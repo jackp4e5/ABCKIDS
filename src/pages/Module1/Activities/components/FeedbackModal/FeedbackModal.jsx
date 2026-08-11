@@ -3,7 +3,7 @@ import feedBackModal from "../../../../../data/Module1/FeedbackModal/feedbackMod
 import imgRestart from "../../../../../../public/ImagesBtns/btnRestart.png";
 import imgContinue from "../../../../../../public/ImagesBtns/btnContinue.png";
 import styles from "./FeedbackModal.module.css";
-const FeedbackModal = ({ correct, actions, onContinue}) => {
+const FeedbackModal = ({ correct, actions, onContinue }) => {
   const imgCorrect = feedBackModal.correct.images["correct"];
   const imgIncorrect = feedBackModal.inCorrect.images["inCorrect2"];
 
@@ -15,23 +15,23 @@ const FeedbackModal = ({ correct, actions, onContinue}) => {
 
   return (
     <div className={styles.modal}>
-      <div>
-        <ImageBlock
-          src={correct ? imgCorrect : imgIncorrect}
-          name={"Imagen buen trabajo  "}
-        />
+      <ImageBlock
+        src={correct ? imgCorrect : imgIncorrect}
+        name={"Imagen buen trabajo  "}
+      />
 
-        <audio src={audio} autoPlay />
+      <audio src={audio} autoPlay />
 
-        {correct && (
-          <button onClick={onContinue} >
-            <img src={imgContinue} alt="imagen Continue" />
-          </button>
-        )}
-        <button onClick={actions.reset}>
-          <img src={imgRestart} alt="imagen Restart" />
-        </button>
-      </div>
+     <div className={styles.buttonsWrapper}> 
+       {correct && (
+        <a href="#" onClick={onContinue}>
+          <img src={imgContinue} alt="imagen Continue" />
+        </a>
+      )}
+      <a href="#" onClick={actions.reset}>
+        <img src={imgRestart} alt="imagen Restart" />
+      </a>
+     </div>
     </div>
   );
 };

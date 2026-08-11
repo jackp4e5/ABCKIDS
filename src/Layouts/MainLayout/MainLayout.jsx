@@ -3,13 +3,16 @@ import Footer from "../../components/Footer";
 import { Outlet } from "react-router-dom";
 import styles from "./MainLayout.module.css";
 import Aside from "../../components/Aside/Aside";
+import activitiesNavigation from "../../pages/Module1/Activities/activitiesNavigation";
+import useModuleProgress from "../../hooks/useModuleProgress";
 
 const MainLayout = () => {
+  const progress = useModuleProgress(activitiesNavigation);
   return (
     <div className={styles.layout}>
       <Header />
 
-   <Aside/>
+      <Aside getActivityStatus={progress.getActivityStatus} />
 
       <main className={styles.main}>
         <Outlet context={{ screen }} />

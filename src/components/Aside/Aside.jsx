@@ -1,19 +1,26 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Aside.module.css";
-import activitiesNavigation from "./activitiesNavigation";
-const Aside = () => {
-  const activities = activitiesNavigation;
+import activitiesNavigation from "../../pages/Module1/Activities/activitiesNavigation";
+
+const Aside = ({ getActivityStatus }) => {
   return (
     <aside className={styles.aside}>
-      {activities.map((activity) => (
-        <NavLink
-          key={activity.id}
-          to={activity.route}
-          className={({ isActive }) => (isActive ? `${styles.active}` : "")}
-        >
-          {activity.title}
-        </NavLink>
-      ))}
+      {activitiesNavigation.map((activity) => {
+        const status = getActivityStatus(activity.id);
+       console.log(activity.id, status);
+        return (
+          <NavLink
+            key={activity.id}
+            to={activity.route}
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
+            {status === "completed" && "✓ "}
+            {status === "available" && "▶ "}
+            {status === "locked" && "🔒 "}
+            {activity.title}
+          </NavLink>
+        );
+      })}
     </aside>
   );
 };

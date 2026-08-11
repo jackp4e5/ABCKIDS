@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import Figure from "../Figure/Figure";
 import styles from "./FigureSelector.module.css";
 
@@ -7,10 +8,25 @@ const FigureSelector = ({
   selectFigure,
   selectedPencil,
 }) => {
+  const handleOnClick = (figure) => {
+    selectFigure(figure.id);
+
+    if (figure.audio) {
+      const audio = new Audio(figure.audio);
+      audio
+        .play()
+        .catch((error) => console.error("Error al reproducir audio:", error));
+    }
+  };
+
   return (
     <div className={styles.wrapperContent}>
       {figures.map((figure, index) => (
-        <button onClick={() => selectFigure(figure.id)} key={figure.id + index}>
+        <a
+          href="#"
+          onClick={() => handleOnClick(figure)}
+          key={figure.id + index}
+        >
           <Figure
             name={figure.name}
             src={
@@ -19,7 +35,7 @@ const FigureSelector = ({
                 : figure.assets.gray
             }
           />
-        </button>
+        </a>
       ))}
     </div>
   );
