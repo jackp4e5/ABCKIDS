@@ -7,7 +7,6 @@ const Aside = ({ getActivityStatus }) => {
     <aside className={styles.aside}>
       {activitiesNavigation.map((activity) => {
         const status = getActivityStatus(activity.id);
-       console.log(activity.id, status);
         return (
           <NavLink
             key={activity.id}

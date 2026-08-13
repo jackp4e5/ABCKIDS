@@ -11,7 +11,7 @@ import PencilSelector from "../components/PencilSelector/PencilSelector";
 import { useNavigate } from "react-router-dom";
 import styles from "./Activity02.module.css";
 
-const Activity02 = ({onContinue }) => {
+const Activity02 = ({ onComplete }) => {
   const session = useActivity(activity02);
 
   const { actions, data, state } = session;
@@ -21,6 +21,12 @@ const Activity02 = ({onContinue }) => {
   };
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (state.submitted && state.correct) {
+      onComplete();
+    }
+  }, [state.submitted, state.correct, onComplete]);
 
   const handleContinue = () => {
     onContinue();
