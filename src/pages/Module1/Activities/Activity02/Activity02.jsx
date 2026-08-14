@@ -9,6 +9,7 @@ import FigureSelector from "../components/FigureSelector/FigureSelector";
 import Palette from "../components/Palette/Palette";
 import PencilSelector from "../components/PencilSelector/PencilSelector";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import styles from "./Activity02.module.css";
 
 const Activity02 = ({ onComplete }) => {
