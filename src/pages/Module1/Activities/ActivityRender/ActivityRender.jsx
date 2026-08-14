@@ -19,24 +19,19 @@ const ActivityRender = () => {
   };
 
   const handleContinue = () => {
+    completeActivity(activityId);
     if (!currentActivity?.next) {
       return;
     }
-
     navigate(currentActivity.next);
   };
-
-   const handleActivityComplete = () => {
-    completeActivity(activityId);
-  };
-
   const ActivityComponent = activities[activityId];
 
   if (!ActivityComponent) {
     return <div>Actividad no encontrada</div>;
   }
 
-  return <ActivityComponent onComplete={handleActivityComplete} onContinue={handleContinue}/>;
+  return <ActivityComponent onContinue={handleContinue} />;
 };
 
 export default ActivityRender;

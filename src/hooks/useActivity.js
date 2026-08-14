@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import activityEngineDropPencilOnFigure from "../core/activityEngine/precesses/activityEngineDropPencilOnFigure";
 import { checkActivity } from "../core/activityEngine";
 
@@ -9,6 +8,7 @@ const useActivity = (activityData) => {
   const [state, setState] = useState({
     submitted: false,
     completed: false,
+    correct: false,
     selectedFigures: [],
     selectedPencil: null,
     paintedFigures: [],

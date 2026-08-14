@@ -8,29 +8,16 @@ import FigureBoard from "../components/FigureBoard/FigureBoard";
 import FigureSelector from "../components/FigureSelector/FigureSelector";
 import Palette from "../components/Palette/Palette";
 import PencilSelector from "../components/PencilSelector/PencilSelector";
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+
 import styles from "./Activity02.module.css";
 
-const Activity02 = ({ onComplete,onContinue }) => {
+const Activity02 = ({ onContinue }) => {
   const session = useActivity(activity02);
 
   const { actions, data, state } = session;
 
   const onFigureDrop = (data) => {
     actions.dropPencilOnFigure(data.pencilId, data.figureId);
-  };
-
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (state.submitted && state.correct) {
-      onComplete();
-    }
-  }, [state.submitted, state.correct, onComplete]);
-
-  const handleContinue = () => {
-    onContinue();
   };
 
   return (
@@ -58,7 +45,7 @@ const Activity02 = ({ onComplete,onContinue }) => {
         <FeedbackModal
           correct={state.correct}
           actions={actions}
-          onContinue={handleContinue}
+          onContinue={onContinue}
         />
       )}
     </div>

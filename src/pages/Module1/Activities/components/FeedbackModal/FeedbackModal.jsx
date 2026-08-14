@@ -11,7 +11,7 @@ const FeedbackModal = ({ correct, actions, onContinue }) => {
     Math.random() * Object.keys(feedBackModal.inCorrect.images).length,
   );
 
-  console.log(randomItem);
+
 
   const correctItem =
     randomItem === 0 ? "correct" : randomItem === 1 ? "correct02" : "correct03";
