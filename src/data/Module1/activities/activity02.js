@@ -13,8 +13,8 @@ export const activity02 = {
     message: "Colorea cada figura como se identifica.",
     audio: "../../../../audio/Activity02/instructionAudio.mp3",
     assets: {
-      image: "../../../../images/Activity02/instructionImg.png",
-      iconAudio: "../../../../imagesBtns/iconAudio.png",
+      image: "../../../../public/images/Activity02/instructionImg.png",
+      iconAudio: "../../../../public/ImagesBtns/iconAudio.png",
     },
   },
 
@@ -179,9 +179,5 @@ export const activity02 = {
     },
   ],
 
-  controls: {},
 
-  validation: {},
-
-  config: {},
 };

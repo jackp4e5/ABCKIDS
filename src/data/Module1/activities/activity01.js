@@ -2,7 +2,6 @@ export const activity01 = {
   id: "activity01",
   header: {
     title: "Solidos geométricos",
-    audio: "../../../../public/audio/Activity01/titleAudio.mp3",
     assets: {
       headerImg: "../../../../public/images/Activity01/headerActivity.png",
       badge: "../../../../public/images/iconHeader.png",
@@ -31,7 +30,7 @@ export const activity01 = {
     {
       id: "cubo",
       name: "Cubo",
-       audio: "../../../../public/audio/Activity01/audioCubo.mp3",
+      audio: "../../../../public/audio/Activity01/audioCubo.mp3",
       assets: {
         gray: "../../../../public/images/Activity01/grayCube.png",
         active: "../../../../public/images/Activity01/activeCube.png",
@@ -56,10 +55,4 @@ export const activity01 = {
       },
     },
   ],
-
-  controls: {},
-
-  validation: {},
-
-  config: {},
 };
