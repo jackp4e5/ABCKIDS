@@ -1,7 +1,6 @@
 import { useState } from "react";
-import activitiesNavigation from "../pages/Module1/Activities/activitiesNavigation";
 
-const useModuleProgress = (activities) => {
+const useModuleProgress = (activitiesNavigation) => {
   const [progress, setProgress] = useState({
     completedActivities: [],
   });
