@@ -4,12 +4,27 @@ import imgRestart from "../../../../../../public/ImagesBtns/btnRestart.png";
 import imgContinue from "../../../../../../public/ImagesBtns/btnContinue.png";
 import styles from "./FeedbackModal.module.css";
 const FeedbackModal = ({ correct, actions, onContinue }) => {
-  const imgCorrect = feedBackModal.correct.images["correct"];
-  const imgIncorrect = feedBackModal.inCorrect.images["inCorrect2"];
+  const randomItem = Math.floor(
+    Math.random() * Object.keys(feedBackModal.correct.images).length,
+  );
+  const randomItemIncorrect = Math.floor(
+    Math.random() * Object.keys(feedBackModal.inCorrect.images).length,
+  );
 
-  const audioCorrect = feedBackModal.correct.audio["correct"];
+  console.log(randomItem);
 
-  const audioIncorrect = feedBackModal.inCorrect.audio["inCorrect"];
+  const correctItem =
+    randomItem === 0 ? "correct" : randomItem === 1 ? "correct02" : "correct03";
+
+  const IncorrectItem = randomItemIncorrect === 0 ? "inCorrect" : "inCorrect02";
+
+  const imgCorrect = feedBackModal.correct.images[correctItem];
+
+  const imgIncorrect = feedBackModal.inCorrect.images[IncorrectItem];
+
+  const audioCorrect = feedBackModal.correct.audio[correctItem];
+
+  const audioIncorrect = feedBackModal.inCorrect.audio[IncorrectItem];
 
   const audio = correct ? audioCorrect : audioIncorrect;
 
@@ -22,16 +37,16 @@ const FeedbackModal = ({ correct, actions, onContinue }) => {
 
       <audio src={audio} autoPlay />
 
-     <div className={styles.buttonsWrapper}> 
-       {correct && (
-        <a href="#" onClick={onContinue}>
-          <img src={imgContinue} alt="imagen Continue" />
+      <div className={styles.buttonsWrapper}>
+        {correct && (
+          <a href="#" onClick={onContinue}>
+            <img src={imgContinue} alt="imagen Continue" />
+          </a>
+        )}
+        <a href="#" onClick={actions.reset}>
+          <img src={imgRestart} alt="imagen Restart" />
         </a>
-      )}
-      <a href="#" onClick={actions.reset}>
-        <img src={imgRestart} alt="imagen Restart" />
-      </a>
-     </div>
+      </div>
     </div>
   );
 };

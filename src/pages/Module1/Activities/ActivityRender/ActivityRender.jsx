@@ -36,7 +36,7 @@ const ActivityRender = () => {
     return <div>Actividad no encontrada</div>;
   }
 
-  return <ActivityComponent onComplete={handleActivityComplete} />;
+  return <ActivityComponent onComplete={handleActivityComplete} onContinue={handleContinue}/>;
 };
 
 export default ActivityRender;

@@ -7,18 +7,18 @@ import ActivityHeader from "../components/ActivityHeader/ActivityHeader";
 import FeedbackModal from "../components/FeedbackModal/FeedbackModal";
 import FigureSelector from "../components/FigureSelector/FigureSelector";
 import styles from "./Activity01.module.css";
-const Activity01 = ({onComplete}) => {
+const Activity01 = ({ onComplete, onContinue }) => {
   const session = useActivity(activity01);
 
   const { actions, data, state } = session;
 
-    useEffect(() => {
-      if (state.submitted && state.correct) {
-        onComplete();
-      }
-    }, [state.submitted, state.correct, onComplete]);
+  useEffect(() => {
+    if (state.submitted && state.correct) {
+      onComplete();
+    }
+  }, [state.submitted, state.correct, onComplete]);
 
-    const handleContinue = () => {
+  const handleContinue = () => {
     onContinue();
   };
 

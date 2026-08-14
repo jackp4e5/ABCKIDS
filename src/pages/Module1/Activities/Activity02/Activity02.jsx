@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import styles from "./Activity02.module.css";
 
-const Activity02 = ({ onComplete }) => {
+const Activity02 = ({ onComplete,onContinue }) => {
   const session = useActivity(activity02);
 
   const { actions, data, state } = session;
