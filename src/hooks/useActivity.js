@@ -29,6 +29,7 @@ const useActivity = (activityData) => {
       return {
         ...previousState,
         selectedFigures: updatedFigures,
+        paintedFigures: updatedFigures,
         completed,
       };
     });
