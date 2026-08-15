@@ -9,9 +9,15 @@ const useActivity = (activityData) => {
     submitted: false,
     completed: false,
     correct: false,
+
     selectedFigures: [],
     selectedPencil: null,
     paintedFigures: [],
+
+    selectedParent: null,
+    selectedFigure: null,
+
+    selectedFaces: []
   });
 
   const selectFigure = (figureId) => {
@@ -34,6 +40,15 @@ const useActivity = (activityData) => {
       };
     });
   };
+
+  const selectActivity03Figure = (parentId, figureId) => {
+    setState((previousState) => ({
+      ...previousState,
+      selectedParent: parentId,
+      selectedFigure: figureId,
+    }));
+  };
+
   const selectPencil = (pencilId) => {
     setState((previousState) => ({
       ...previousState,
@@ -75,12 +90,15 @@ const useActivity = (activityData) => {
       selectedFigures: [],
       selectedPencil: null,
       paintedFigures: [],
+      selectedParent: null,
+      selectedFigure: null,
     });
   };
   // Expone las acciones //
   const actions = {
     reset,
     selectFigure,
+    selectActivity03Figure,
     selectPencil,
     dropPencilOnFigure,
     submit,
