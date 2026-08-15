@@ -6,3 +6,11 @@
   gap: 3%;
  
 }
+
+
+.wrapperFigures{
+      display: flex;
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
+}

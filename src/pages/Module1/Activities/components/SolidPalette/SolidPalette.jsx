@@ -1,27 +1,27 @@
+import styles from "./SolidPalette.module.css";
+const SolidPalette = ({ solids, selectedFaces, onSelectFigure }) => {
+  const isFigureSelected = (parentId, figureId) => {
+    return selectedFaces.some(
+      (selection) =>
+        selection.parentId === parentId && selection.figureId === figureId,
+    );
+  };
 
-import styles from "./SolidPalette.module.css"
-const SolidPalette = ({ solids, selectedFigure, onSelectFigure }) => {
   return (
     <div>
       {solids.map((solid) => (
         <div className={styles.wrapper} key={solid.id}>
+          <img src={solid.assets.active} alt={solid.name} />
 
-          <img
-            src={solid.assets.active}
-            alt={solid.name}
-          />
-
-          <div>
+          <div className={styles.wrapperFigures}>
             {solid.figures.map((figure) => (
               <button
                 key={figure.id}
-                onClick={() =>
-                  onSelectFigure(solid.id, figure.id)
-                }
+                onClick={() => onSelectFigure(solid.id, figure.id)}
               >
                 <img
                   src={
-                    selectedFigure === figure.id
+                    isFigureSelected(solid.id, figure.id)
                       ? figure.assets.active
                       : figure.assets.default
                   }
@@ -30,7 +30,6 @@ const SolidPalette = ({ solids, selectedFigure, onSelectFigure }) => {
               </button>
             ))}
           </div>
-
         </div>
       ))}
     </div>

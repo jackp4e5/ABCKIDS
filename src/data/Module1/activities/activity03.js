@@ -13,9 +13,9 @@ export const activity03 = {
   },
   instruction: {
     message: "Escucha, observa y resuelve.",
-    audio: "../../../../audio/Activity02/instructionAudio.mp3",
+    audio: "../../../../audio/Activity03/instructionAudio.mp3",
     assets: {
-      image: "../../../../public/images/Activity02/instructionImg.png",
+      image: "../../../../public/images/Activity03/instructionImg.png",
       iconAudio: "../../../../public/imagesBtns/iconAudio.png",
     },
   },
@@ -39,7 +39,7 @@ export const activity03 = {
           isCorrect:false,
           assets: {
             default: "../../../../public/images/activity03/whiteCircle.png",
-            active: "../../../../public/images/activity02/greenCircle.png",
+            active: "../../../../public/images/activity03/greenCircle.png",
           },
         },
 
@@ -50,7 +50,7 @@ export const activity03 = {
           isCorrect:true,
           assets: {
             default: "../../../../public/images/activity03/whiteSquare.png",
-            active: "../../../../public/images/activity02/greenSquare.png",
+            active: "../../../../public/images/activity03/greenSquare.png",
           },
         },
 
@@ -94,7 +94,7 @@ export const activity03 = {
           isCorrect:true,
           assets: {
             default: "../../../../public/images/activity03/whiteCircle.png",
-            active: "../../../../public/images/activity02/redCircle.png",
+            active: "../../../../public/images/activity03/redCircle.png",
           },
         },
 
@@ -105,7 +105,7 @@ export const activity03 = {
           isCorrect:false,
           assets: {
             default: "../../../../public/images/activity03/whiteSquare.png",
-            active: "../../../../public/images/activity02/redSquare.png",
+            active: "../../../../public/images/activity03/redSquare.png",
           },
         },
       ],
@@ -128,7 +128,7 @@ export const activity03 = {
           isCorrect:true,
           assets: {
             default: "../../../../public/images/activity03/whiteCircle.png",
-            active: "../../../../public/images/activity02/blueCircle.png",
+            active: "../../../../public/images/activity03/blueCircle.png",
           },
         },
         {
@@ -149,7 +149,7 @@ export const activity03 = {
           isCorrect:false,
           assets: {
             default: "../../../../public/images/activity03/whiteSquare.png",
-            active: "../../../../public/images/activity02/blueSquare.png",
+            active: "../../../../public/images/activity03/blueSquare.png",
           },
         },
       ],

@@ -17,7 +17,7 @@ const useActivity = (activityData) => {
     selectedParent: null,
     selectedFigure: null,
 
-    selectedFaces: []
+    selectedFaces: [],
   });
 
   const selectFigure = (figureId) => {
@@ -42,11 +42,26 @@ const useActivity = (activityData) => {
   };
 
   const selectActivity03Figure = (parentId, figureId) => {
-    setState((previousState) => ({
-      ...previousState,
-      selectedParent: parentId,
-      selectedFigure: figureId,
-    }));
+    setState((previousState) => {
+      const updatedFaces = previousState.selectedFaces.filter(
+        (face) => face.parentId !== parentId,
+      );
+
+      updatedFaces.push({
+        parentId,
+        figureId,
+      });
+
+      const completed = updatedFaces.length === activityData.palette.length;
+
+      return {
+        ...previousState,
+        selectedParent: parentId,
+        selectedFigure: figureId,
+        selectedFaces: updatedFaces,
+        completed,
+      };
+    });
   };
 
   const selectPencil = (pencilId) => {
@@ -68,30 +83,48 @@ const useActivity = (activityData) => {
     });
   };
 
-  const submit = () => {
-    setState((previousState) => {
-      const newState = checkActivity({
-        state: previousState,
-        data: activityData,
-      });
+const submit = () => {
+  setState((previousState) => {
+  /*   const newState = checkActivity({
+      state: previousState,
+      data: activityData,
+    }); */
 
-      return {
-        ...newState,
-        submitted: true,
-      };
+    const correct = previousState.selectedFaces.every((selection) => {
+      const parent = activityData.palette.find(
+        (item) => item.id === selection.parentId,
+      );
+
+      const figure = parent.figures.find(
+        (item) => item.id === selection.figureId,
+      );
+
+ 
+
+      return figure.isCorrect;
     });
-  };
+
+    return {
+      ...previousState,
+      submitted: true,
+      correct,
+    };
+  });
+};
 
   const reset = () => {
     setState({
       submitted: false,
       completed: false,
       correct: false,
+
       selectedFigures: [],
       selectedPencil: null,
       paintedFigures: [],
+
       selectedParent: null,
       selectedFigure: null,
+      selectedFaces: [],
     });
   };
   // Expone las acciones //
