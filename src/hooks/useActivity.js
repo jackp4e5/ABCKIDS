@@ -1,6 +1,7 @@
 import { useState } from "react";
 import activityEngineDropPencilOnFigure from "../core/activityEngine/precesses/activityEngineDropPencilOnFigure";
 import { checkActivity } from "../core/activityEngine";
+import useActivity03 from "./useActivity03";
 
 // Recibe los datos de una actividad
 const useActivity = (activityData) => {
@@ -13,12 +14,18 @@ const useActivity = (activityData) => {
     selectedFigures: [],
     selectedPencil: null,
     paintedFigures: [],
-
-    selectedParent: null,
-    selectedFigure: null,
-
-    selectedFaces: [],
   });
+
+  const {
+    selectedState,
+    actions: {
+      selectActivity03Figure,
+      checkActivity03,
+      reset: resetActivity03,
+    },
+  } = useActivity03(activityData);
+
+  const { selectedFaces } = selectedState;
 
   const selectFigure = (figureId) => {
     setState((previousState) => {
@@ -36,29 +43,6 @@ const useActivity = (activityData) => {
         ...previousState,
         selectedFigures: updatedFigures,
         paintedFigures: updatedFigures,
-        completed,
-      };
-    });
-  };
-
-  const selectActivity03Figure = (parentId, figureId) => {
-    setState((previousState) => {
-      const updatedFaces = previousState.selectedFaces.filter(
-        (face) => face.parentId !== parentId,
-      );
-
-      updatedFaces.push({
-        parentId,
-        figureId,
-      });
-
-      const completed = updatedFaces.length === activityData.palette.length;
-
-      return {
-        ...previousState,
-        selectedParent: parentId,
-        selectedFigure: figureId,
-        selectedFaces: updatedFaces,
         completed,
       };
     });
@@ -83,34 +67,20 @@ const useActivity = (activityData) => {
     });
   };
 
-const submit = () => {
-  setState((previousState) => {
-  /*   const newState = checkActivity({
-      state: previousState,
-      data: activityData,
-    }); */
-
-    const correct = previousState.selectedFaces.every((selection) => {
-      const parent = activityData.palette.find(
-        (item) => item.id === selection.parentId,
-      );
-
-      const figure = parent.figures.find(
-        (item) => item.id === selection.figureId,
-      );
-
- 
-
-      return figure.isCorrect;
+  const submit = () => {
+    setState((previousState) => {
+      const newState = checkActivity({
+        state: previousState,
+        data: activityData,
+      });
+      const correct = checkActivity03();
+      return {
+        ...newState,
+        submitted: true,
+        correct,
+      };
     });
-
-    return {
-      ...previousState,
-      submitted: true,
-      correct,
-    };
-  });
-};
+  };
 
   const reset = () => {
     setState({
@@ -121,11 +91,8 @@ const submit = () => {
       selectedFigures: [],
       selectedPencil: null,
       paintedFigures: [],
-
-      selectedParent: null,
-      selectedFigure: null,
-      selectedFaces: [],
     });
+    resetActivity03();
   };
   // Expone las acciones //
   const actions = {
@@ -140,6 +107,7 @@ const submit = () => {
   const session = {
     data: activityData,
     state,
+     selectedState,
     actions,
   };
 
