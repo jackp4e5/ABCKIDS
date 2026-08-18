@@ -21,11 +21,15 @@ const useActivity = (activityData) => {
     actions: {
       selectActivity03Figure,
       checkActivity03,
-      reset: resetActivity03,
+      resetActivity03,
     },
   } = useActivity03(activityData);
 
+
+  
+  
   const { selectedFaces } = selectedState;
+  
 
   const selectFigure = (figureId) => {
     setState((previousState) => {
@@ -69,15 +73,18 @@ const useActivity = (activityData) => {
 
   const submit = () => {
     setState((previousState) => {
-      const newState = checkActivity({
+    /*   const newState = checkActivity({
         state: previousState,
         data: activityData,
-      });
-      const correct = checkActivity03();
+      }); */
+      
+      
+      const correct = checkActivity03();      
+      
       return {
-        ...newState,
+        ...previousState,
         submitted: true,
-        correct,
+        correct
       };
     });
   };

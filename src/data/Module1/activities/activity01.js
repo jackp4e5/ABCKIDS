@@ -1,5 +1,6 @@
 export const activity01 = {
   id: "activity01",
+  audio:"../../../../public/audio/Activity01/backAudio.mp3",
   header: {
     title: "Solidos geométricos",
     assets: {

@@ -12,7 +12,6 @@ const FeedbackModal = ({ correct, actions, onContinue }) => {
   );
 
 
-
   const correctItem =
     randomItem === 0 ? "correct" : randomItem === 1 ? "correct02" : "correct03";
 

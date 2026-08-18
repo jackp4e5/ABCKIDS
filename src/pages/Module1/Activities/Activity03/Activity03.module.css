@@ -1,22 +1,24 @@
 .container {
- background-image: url(../../../../../../public/images/activity03/hero.png);
-  background-size: contain;
-  background-position: center;
-  background-position-x: center;
-  background-repeat: no-repeat;
-  max-width: 900px;
-  width: 95%;
-  height: 75vh;
   position: relative;
-  margin: 0 auto; 
-
-  
-
-
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  padding: 2%;
 }
 
-/* .relative {
+.bgSlide {
   width: 100%;
   height: 100%;
-  position: relative;
-} */
+  object-fit: contain;
+  display: block;
+}
+
+.activityWrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: -45%;
+  left: 50%;
+  width: 90%;
+  height: 95%;
+  font-size: clamp(10px, 2.5vw, 1rem);
+}

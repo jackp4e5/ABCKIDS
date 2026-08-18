@@ -23,7 +23,7 @@ const Header = () => {
         </svg>
       </Button>
       <a className={styles.logo}>
-        <img src={logo} alt="imagen logo" />
+        <img className={styles.logo} src={logo} alt="imagen logo" />
       </a>
     </header>
   );

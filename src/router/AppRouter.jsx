@@ -9,10 +9,10 @@ export const AppRouter = () => {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route path="module-1/screen/:screenId" element={<Screen />} />
-
-
-            <Route path="module-1/activity/:activityId" element={<ActivityRender />} />
-          
+          <Route
+            path="module-1/activity/:activityId"
+            element={<ActivityRender />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -7,19 +7,16 @@ import activitiesNavigation from "../../pages/Module1/Activities/activitiesNavig
 import useModuleProgress from "../../hooks/useModuleProgress";
 
 const MainLayout = () => {
-
-  const { completeActivity, getActivityStatus } = useModuleProgress(activitiesNavigation);
+  const { completeActivity, getActivityStatus } =
+    useModuleProgress(activitiesNavigation);
   return (
-    <div className={styles.layout}>
+    <div>
       <Header />
-
-      <Aside getActivityStatus={getActivityStatus} />
+ <Aside getActivityStatus={getActivityStatus} />
 
       <main className={styles.main}>
         <Outlet context={{ completeActivity }} />
       </main>
-
-      <Footer />
     </div>
   );
 };

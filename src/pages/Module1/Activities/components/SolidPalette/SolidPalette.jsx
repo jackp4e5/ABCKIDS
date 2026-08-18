@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./SolidPalette.module.css";
 const SolidPalette = ({ solids, selectedFaces, onSelectFigure }) => {
   const isFigureSelected = (parentId, figureId) => {
@@ -8,18 +9,19 @@ const SolidPalette = ({ solids, selectedFaces, onSelectFigure }) => {
   };
 
   return (
-    <div>
+    <div className={styles.palette}>
       {solids.map((solid) => (
         <div className={styles.wrapper} key={solid.id}>
-          <img src={solid.assets.active} alt={solid.name} />
+          <img className={styles.solids} src={solid.assets.active} alt={solid.name} />
 
           <div className={styles.wrapperFigures}>
             {solid.figures.map((figure) => (
-              <button
+              <Link
                 key={figure.id}
                 onClick={() => onSelectFigure(solid.id, figure.id)}
               >
                 <img
+                className={styles.figures}
                   src={
                     isFigureSelected(solid.id, figure.id)
                       ? figure.assets.active
@@ -27,7 +29,7 @@ const SolidPalette = ({ solids, selectedFaces, onSelectFigure }) => {
                   }
                   alt={figure.name}
                 />
-              </button>
+              </Link>
             ))}
           </div>
         </div>

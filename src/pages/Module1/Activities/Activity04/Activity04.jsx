@@ -1,30 +1,44 @@
-import { activity01 } from "../../../../data/Module1/activities/activity01";
+import { activity02 } from "../../../../data/Module1/activities/activity02";
 import useActivity from "../../../../hooks/useActivity";
 import ActivityBoard from "../components/ActivityBoard/ActivityBoard";
 import ActivityControls from "../components/ActivityControls/ActivityControls";
 import ActivityHeader from "../components/ActivityHeader/ActivityHeader";
 import FeedbackModal from "../components/FeedbackModal/FeedbackModal";
+import FigureBoard from "../components/FigureBoard/FigureBoard";
 import FigureSelector from "../components/FigureSelector/FigureSelector";
-import hero from "../../../../../public/images/Activity01/hero.png";
-import styles from "./Activity01.module.css";
+import Palette from "../components/Palette/Palette";
+import PencilSelector from "../components/PencilSelector/PencilSelector";
+import hero from "../../../../../public/images/Activity02/hero.png";
+import styles from "./Activity04.module.css";
 
-const Activity01 = ({ onContinue }) => {
-  const session = useActivity(activity01);
+const Activity04 = ({ onContinue }) => {
+  const session = useActivity(activity02);
 
   const { actions, data, state } = session;
+
+  const onFigureDrop = (data) => {
+    actions.dropPencilOnFigure(data.pencilId, data.figureId);
+  };
 
   return (
     <div className={styles.container}>
       <img src={hero} className={styles.bgSlide} alt="image hero" />
       <div className={styles.activityWrapper}>
-      <audio loop autoPlay src={data.audio}/>
+        <audio loop autoPlay src={data.audio} />
         <ActivityHeader header={data.header} instruction={data.instruction} />
 
         <ActivityBoard>
-          <FigureSelector
+          <Palette paletteFigures={data.paletteFigures} />
+          <PencilSelector
+            pencils={data.pencils}
+            selectPencil={session.actions.selectPencil}
+            selectedPencil={state.selectedPencil}
+          />
+
+          <FigureBoard
+            paintedFigures={state.paintedFigures}
             figures={data.figures}
-            selectedFigures={state.selectedFigures}
-            selectFigure={actions.selectFigure}
+            onFigureDrop={onFigureDrop}
           />
         </ActivityBoard>
 
@@ -41,4 +55,4 @@ const Activity01 = ({ onContinue }) => {
   );
 };
 
-export default Activity01;
+export default Activity04;

@@ -1,5 +1,6 @@
 export const activity02 = {
   id: "activity02",
+  audio:"../../../../public/audio/Activity02/backAudio.mp3",
   type: "dropPencil",
   header: {
     title: "Relaciona",

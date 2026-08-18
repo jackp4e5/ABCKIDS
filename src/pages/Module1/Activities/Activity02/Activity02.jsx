@@ -8,7 +8,7 @@ import FigureBoard from "../components/FigureBoard/FigureBoard";
 import FigureSelector from "../components/FigureSelector/FigureSelector";
 import Palette from "../components/Palette/Palette";
 import PencilSelector from "../components/PencilSelector/PencilSelector";
-
+import hero from "../../../../../public/images/Activity02/hero.png";
 import styles from "./Activity02.module.css";
 
 const Activity02 = ({ onContinue }) => {
@@ -22,25 +22,28 @@ const Activity02 = ({ onContinue }) => {
 
   return (
     <div className={styles.container}>
-      <ActivityHeader header={data.header} instruction={data.instruction} />
+      <img src={hero} className={styles.bgSlide} alt="image hero" />
+      <div className={styles.activityWrapper}>
+        <audio loop autoPlay src={data.audio} />
+        <ActivityHeader header={data.header} instruction={data.instruction} />
 
-      <ActivityBoard>
-        <Palette paletteFigures={data.paletteFigures} />
-        <PencilSelector
-          pencils={data.pencils}
-          selectPencil={session.actions.selectPencil}
-          selectedPencil={state.selectedPencil}
-        />
+        <ActivityBoard>
+          <Palette paletteFigures={data.paletteFigures} />
+          <PencilSelector
+            pencils={data.pencils}
+            selectPencil={session.actions.selectPencil}
+            selectedPencil={state.selectedPencil}
+          />
 
-        <FigureBoard
-          paintedFigures={state.paintedFigures}
-          figures={data.figures}
-          onFigureDrop={onFigureDrop}
-        />
-      </ActivityBoard>
+          <FigureBoard
+            paintedFigures={state.paintedFigures}
+            figures={data.figures}
+            onFigureDrop={onFigureDrop}
+          />
+        </ActivityBoard>
 
-      <ActivityControls completed={state.completed} actions={actions} />
-
+        <ActivityControls completed={state.completed} actions={actions} />
+      </div>
       {state.submitted && (
         <FeedbackModal
           correct={state.correct}

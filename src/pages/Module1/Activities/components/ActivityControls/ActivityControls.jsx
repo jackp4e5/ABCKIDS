@@ -1,5 +1,7 @@
 import submit from "../../../../../../public/ImagesBtns/btnContinue.png";
 
+import styles from "./ActivityControls.module.css"
+
 const ActivityControls = ({ completed, actions }) => {
   const handleSubmit = () => {
     actions.submit();
@@ -7,9 +9,9 @@ const ActivityControls = ({ completed, actions }) => {
   return (
     <>
       {completed && (
-        <button onClick={handleSubmit}>
-          <img src={submit} alt="" />
-        </button>
+        <a href="#" className={styles.button} onClick={handleSubmit}>
+          <img src={submit} alt="botton send" />
+        </a>
       )}
     </>
   );

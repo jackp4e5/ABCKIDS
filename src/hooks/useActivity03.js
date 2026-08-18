@@ -5,6 +5,7 @@ const useActivity03 = (activityData) => {
     selectedParent: null,
     selectedFigure: null,
     selectedFaces: [],
+    completed: false,
   });
 
   const selectActivity03Figure = (parentId, figureId) => {
@@ -18,11 +19,14 @@ const useActivity03 = (activityData) => {
         figureId,
       });
 
+      const completed = updatedFaces.length === activityData.palette.length;
+
       return {
         ...previousState,
         selectedParent: parentId,
         selectedFigure: figureId,
         selectedFaces: updatedFaces,
+        completed,
       };
     });
   };
@@ -44,11 +48,12 @@ const useActivity03 = (activityData) => {
     });
   };
 
-  const reset = () => {
+  const resetActivity03 = () => {
     setSelectedState({
       selectedParent: null,
       selectedFigure: null,
       selectedFaces: [],
+      completed: false,
     });
   };
 
@@ -57,7 +62,7 @@ const useActivity03 = (activityData) => {
     actions: {
       selectActivity03Figure,
       checkActivity03,
-      reset,
+      resetActivity03,
     },
   };
 };

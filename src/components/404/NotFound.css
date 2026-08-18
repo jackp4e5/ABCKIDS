@@ -1,0 +1,44 @@
+/* Centra la diapositiva en la pantalla */
+.slide-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  overflow: hidden;
+}
+
+/* El contenedor mantiene SIEMPRE la proporción de la imagen (ej: 16:9) */
+.slide-container {
+  position: relative;
+  width: 100%;
+  max-width: 1920px; /* Tamaño máximo deseado */
+  aspect-ratio: 16 / 9; /* Mantiene la relación de aspecto exacta */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* La imagen llena exactamente el contenedor */
+.slide-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Los elementos hijos se ubican de forma relativa al contenedor (%) */
+.activity-item {
+  position: absolute;
+  transform: translate(-50%, -50%); /* Centra el punto de anclaje */
+}
+
+/* Estilos de botones o elementos interactivos */
+.item-button button {
+  padding: 12px 24px;
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem); /* Texto responsive */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

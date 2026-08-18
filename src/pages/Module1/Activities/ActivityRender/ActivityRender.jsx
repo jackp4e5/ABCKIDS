@@ -3,6 +3,8 @@ import Activity01 from "../Activity01/Activity01";
 import Activity02 from "../Activity02/Activity02";
 import activitiesNavigation from "../activitiesNavigation";
 import Activity03 from "../Activity03/Activity03";
+import { NotFound } from "../../../../components/404/NotFound";
+import Activity04 from "../Activity04/Activity04";
 
 const ActivityRender = () => {
   const navigate = useNavigate();
@@ -18,6 +20,7 @@ const ActivityRender = () => {
     activity01: Activity01,
     activity02: Activity02,
     activity03: Activity03,
+    activity04: Activity04,
   };
 
   const handleContinue = () => {
@@ -30,7 +33,7 @@ const ActivityRender = () => {
   const ActivityComponent = activities[activityId];
 
   if (!ActivityComponent) {
-    return <div>Actividad no encontrada</div>;
+    return <NotFound/>;
   }
 
   return <ActivityComponent onContinue={handleContinue} />;

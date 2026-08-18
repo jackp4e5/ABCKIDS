@@ -1,15 +1,15 @@
 .wrapper{
-   background-image: url(/public/images/Activity02/board.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 40%;
-    position: absolute;
-    right: 29%;
-    top: 150%;
-    padding: 5px;
-    gap: 16px;
+  background-image: url(/public/images/Activity02/board.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 64%;
+  position: absolute;
+  right: 16%;
+  top: 136%;
+  padding: 5px;
+  gap: 16px;
 }
 .wrapper img{
   width: 90%;

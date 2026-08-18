@@ -1,16 +1,10 @@
-body{
-
-    background:var(--background);
-
-    color:var(--text);
-
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    user-select: none;
-
+body {
+  background: var(--background);
+  color: var(--text);
+  height: 100vh;
+  user-select: none;
 }
 
-img{
-    width: 100px;
-}
+
+
+

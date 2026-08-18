@@ -1,6 +1,7 @@
 
 export const activity03 = {
   id: "activity03",
+  audio:"../../../../public/audio/Activity03/backAudio.mp3",
   type: "",
   hero: "../../../../public/images/Activity03/hero.png",
   header: {

@@ -1,7 +1,9 @@
 .wrapper {
-  display: flex;
-  gap: 10px;
-  width: 30%;
+     display: flex;
+    gap: 10px;
+    width: 50%;
+    user-select: none;
+   
 }
 .wrapper img {
   

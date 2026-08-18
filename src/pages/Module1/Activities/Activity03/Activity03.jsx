@@ -4,27 +4,33 @@ import ActivityControls from "../components/ActivityControls/ActivityControls";
 import ActivityHeader from "../components/ActivityHeader/ActivityHeader";
 import FeedbackModal from "../components/FeedbackModal/FeedbackModal";
 import SolidPalette from "../components/SolidPalette";
+import hero from "../../../../../public/images/Activity03/hero.png";
 
 import styles from "./Activity03.module.css";
 
 const Activity03 = ({ onContinue }) => {
   const session = useActivity(activity03);
- 
-  const { actions, data, state,selectedState } = session;
-console.log(selectedState);
+
+  const { actions, data, state, selectedState } = session;
 
   return (
     <div className={styles.container}>
-      <ActivityHeader header={data.header} instruction={data.instruction} />
+      <img src={hero} className={styles.bgSlide} alt="image hero" />
+      <div className={styles.activityWrapper}>
+        <audio loop autoPlay src={data.audio} />
+        <ActivityHeader header={data.header} instruction={data.instruction} />
 
-      <SolidPalette
-        solids={data.palette}
-        selectedFaces={selectedState.selectedFaces}
-        onSelectFigure={actions.selectActivity03Figure}
-      />
+        <SolidPalette
+          solids={data.palette}
+          selectedFaces={selectedState.selectedFaces}
+          onSelectFigure={actions.selectActivity03Figure}
+        />
 
-      <ActivityControls completed={state.completed} actions={actions} />
-
+        <ActivityControls
+          completed={selectedState.completed}
+          actions={actions}
+        />
+      </div>
       {state.submitted && (
         <FeedbackModal
           correct={state.correct}
