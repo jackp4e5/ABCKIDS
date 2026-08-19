@@ -2,6 +2,7 @@ import { useState } from "react";
 import activityEngineDropPencilOnFigure from "../core/activityEngine/precesses/activityEngineDropPencilOnFigure";
 import { checkActivity } from "../core/activityEngine";
 import useActivity03 from "./useActivity03";
+import isCompleted from "../core/activityEngine/utils/isCompleted";
 
 // Recibe los datos de una actividad
 const useActivity = (activityData) => {
@@ -18,18 +19,10 @@ const useActivity = (activityData) => {
 
   const {
     selectedState,
-    actions: {
-      selectActivity03Figure,
-      checkActivity03,
-      resetActivity03,
-    },
+    actions: { selectActivity03Figure, checkActivity03, resetActivity03 },
   } = useActivity03(activityData);
 
-
-  
-  
   const { selectedFaces } = selectedState;
-  
 
   const selectFigure = (figureId) => {
     setState((previousState) => {
@@ -41,7 +34,10 @@ const useActivity = (activityData) => {
       }
 
       const updatedFigures = [...previousState.selectedFigures, figureId];
-      const completed = updatedFigures.length === activityData.figures.length;
+      const completed = isCompleted(
+        updatedFigures.length,
+        activityData.figures.length,
+      );
 
       return {
         ...previousState,
@@ -73,18 +69,17 @@ const useActivity = (activityData) => {
 
   const submit = () => {
     setState((previousState) => {
-    /*   const newState = checkActivity({
+      /*   const newState = checkActivity({
         state: previousState,
         data: activityData,
       }); */
-      
-      
-      const correct = checkActivity03();      
-      
+
+      const correct = checkActivity03();
+
       return {
         ...previousState,
         submitted: true,
-        correct
+        correct,
       };
     });
   };
@@ -114,7 +109,7 @@ const useActivity = (activityData) => {
   const session = {
     data: activityData,
     state,
-     selectedState,
+    selectedState,
     actions,
   };
 
