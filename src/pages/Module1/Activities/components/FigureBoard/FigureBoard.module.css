@@ -1,7 +1,4 @@
-.wrapper{
-  background-image: url(/public/images/Activity02/board.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
+.wrapper{ 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 64%;

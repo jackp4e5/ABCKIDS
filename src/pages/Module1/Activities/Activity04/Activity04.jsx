@@ -1,47 +1,39 @@
-import { activity02 } from "../../../../data/Module1/activities/activity02";
-
 import useActivity from "../../../../hooks/useActivity";
-import useActivity02 from "../../../../hooks/useActivity02";
 
 import ActivityBoard from "../components/ActivityBoard/ActivityBoard";
 import ActivityControls from "../components/ActivityControls/ActivityControls";
 import ActivityHeader from "../components/ActivityHeader/ActivityHeader";
 import FeedbackModal from "../components/FeedbackModal/FeedbackModal";
-import FigureBoard from "../components/FigureBoard/FigureBoard";
-import Palette from "../components/Palette/Palette";
-import PencilSelector from "../components/PencilSelector/PencilSelector";
 
-import hero from "../../../../../public/images/Activity02/hero.png";
+import hero from "../../../../../public/images/Activity04/hero.png";
 
 import styles from "./Activity04.module.css";
+import { activity04 } from "../../../../data/Module1/activities/activity04";
+import useActivity04 from "../../../../hooks/useActivity04";
 
-const Activity02 = ({ onContinue }) => {
-  const session = useActivity(activity02);
+const Activity04 = ({ onContinue }) => {
+  const session = useActivity(activity04);
 
   const { actions, data, state } = session;
 
-  const {
-    stateActivity02,
-    selectPencil,
-    dropPencilOnFigure,
-    checkActivity02,
-    resetActivity02,
-    completed,
-  } = useActivity02(activity02);
+  console.log(data);
 
-  const onFigureDrop = (data) => {
-    dropPencilOnFigure(data.pencilId, data.figureId);
-  };
+  const {
+ 
+    checkActivity04,
+    resetActivity04,
+    completed,
+  } = useActivity04(activity04);
 
   const handleSubmit = () => {
-    const correct = checkActivity02();
+    const correct = checkActivity04();
 
     actions.submit(correct);
   };
 
   const handleReset = () => {
     actions.reset();
-    resetActivity02();
+    resetActivity04();
   };
 
   const activityActions = {
@@ -60,19 +52,7 @@ const Activity02 = ({ onContinue }) => {
         <ActivityHeader header={data.header} instruction={data.instruction} />
 
         <ActivityBoard>
-          <Palette paletteFigures={data.paletteFigures} />
-
-          <PencilSelector
-            pencils={data.pencils}
-            selectPencil={selectPencil}
-            selectedPencil={stateActivity02.selectedPencil}
-          />
-
-          <FigureBoard
-            paintedFigures={stateActivity02.paintedFigures}
-            figures={data.figures}
-            onFigureDrop={onFigureDrop}
-          />
+         
         </ActivityBoard>
 
         <ActivityControls completed={completed} actions={activityActions} />
@@ -89,4 +69,4 @@ const Activity02 = ({ onContinue }) => {
   );
 };
 
-export default Activity02;
+export default Activity04;
