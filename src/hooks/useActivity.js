@@ -1,22 +1,20 @@
 import { useState } from "react";
+<<<<<<< HEAD
 import activityEngineDropPencilOnFigure from "../core/activityEngine/precesses/activityEngineDropPencilOnFigure";
 import { checkActivity } from "../core/activityEngine";
 import useActivity03 from "./useActivity03";
 import isCompleted from "../core/activityEngine/utils/isCompleted";
+=======
+>>>>>>> 73edd8c (se hizo la refactorizacion de las tres actividades, para que la logica estubiera fuera de useactivity)
 
-// Recibe los datos de una actividad
 const useActivity = (activityData) => {
-  // Inicializa el estado
   const [state, setState] = useState({
     submitted: false,
     completed: false,
     correct: false,
-
-    selectedFigures: [],
-    selectedPencil: null,
-    paintedFigures: [],
   });
 
+<<<<<<< HEAD
   const {
     selectedState,
     actions: { selectActivity03Figure, checkActivity03, resetActivity03 },
@@ -49,12 +47,16 @@ const useActivity = (activityData) => {
   };
 
   const selectPencil = (pencilId) => {
+=======
+  const completeActivity = (completed) => {
+>>>>>>> 73edd8c (se hizo la refactorizacion de las tres actividades, para que la logica estubiera fuera de useactivity)
     setState((previousState) => ({
       ...previousState,
-      selectedPencil: pencilId,
+      completed,
     }));
   };
 
+<<<<<<< HEAD
   const dropPencilOnFigure = (pencilId, figureId) => {
     setState((previousState) => {
       return activityEngineDropPencilOnFigure(
@@ -82,6 +84,14 @@ const useActivity = (activityData) => {
         correct,
       };
     });
+=======
+  const submit = (correct) => {
+    setState((previousState) => ({
+      ...previousState,
+      submitted: true,
+      correct,
+    }));
+>>>>>>> 73edd8c (se hizo la refactorizacion de las tres actividades, para que la logica estubiera fuera de useactivity)
   };
 
   const reset = () => {
@@ -89,31 +99,24 @@ const useActivity = (activityData) => {
       submitted: false,
       completed: false,
       correct: false,
-
-      selectedFigures: [],
-      selectedPencil: null,
-      paintedFigures: [],
     });
-    resetActivity03();
   };
-  // Expone las acciones //
+
   const actions = {
-    reset,
-    selectFigure,
-    selectActivity03Figure,
-    selectPencil,
-    dropPencilOnFigure,
+    completeActivity,
     submit,
+    reset,
   };
-  // Expone el estado, Expone los datos
-  const session = {
+
+  return {
     data: activityData,
     state,
+<<<<<<< HEAD
     selectedState,
+=======
+>>>>>>> 73edd8c (se hizo la refactorizacion de las tres actividades, para que la logica estubiera fuera de useactivity)
     actions,
   };
-
-  // Devuelve la sesión
-  return session;
 };
+
 export default useActivity;

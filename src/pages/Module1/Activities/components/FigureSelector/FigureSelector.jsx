@@ -9,6 +9,8 @@ const FigureSelector = ({
   selectFigure,
   selectedPencil,
 }) => {
+
+  
   const handleOnClick = (figure) => {
     selectFigure(figure.id);
 

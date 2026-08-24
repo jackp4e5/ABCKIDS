@@ -1,17 +1,16 @@
 import { useState } from "react";
 
 const useActivity03 = (activityData) => {
-  const [selectedState, setSelectedState] = useState({
+  const [stateActivity03, setStateActivity03] = useState({
     selectedParent: null,
     selectedFigure: null,
     selectedFaces: [],
-    completed: false,
   });
 
   const selectActivity03Figure = (parentId, figureId) => {
-    setSelectedState((previousState) => {
+    setStateActivity03((previousState) => {
       const updatedFaces = previousState.selectedFaces.filter(
-        (face) => face.parentId !== parentId,
+        (face) => face.parentId !== parentId
       );
 
       updatedFaces.push({
@@ -19,29 +18,27 @@ const useActivity03 = (activityData) => {
         figureId,
       });
 
-      const completed = updatedFaces.length === activityData.palette.length;
-
       return {
         ...previousState,
         selectedParent: parentId,
         selectedFigure: figureId,
         selectedFaces: updatedFaces,
-        completed,
       };
     });
   };
 
   const checkActivity03 = () => {
-    if (selectedState.selectedFaces.length === 0) {
+    if (stateActivity03.selectedFaces.length === 0) {
       return false;
     }
-    return selectedState.selectedFaces.every((selection) => {
+
+    return stateActivity03.selectedFaces.every((selection) => {
       const parent = activityData.palette.find(
-        (item) => item.id === selection.parentId,
+        (item) => item.id === selection.parentId
       );
 
       const figure = parent.figures.find(
-        (item) => item.id === selection.figureId,
+        (item) => item.id === selection.figureId
       );
 
       return figure.isCorrect;
@@ -49,21 +46,23 @@ const useActivity03 = (activityData) => {
   };
 
   const resetActivity03 = () => {
-    setSelectedState({
+    setStateActivity03({
       selectedParent: null,
       selectedFigure: null,
       selectedFaces: [],
-      completed: false,
     });
   };
 
+  const completed =
+    stateActivity03.selectedFaces.length ===
+    activityData.palette.length;
+
   return {
-    selectedState,
-    actions: {
-      selectActivity03Figure,
-      checkActivity03,
-      resetActivity03,
-    },
+    stateActivity03,
+    completed,
+    selectActivity03Figure,
+    checkActivity03,
+    resetActivity03,
   };
 };
 
