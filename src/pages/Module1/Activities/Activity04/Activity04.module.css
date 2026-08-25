@@ -20,6 +20,6 @@
   left: 50%;
   width: 90%;
   height: 95%;
-  font-size: clamp(10px, 2.5vw, 1rem);
+  font-size: clamp(8px, 2.5vw, 1rem);
 }
 

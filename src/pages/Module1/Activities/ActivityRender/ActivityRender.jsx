@@ -24,6 +24,8 @@ const ActivityRender = () => {
   };
 
   const handleContinue = () => {
+    console.log(2);
+    
     completeActivity(activityId);
     if (!currentActivity?.next) {
       return;

@@ -1,7 +1,7 @@
 .modal {
   height: 100vh;
   width: 100vw;
-  background: rgba(160, 154, 154, 0.5);
+  background: rgba(129, 129, 129, 0.87);
   position: fixed;
   top: 0;
   left: 0;
@@ -10,7 +10,14 @@
 }
 
 .modal img:first-child {
-  width: 35%;
+  width: 45%;
+}
+.bgSlide {
+  width: 76%;
+  height: 74%;
+  display: grid;
+  place-items: center;
+  position: relative;
 }
 
 .buttonsWrapper {
@@ -19,8 +26,15 @@
   justify-content: center;
   align-items: center;
   position: absolute;
+  gap: 10%;
+  height: 200px;
   right: 0px;
   bottom: 62px;
   max-width: 25%;
   text-align: center;
+}
+
+
+.reset{
+      width: clamp(10px, 15vw, 90px);
 }

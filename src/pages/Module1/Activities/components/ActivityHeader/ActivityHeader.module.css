@@ -3,17 +3,14 @@
   justify-content: center;
   align-items: center;
   color: rgb(30, 178, 109);
- 
-  
 }
 
-.wrapperContent{
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-
-    padding: 20px 0;
+.wrapperContent {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
 }
 
 .wrapperImg {
@@ -24,22 +21,11 @@
 }
 
 .wrapperImg img {
-  width: 25px;
-  height: 25px;
+  width: clamp(10px, 2.5vw, 25px);
+  height: clamp(10px, 2.5vw, 25px);
+
   cursor: pointer;
-  transition: .2s ease scale;
-}
-
-@media (width < 760px) {
-  .wrapperImg img {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  transition: .2s ease scale;
-}
-
-
-
+  transition: 0.2s ease scale;
 }
 
 .wrapperImg img:hover {

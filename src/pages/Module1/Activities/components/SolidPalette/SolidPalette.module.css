@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 3%;
+  gap: 5%;
 }
 
 .solids {
@@ -12,9 +12,17 @@
 
 .wrapperFigures {
   display: flex;
-  gap: 5%;
+  gap: 9%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+
+
+.wrapperFigures img {
+  max-height: 80px;
 }
 
 .palette {
