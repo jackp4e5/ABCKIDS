@@ -1,0 +1,9 @@
+.pieceWrapper {
+  display: flex;
+  gap: 1%;
+  position: absolute;
+  bottom: 0%;
+  width: 82%;
+  right: 16%;
+  justify-content: center;
+}

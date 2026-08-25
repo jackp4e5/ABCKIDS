@@ -1,6 +1,5 @@
 import useActivity from "../../../../hooks/useActivity";
 
-import ActivityBoard from "../components/ActivityBoard/ActivityBoard";
 import ActivityControls from "../components/ActivityControls/ActivityControls";
 import ActivityHeader from "../components/ActivityHeader/ActivityHeader";
 import FeedbackModal from "../components/FeedbackModal/FeedbackModal";
@@ -10,20 +9,17 @@ import hero from "../../../../../public/images/Activity04/hero.png";
 import styles from "./Activity04.module.css";
 import { activity04 } from "../../../../data/Module1/activities/activity04";
 import useActivity04 from "../../../../hooks/useActivity04";
+import ActivityDragAndDrop from "../components/ActivityDragAndDrop/ActivityDragAndDrop";
+import ActivityDrag from "../components/ActivityDrag/ActivityDrag";
 
 const Activity04 = ({ onContinue }) => {
   const session = useActivity(activity04);
 
   const { actions, data, state } = session;
-
-  console.log(data);
-
-  const {
  
-    checkActivity04,
-    resetActivity04,
-    completed,
-  } = useActivity04(activity04);
+
+  const { stateActivity04, checkActivity04, resetActivity04, completed } =
+    useActivity04(activity04);
 
   const handleSubmit = () => {
     const correct = checkActivity04();
@@ -51,9 +47,8 @@ const Activity04 = ({ onContinue }) => {
 
         <ActivityHeader header={data.header} instruction={data.instruction} />
 
-        <ActivityBoard>
-         
-        </ActivityBoard>
+        <ActivityDragAndDrop animals={data.animals}/>
+        <ActivityDrag animals={data.animals}/>
 
         <ActivityControls completed={completed} actions={activityActions} />
       </div>
