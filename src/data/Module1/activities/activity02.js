@@ -1,6 +1,31 @@
+import backAudio from "../../../../public/audio/Activity02/backAudio.mp3";
+import instructionAudio from "../../../../public/audio/Activity02/instructionAudio.mp3";
+import instructionImg from "../../../../public/images/Activity02/instructionImg.png";
+import iconAudio from "../../../../public/ImagesBtns/iconAudio.png";
+import grayBall from "../../../../public/images/activity02/grayBall.png";
+import ActiveBall from "../../../../public/images/activity02/ActiveBall.png";
+import grayDie from "../../../../public/images/activity02/grayDie.png";
+import ActiveDie from "../../../../public/images/activity02/ActiveDie.png";
+import grayConePartyHat from "../../../../public/images/activity02/grayConePartyHat.png";
+import activeConePartyHat from "../../../../public/images/activity02/activeConePartyHat.png";
+import grayBottle from "../../../../public/images/activity02/grayBottle.png";
+import activeBottle from "../../../../public/images/activity02/activeBottle.png";
+import graySphere from "../../../../public/images/activity02/graySphere.png";
+import paletteSphere from "../../../../public/images/activity02/paletteSphere.png";
+import grayCube from "../../../../public/images/activity02/grayCube.png";
+import paletteCube from "../../../../public/images/activity02/paletteCube.png";
+import grayCylinder from "../../../../public/images/activity02/grayCylinder.png";
+import paletteCylinder from "../../../../public/images/activity02/paletteCylinder.png";
+import grayTriangle from "../../../../public/images/activity02/grayTriangle.png";
+import paletteTriangle from "../../../../public/images/activity02/paletteTriangle.png";
+import bluePencil from "../../../../public/images/activity02/pencils/bluePencil.png";
+import greenPencil from "../../../../public/images/activity02/pencils/greenPencil.png";
+import orangePencil from "../../../../public/images/activity02/pencils/orangePencil.png";
+import purplePencil from "../../../../public/images/activity02/pencils/purplePencil.png";
+
 export const activity02 = {
   id: "activity02",
-  audio:"../../../../public/audio/Activity02/backAudio.mp3",
+  audio: backAudio,
   type: "dropPencil",
   header: {
     title: "Relaciona",
@@ -12,10 +37,10 @@ export const activity02 = {
   },
   instruction: {
     message: "Colorea cada figura como se identifica.",
-    audio: "../../../../audio/Activity02/instructionAudio.mp3",
+    audio: instructionAudio,
     assets: {
-      image: "../../../../public/images/Activity02/instructionImg.png",
-      iconAudio: "../../../../public/ImagesBtns/iconAudio.png",
+      image: instructionImg,
+      iconAudio: iconAudio,
     },
   },
 
@@ -26,8 +51,8 @@ export const activity02 = {
       shape: "esfera",
       color: "blue",
       assets: {
-        gray: "../../../../public/images/activity02/graySphere.png",
-        active: "../../../../public/images/activity02/paletteSphere.png",
+        gray: graySphere,
+        active: paletteSphere,
       },
     },
     {
@@ -36,8 +61,8 @@ export const activity02 = {
       shape: "cubo",
       color: "purple",
       assets: {
-        gray: "../../../../public/images/activity02/grayCube.png",
-        active: "../../../../public/images/activity02/paletteCube.png",
+        gray: grayCube,
+        active: paletteCube,
       },
     },
     {
@@ -46,8 +71,8 @@ export const activity02 = {
       shape: "cilindro",
       color: "orange",
       assets: {
-        gray: "../../../../public/images/activity02/grayCylinder.png",
-        active: "../../../../public/images/activity02/paletteCylinder.png",
+        gray: grayCylinder,
+        active: paletteCylinder,
       },
     },
     {
@@ -56,8 +81,8 @@ export const activity02 = {
       shape: "triangulo",
       color: "green",
       assets: {
-        gray: "../../../../public/images/activity02/grayTriangle.png",
-        active: "../../../../public/images/activity02/paletteTriangle.png",
+        gray: grayTriangle,
+        active: paletteTriangle,
       },
     },
     {
@@ -66,8 +91,8 @@ export const activity02 = {
       shape: "esfera",
       color: "blue",
       assets: {
-        gray: "../../../../public/images/activity02/grayBall.png",
-        active: "../../../../public/images/activity02/ActiveBall.png",
+        gray: grayBall,
+        active: ActiveBall,
       },
     },
     {
@@ -76,8 +101,8 @@ export const activity02 = {
       shape: "cubo",
       color: "purple",
       assets: {
-        gray: "../../../../public/images/activity02/grayDie.png",
-        active: "../../../../public/images/activity02/ActiveDie.png",
+        gray: grayDie,
+        active: ActiveDie,
       },
     },
     {
@@ -86,8 +111,8 @@ export const activity02 = {
       shape: "triangulo",
       color: "green",
       assets: {
-        gray: "../../../../public/images/activity02/grayConePartyHat.png",
-        active: "../../../../public/images/activity02/activeConePartyHat.png",
+        gray: grayConePartyHat,
+        active: activeConePartyHat,
       },
     },
     {
@@ -96,8 +121,8 @@ export const activity02 = {
       shape: "cilindro",
       color: "orange",
       assets: {
-        gray: "../../../../public/images/activity02/grayBottle.png",
-        active: "../../../../public/images/activity02/activeBottle.png",
+        gray: grayBottle,
+        active: activeBottle,
       },
     },
   ],
@@ -109,8 +134,8 @@ export const activity02 = {
       shape: "esfera",
       color: "blue",
       assets: {
-        gray: "../../../../public/images/activity02/graySphere.png",
-        active: "../../../../public/images/activity02/paletteSphere.png",
+        gray: graySphere,
+        active: paletteSphere,
       },
     },
     {
@@ -119,8 +144,8 @@ export const activity02 = {
       shape: "cubo",
       color: "purple",
       assets: {
-        gray: "../../../../public/images/activity02/grayCube.png",
-        active: "../../../../public/images/activity02/paletteCube.png",
+        gray: grayCube,
+        active: paletteCube,
       },
     },
     {
@@ -129,8 +154,8 @@ export const activity02 = {
       shape: "cilindro",
       color: "orange",
       assets: {
-        gray: "../../../../public/images/activity02/grayCylinder.png",
-        active: "../../../../public/images/activity02/paletteCylinder.png",
+        gray: grayCylinder,
+        active: paletteCylinder,
       },
     },
     {
@@ -139,8 +164,8 @@ export const activity02 = {
       shape: "triangulo",
       color: "green",
       assets: {
-        gray: "../../../../public/images/activity02/grayTriangle.png",
-        active: "../../../../public/images/activity02/paletteTriangle.png",
+        gray: grayTriangle,
+        active: paletteTriangle,
       },
     },
   ],
@@ -151,7 +176,7 @@ export const activity02 = {
       name: "blue Pencil",
       color: "blue",
       assets: {
-        src: "../../../../public/images/activity02/pencils/bluePencil.png",
+        src: bluePencil,
       },
     },
     {
@@ -159,7 +184,7 @@ export const activity02 = {
       name: "green Pencil",
       color: "green",
       assets: {
-        src: "../../../../public/images/activity02/pencils/greenPencil.png",
+        src: greenPencil,
       },
     },
     {
@@ -167,7 +192,7 @@ export const activity02 = {
       name: "orange Pencil",
       color: "orange",
       assets: {
-        src: "../../../../public/images/activity02/pencils/orangePencil.png",
+        src: orangePencil,
       },
     },
     {
@@ -175,10 +200,8 @@ export const activity02 = {
       name: "purple Pencil",
       color: "purple",
       assets: {
-        src: "../../../../public/images/activity02/pencils/purplePencil.png",
+        src: purplePencil,
       },
     },
   ],
-
-
 };
