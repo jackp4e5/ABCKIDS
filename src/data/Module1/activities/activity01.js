@@ -1,6 +1,25 @@
+import audioEsfera from "../../../../public/audio/Activity01/audioEsfera.mp3"
+import backAudio from "../../../../public/audio/Activity01/backAudio.mp3"
+import instructionAudio from "../../../../public/audio/Activity01/instructionAudio.mp3"
+import instructionImg from "../../../../public/images/Activity01/instruction.png"
+import iconAudio from "../../../../public/imagesBtns/iconAudio.png"
+import grayCircle from "../../../../public/images/Activity01/grayCircle.png"
+import activeCircle from "../../../../public/images/Activity01/activeCircle.png"
+import grayCube from "../../../../public/images/Activity01/grayCube.png"
+import activeCube from "../../../../public/images/Activity01/activeCube.png"
+import audioCubo from "../../../../public/audio/Activity01/audioCubo.mp3"
+import grayCilindre from "../../../../public/images/Activity01/grayCilindre.png"
+import activeCilindre from "../../../../public/images/Activity01/activeCilindre.png"
+import audioCilindro from "../../../../public/audio/Activity01/audioCilindro.mp3"
+import grayTriangle from "../../../../public/images/Activity01/grayTriangle.png"
+import activeTriangle from "../../../../public/images/Activity01/activeTriangle.png"
+import audioCono from "../../../../public/audio/Activity01/audioCono.mp3"
+
+
+
 export const activity01 = {
   id: "activity01",
-  audio:"../../../../public/audio/Activity01/backAudio.mp3",
+  audio:backAudio,
   header: {
     title: "Solidos geométricos",
     assets: {
@@ -10,10 +29,10 @@ export const activity01 = {
   },
   instruction: {
     message: "Señala e identifica.",
-    audio: "../../../../public/audio/Activity01/instructionAudio.mp3",
+    audio: instructionAudio,
     assets: {
-      image: "../../../../public/images/Activity01/instruction.png",
-      iconAudio: "../../../../public/imagesBtns/iconAudio.png",
+      image: instructionImg,
+      iconAudio: iconAudio,
     },
   },
 
@@ -21,38 +40,38 @@ export const activity01 = {
     {
       id: "esfera",
       name: "Esfera",
-      audio: "../../../../public/audio/Activity01/audioEsfera.mp3",
+      audio: audioEsfera,
 
       assets: {
-        gray: "../../../../public/images/Activity01/grayCircle.png",
-        active: "../../../../public/images/Activity01/activeCircle.png",
+        gray: grayCircle ,
+        active:activeCircle ,
       },
     },
     {
       id: "cubo",
       name: "Cubo",
-      audio: "../../../../public/audio/Activity01/audioCubo.mp3",
+      audio:audioCubo ,
       assets: {
-        gray: "../../../../public/images/Activity01/grayCube.png",
-        active: "../../../../public/images/Activity01/activeCube.png",
+        gray: grayCube ,
+        active:activeCube ,
       },
     },
     {
       id: "cilindro",
       name: "Cilindro",
-      audio: "../../../../public/audio/Activity01/audioCilindro.mp3",
+      audio:audioCilindro ,
       assets: {
-        gray: "../../../../public/images/Activity01/grayCilindre.png",
-        active: "../../../../public/images/Activity01/activeCilindre.png",
+        gray:grayCilindre ,
+        active: activeCilindre,
       },
     },
     {
       id: "cono",
       name: "Cono",
-      audio: "../../../../public/audio/Activity01/audioCono.mp3",
+      audio:audioCono ,
       assets: {
-        gray: "../../../../public/images/Activity01/grayTriangle.png",
-        active: "../../../../public/images/Activity01/activeTriangle.png",
+        gray:grayTriangle ,
+        active:activeTriangle ,
       },
     },
   ],
