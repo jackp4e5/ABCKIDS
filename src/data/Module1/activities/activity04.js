@@ -14,15 +14,18 @@ import dogLeft from "../../../../public/images/Activity04/dogLeft.png";
 import dogRight from "../../../../public/images/Activity04/dogRight.png";
 import monkeyRight from "../../../../public/images/Activity04/monkeyRight.png";
 import monkeyLeft from "../../../../public/images/Activity04/monkeyLeft.png";
+import heroImg from "../../../../public/images/Activity04/hero.png";
+import backAudio from "../../../../public/audio/Activity03/backAudio.mp3";
+import iconAudioImg from "../../../../public/imagesBtns/iconAudio.png";
 
 export const activity04 = {
   id: "activity04",
-  audio: "../../../../public/audio/Activity03/backAudio.mp3",
+  audio: backAudio,
   type: "",
-  hero: "../../../../public/images/Activity04/hero.png",
+  hero: heroImg,
   header: {
     title: "Caritas de animales",
-    audio: "../../../../audio/Activity03/titleAudio.mp3",
+    audio: "../../../../public/audio/Activity03/titleAudio.mp3",
     assets: {
       headerImg: "../../../../public/images/Activity02/titleImg.png",
       badge: "../../../../public/images/iconHeader.png",
@@ -33,7 +36,7 @@ export const activity04 = {
     audio: "../../../../audio/Activity03/instructionAudio.mp3",
     assets: {
       image: "../../../../public/images/Activity03/instructionImg.png",
-      iconAudio: "../../../../public/imagesBtns/iconAudio.png",
+      iconAudio: iconAudioImg,
     },
   },
   animals: [

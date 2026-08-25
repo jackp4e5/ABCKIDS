@@ -1,23 +1,46 @@
+import backAudio from "../../../../public/audio/Activity03/backAudio.mp3";
+import heroImg from "../../../../public/images/Activity03/hero.png";
+import titleAudio from "../../../../public/audio/Activity03/backAudio.mp3";
+import titleImg from "../../../../public/images/Activity02/titleImg.png";
+import iconHeader from "../../../../public/images/iconHeader.png";
+import instructionAudio from "../../../../public/audio/Activity03/instructionAudio.mp3";
+import iconAudio from "../../../../public/imagesBtns/iconAudio.png";
+import greenCube from "../../../../public/images/activity03/greenCube.png";
+import greenCircle from "../../../../public/images/activity03/greenCircle.png";
+import whiteSquare from "../../../../public/images/activity03/whiteSquare.png";
+import greenSquare from "../../../../public/images/activity03/greenSquare.png";
+import whiteRectangle from "../../../../public/images/activity03/whiteRectangle.png";
+import greenRectangle from "../../../../public/images/activity03/greenRectangle.png";
+import redCylinder from "../../../../public/images/activity03/redCylinder.png";
+import redRectangle from "../../../../public/images/activity03/redRectangle.png";
+import whiteCircle from "../../../../public/images/activity03/whiteCircle.png";
+import redCircle from "../../../../public/images/activity03/redCircle.png";
+import redSquare from "../../../../public/images/activity03/redSquare.png";
+import blueCone from "../../../../public/images/activity03/blueCone.png";
+import blueCircle from "../../../../public/images/activity03/blueCircle.png";
+import whiteTriangle from "../../../../public/images/activity03/whiteTriangle.png";
+import blueTriangle from "../../../../public/images/activity03/blueTriangle.png";
+import blueSquare from "../../../../public/images/activity03/blueSquare.png";
 
 export const activity03 = {
   id: "activity03",
-  audio:"../../../../public/audio/Activity03/backAudio.mp3",
+  audio: backAudio,
   type: "",
-  hero: "../../../../public/images/Activity03/hero.png",
+  hero: heroImg,
   header: {
     title: "Sólidos y caras",
-    audio: "../../../../audio/Activity03/titleAudio.mp3",
+    audio: titleAudio,
     assets: {
-      headerImg: "../../../../public/images/Activity02/titleImg.png",
-      badge: "../../../../public/images/iconHeader.png",
+      headerImg: titleImg,
+      badge: iconHeader,
     },
   },
   instruction: {
     message: "Escucha, observa y resuelve.",
-    audio: "../../../../audio/Activity03/instructionAudio.mp3",
+    audio: instructionAudio,
     assets: {
       image: "../../../../public/images/Activity03/instructionImg.png",
-      iconAudio: "../../../../public/imagesBtns/iconAudio.png",
+      iconAudio: iconAudio,
     },
   },
 
@@ -29,7 +52,7 @@ export const activity03 = {
       color: "green",
 
       assets: {
-        active: "../../../../public/images/activity03/greenCube.png",
+        active: greenCube,
       },
 
       figures: [
@@ -37,10 +60,10 @@ export const activity03 = {
           id: "circle01",
           name: "Círculo",
           shape: "circulo",
-          isCorrect:false,
+          isCorrect: false,
           assets: {
-            default: "../../../../public/images/activity03/whiteCircle.png",
-            active: "../../../../public/images/activity03/greenCircle.png",
+            default: whiteCircle,
+            active: greenCircle,
           },
         },
 
@@ -48,10 +71,10 @@ export const activity03 = {
           id: "square01",
           name: "Cuadrado",
           shape: "cuadrado",
-          isCorrect:true,
+          isCorrect: true,
           assets: {
-            default: "../../../../public/images/activity03/whiteSquare.png",
-            active: "../../../../public/images/activity03/greenSquare.png",
+            default: whiteSquare,
+            active: greenSquare,
           },
         },
 
@@ -59,10 +82,10 @@ export const activity03 = {
           id: "rectangle01",
           name: "Rectángulo",
           shape: "rectangulo",
-          isCorrect:false,
+          isCorrect: false,
           assets: {
-            default: "../../../../public/images/activity03/whiteRectangle.png",
-            active: "../../../../public/images/activity03/greenRectangle.png",
+            default: whiteRectangle,
+            active: greenRectangle,
           },
         },
       ],
@@ -74,7 +97,7 @@ export const activity03 = {
       color: "red",
 
       assets: {
-        active: "../../../../public/images/activity03/redCylinder.png",
+        active: redCylinder,
       },
 
       figures: [
@@ -82,20 +105,20 @@ export const activity03 = {
           id: "rectangle02",
           name: "Rectángulo",
           shape: "rectangulo",
-          isCorrect:false,
+          isCorrect: false,
           assets: {
-            default: "../../../../public/images/activity03/whiteRectangle.png",
-            active: "../../../../public/images/activity03/redRectangle.png",
+            default: whiteRectangle,
+            active: redRectangle,
           },
         },
         {
           id: "circle02",
           name: "Círculo",
           shape: "circulo",
-          isCorrect:true,
+          isCorrect: true,
           assets: {
-            default: "../../../../public/images/activity03/whiteCircle.png",
-            active: "../../../../public/images/activity03/redCircle.png",
+            default: whiteCircle,
+            active: redCircle,
           },
         },
 
@@ -103,10 +126,10 @@ export const activity03 = {
           id: "square02",
           name: "Cuadrado",
           shape: "cuadrado",
-          isCorrect:false,
+          isCorrect: false,
           assets: {
-            default: "../../../../public/images/activity03/whiteSquare.png",
-            active: "../../../../public/images/activity03/redSquare.png",
+            default: whiteSquare,
+            active: redSquare,
           },
         },
       ],
@@ -118,7 +141,7 @@ export const activity03 = {
       color: "blue",
 
       assets: {
-        active: "../../../../public/images/activity03/blueCone.png",
+        active: blueCone,
       },
 
       figures: [
@@ -126,20 +149,20 @@ export const activity03 = {
           id: "circle03",
           name: "Círculo",
           shape: "circulo",
-          isCorrect:true,
+          isCorrect: true,
           assets: {
-            default: "../../../../public/images/activity03/whiteCircle.png",
-            active: "../../../../public/images/activity03/blueCircle.png",
+            default: whiteCircle,
+            active: blueCircle,
           },
         },
         {
           id: "triangulo01",
           name: "Triangulo",
           shape: "triangulo",
-          isCorrect:false,
+          isCorrect: false,
           assets: {
-            default: "../../../../public/images/activity03/whiteTriangle.png",
-            active: "../../../../public/images/activity03/blueTriangle.png",
+            default: whiteTriangle,
+            active: blueTriangle,
           },
         },
 
@@ -147,14 +170,13 @@ export const activity03 = {
           id: "square03",
           name: "Cuadrado",
           shape: "cuadrado",
-          isCorrect:false,
+          isCorrect: false,
           assets: {
-            default: "../../../../public/images/activity03/whiteSquare.png",
-            active: "../../../../public/images/activity03/blueSquare.png",
+            default: whiteSquare,
+            active: blueSquare,
           },
         },
       ],
     },
   ],
 };
-

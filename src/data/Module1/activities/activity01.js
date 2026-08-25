@@ -2,7 +2,7 @@ import audioEsfera from "../../../../public/audio/Activity01/audioEsfera.mp3"
 import backAudio from "../../../../public/audio/Activity01/backAudio.mp3"
 import instructionAudio from "../../../../public/audio/Activity01/instructionAudio.mp3"
 import instructionImg from "../../../../public/images/Activity01/instruction.png"
-import iconAudio from "../../../../public/imagesBtns/iconAudio.png"
+import iconAudioImg from "../../../../public/imagesBtns/iconAudio.png"
 import grayCircle from "../../../../public/images/Activity01/grayCircle.png"
 import activeCircle from "../../../../public/images/Activity01/activeCircle.png"
 import grayCube from "../../../../public/images/Activity01/grayCube.png"
@@ -32,7 +32,7 @@ export const activity01 = {
     audio: instructionAudio,
     assets: {
       image: instructionImg,
-      iconAudio: iconAudio,
+      iconAudio: iconAudioImg,
     },
   },
 
