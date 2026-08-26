@@ -1,9 +1,9 @@
 import ImageBlock from "../../../../../components/Blocks/ImageBlock/ImageBlock";
 import feedBackModal from "../../../../../data/Module1/FeedbackModal/feedbackModal";
-import imgRestart from "../../../../../../public/ImagesBtns/btnRestart.png";
-import imgContinue from "../../../../../../public/ImagesBtns/btnContinue.png";
 import styles from "./FeedbackModal.module.css";
 import { Link } from "react-router-dom";
+const imgRestart = "/ImagesBtns/btnRestart.png";
+const imgContinue = "/ImagesBtns/btnContinue.png";
 const FeedbackModal = ({ correct, actions, onContinue }) => {
   const randomItem = Math.floor(
     Math.random() * Object.keys(feedBackModal.correct.images).length,
@@ -11,6 +11,8 @@ const FeedbackModal = ({ correct, actions, onContinue }) => {
   const randomItemIncorrect = Math.floor(
     Math.random() * Object.keys(feedBackModal.inCorrect.images).length,
   );
+
+  console.log(randomItem);
 
   const correctItem =
     randomItem === 0 ? "correct" : randomItem === 1 ? "correct02" : "correct03";
