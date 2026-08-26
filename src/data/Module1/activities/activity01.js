@@ -1,25 +1,23 @@
-import audioEsfera from "../../../../public/audio/Activity01/audioEsfera.mp3"
-import backAudio from "../../../../public/audio/Activity01/backAudio.mp3"
-import instructionAudio from "../../../../public/audio/Activity01/instructionAudio.mp3"
-import instructionImg from "../../../../public/images/Activity01/instruction.png"
-import iconAudioImg from "../../../../public/imagesBtns/iconAudio.png"
-import grayCircle from "../../../../public/images/Activity01/grayCircle.png"
-import activeCircle from "../../../../public/images/Activity01/activeCircle.png"
-import grayCube from "../../../../public/images/Activity01/grayCube.png"
-import activeCube from "../../../../public/images/Activity01/activeCube.png"
-import audioCubo from "../../../../public/audio/Activity01/audioCubo.mp3"
-import grayCilindre from "../../../../public/images/Activity01/grayCilindre.png"
-import activeCilindre from "../../../../public/images/Activity01/activeCilindre.png"
-import audioCilindro from "../../../../public/audio/Activity01/audioCilindro.mp3"
-import grayTriangle from "../../../../public/images/Activity01/grayTriangle.png"
-import activeTriangle from "../../../../public/images/Activity01/activeTriangle.png"
-import audioCono from "../../../../public/audio/Activity01/audioCono.mp3"
-
-
+const audioEsfera = "/audio/Activity01/audioEsfera.mp3";
+const backAudio = "/audio/Activity01/backAudio.mp3";
+const instructionAudio = "/audio/Activity01/instructionAudio.mp3";
+const instructionImg = "/images/Activity01/instruction.png";
+const iconAudioImg = "/imagesBtns/iconAudio.png";
+const grayCircle = "/images/Activity01/grayCircle.png";
+const activeCircle = "/images/Activity01/activeCircle.png";
+const grayCube = "/images/Activity01/grayCube.png";
+const activeCube = "/images/Activity01/activeCube.png";
+const audioCubo = "/audio/Activity01/audioCubo.mp3";
+const grayCilindre = "/images/Activity01/grayCilindre.png";
+const activeCilindre = "/images/Activity01/activeCilindre.png";
+const audioCilindro = "/audio/Activity01/audioCilindro.mp3";
+const grayTriangle = "/images/Activity01/grayTriangle.png";
+const activeTriangle = "/images/Activity01/activeTriangle.png";
+const audioCono = "/audio/Activity01/audioCono.mp3";
 
 export const activity01 = {
   id: "activity01",
-  audio:backAudio,
+  audio: backAudio,
   header: {
     title: "Solidos geométricos",
     assets: {
@@ -43,35 +41,35 @@ export const activity01 = {
       audio: audioEsfera,
 
       assets: {
-        gray: grayCircle ,
-        active:activeCircle ,
+        gray: grayCircle,
+        active: activeCircle,
       },
     },
     {
       id: "cubo",
       name: "Cubo",
-      audio:audioCubo ,
+      audio: audioCubo,
       assets: {
-        gray: grayCube ,
-        active:activeCube ,
+        gray: grayCube,
+        active: activeCube,
       },
     },
     {
       id: "cilindro",
       name: "Cilindro",
-      audio:audioCilindro ,
+      audio: audioCilindro,
       assets: {
-        gray:grayCilindre ,
+        gray: grayCilindre,
         active: activeCilindre,
       },
     },
     {
       id: "cono",
       name: "Cono",
-      audio:audioCono ,
+      audio: audioCono,
       assets: {
-        gray:grayTriangle ,
-        active:activeTriangle ,
+        gray: grayTriangle,
+        active: activeTriangle,
       },
     },
   ],
