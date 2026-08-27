@@ -6,14 +6,14 @@ const PencilSelector = ({ pencils }) => {
   return (
     <div className={styles.wrapper}>
       {pencils.map((pencil, index) => (
-        <Link key={pencil.id + index}>
+        <div key={pencil.id + index}>
           <Pencil
             pencil={pencil}
             id={pencil.id}
             name={pencil.name}
             src={pencil.assets.src}
           />
-        </Link>
+        </div>
       ))}
     </div>
   );
