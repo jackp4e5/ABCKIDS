@@ -12,23 +12,12 @@
   gap: 2%;
 }
 
-
-/* CONTENEDOR DE CADA ANIMAL */
-
 .dropZone {
   position: relative;
 
   width: 100%;
-
-  /*
-   * Mantiene la proporción aproximada
-   * de tu imagen 138.73 x 99.98
-   */
-  aspect-ratio: 138.73 / 99.98;
+  aspect-ratio: 358 / 259;
 }
-
-
-/* IMAGEN BASE */
 
 .dropZoneImage {
   display: block;
@@ -39,9 +28,6 @@
   object-fit: contain;
 }
 
-
-/* CARA QUE SE ARRASTRA */
-
 .animalFace {
   position: absolute;
 
@@ -49,9 +35,76 @@
   width: auto;
 
   top: 6.2%;
-  right: 9%;
 
   object-fit: contain;
 
   pointer-events: none;
+  user-select: none;
+}
+
+/* POSICIÓN HORIZONTAL */
+
+.faceRight {
+  right: 9%;
+}
+
+.faceLeft {
+  left: 9%;
+}
+
+/* OSO */
+
+.bear {
+  height: 85.8%;
+  top: 7%;
+}
+.bear.faceRight {
+  right: 9.3%;
+}
+.bear.faceLeft {
+  left: 9.2%;
+}
+
+/* GATO */
+
+.cat {
+  height: 83%;
+  top: 8.2%;
+}
+
+.cat.faceLeft {
+  left: 11%;
+}
+.cat.faceRight {
+  right: 11.7%;
+}
+
+/* PERRO */
+
+.dog {
+  height: 82%;
+  top: 8.9%;
+}
+
+.dog.faceLeft {
+  left: 6.5%;
+}
+
+.dog.faceRight {
+  right: 6.7%;
+}
+
+/* MONO */
+
+.monkey {
+  height: 82%;
+  top: 9%;
+}
+
+.monkey.faceLeft {
+  left: 3.3%;
+}
+
+.monkey.faceRight {
+  right: 3.6%;
 }

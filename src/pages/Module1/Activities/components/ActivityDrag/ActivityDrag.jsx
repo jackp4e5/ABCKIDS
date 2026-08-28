@@ -1,10 +1,13 @@
 import styles from "./ActivityDrag.module.css";
 import AnimalFace from "../AnimalFace/AnimalFace";
-const ActivityDrag = ({ animals }) => {
+const ActivityDrag = ({ animals, placedPieceIds }) => {
+  const availableAnimals = animals.filter(
+    (animal) => !placedPieceIds.includes(animal.piece.id),
+  );
   return (
     <div className={styles.pieceWrapper}>
-      {animals.map((animal) => (
-        <div key={animal.piece.id}>
+      {availableAnimals.map((animal) => (
+        <div className={styles.imagesWrapper} key={animal.piece.id}>
           <AnimalFace
             animal={animal}
             id={animal.piece.id}

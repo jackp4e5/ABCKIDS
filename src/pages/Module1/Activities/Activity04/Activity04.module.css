@@ -23,3 +23,16 @@
   font-size: clamp(8px, 2.5vw, 1rem);
 }
 
+.btnReset {
+  position: absolute;
+  width: clamp(10px, 5vw, 45px);
+  bottom: 39px;
+  right: 11px;
+}
+
+@media (width > 720px) {
+  .btnReset {
+    bottom: 14%;
+    right: 3.6%;
+  }
+}

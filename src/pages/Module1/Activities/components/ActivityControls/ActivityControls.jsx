@@ -1,4 +1,4 @@
-import submit from "../../../../../../public/ImagesBtns/btnContinue.png";
+const submit = "/ImagesBtns/btnContinue.png";
 
 import styles from "./ActivityControls.module.css"
 

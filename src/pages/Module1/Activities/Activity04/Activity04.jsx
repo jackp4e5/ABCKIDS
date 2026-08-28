@@ -4,13 +4,14 @@ import ActivityControls from "../components/ActivityControls/ActivityControls";
 import ActivityHeader from "../components/ActivityHeader/ActivityHeader";
 import FeedbackModal from "../components/FeedbackModal/FeedbackModal";
 
-const hero = "/images/Activity04/hero.png";
-
 import styles from "./Activity04.module.css";
 import { activity04 } from "../../../../data/Module1/activities/activity04";
 import useActivity04 from "../../../../hooks/useActivity04";
 import ActivityDragAndDrop from "../components/ActivityDragAndDrop/ActivityDragAndDrop";
 import ActivityDrag from "../components/ActivityDrag/ActivityDrag";
+
+const hero = "/images/Activity04/hero.png";
+const resetActivity = "/ImagesBtns/btnRestart.png";
 
 const Activity04 = ({ onContinue }) => {
   const session = useActivity(activity04);
@@ -19,6 +20,7 @@ const Activity04 = ({ onContinue }) => {
 
   const {
     stateActivity04,
+    placedPieceIds,
     dropPieceOnAnimal,
     checkActivity04,
     resetActivity04,
@@ -61,9 +63,15 @@ const Activity04 = ({ onContinue }) => {
           placements={stateActivity04.placements}
           handleDropAnimalFace={handleDropAnimalFace}
         />
-        <ActivityDrag animals={data.animals} />
+        <ActivityDrag animals={data.animals} placedPieceIds={placedPieceIds} />
 
         <ActivityControls completed={completed} actions={activityActions} />
+
+        {placedPieceIds.length > 0 && (
+          <a className={styles.btnReset} href="#" onClick={handleReset}>
+            <img src={resetActivity} alt="boton reset" />
+          </a>
+        )}
       </div>
 
       {state.submitted && (

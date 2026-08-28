@@ -1,10 +1,6 @@
 import styles from "./ActivityDragAndDrop.module.css";
 
-const ActivityDragAndDrop = ({
-  animals,
-  placements,
-  handleDropAnimalFace,
-}) => {
+const ActivityDragAndDrop = ({ animals, placements, handleDropAnimalFace }) => {
   const handleDragOver = (event) => {
     event.preventDefault();
   };
@@ -12,12 +8,10 @@ const ActivityDragAndDrop = ({
   const handleDrop = (event, animalId) => {
     const pieceId = event.dataTransfer.getData("pieceId");
 
-    const dropData = {
+    handleDropAnimalFace({
       pieceId,
       animalId,
-    };
-
-    handleDropAnimalFace(dropData);
+    });
   };
 
   return (
@@ -25,9 +19,7 @@ const ActivityDragAndDrop = ({
       {animals.map((animal) => {
         const pieceId = placements?.[animal.id];
 
-        const pieceAnimal = animals.find(
-          (item) => item.piece.id === pieceId
-        );
+        const pieceAnimal = animals.find((item) => item.piece.id === pieceId);
 
         return (
           <div
@@ -44,7 +36,11 @@ const ActivityDragAndDrop = ({
 
             {pieceAnimal && (
               <img
-                className={styles.animalFace}
+                className={`${styles.animalFace} ${
+                  pieceAnimal.piece.position === "left"
+                    ? styles.faceLeft
+                    : styles.faceRight
+                } ${styles[pieceAnimal.piece.variant]}`}
                 src={pieceAnimal.piece.image}
                 alt={pieceAnimal.piece.id}
               />

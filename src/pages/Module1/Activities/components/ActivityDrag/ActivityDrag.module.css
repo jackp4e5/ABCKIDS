@@ -1,9 +1,30 @@
 .pieceWrapper {
-  display: flex;
-  gap: 1%;
   position: absolute;
-  bottom: 0%;
-  width: 82%;
+
+  bottom: 0;
   right: 16%;
+
+  width: 82%;
+
+  display: flex;
   justify-content: center;
+  align-items: flex-end;
+
+  gap: 1%;
+}
+
+.imagesWrapper {
+  height: 90px;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.imagesWrapper img {
+  display: block;
+
+  height: 100%;
+  width: auto;
+
+  object-fit: contain;
 }
