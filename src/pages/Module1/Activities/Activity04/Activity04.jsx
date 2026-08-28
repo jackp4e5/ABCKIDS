@@ -16,10 +16,19 @@ const Activity04 = ({ onContinue }) => {
   const session = useActivity(activity04);
 
   const { actions, data, state } = session;
- 
 
-  const { stateActivity04, checkActivity04, resetActivity04, completed } =
-    useActivity04(activity04);
+  const {
+    stateActivity04,
+    dropPieceOnAnimal,
+    checkActivity04,
+    resetActivity04,
+    completed,
+  } = useActivity04(activity04);
+
+  const handleDropAnimalFace = (dropData) => {
+    const { pieceId, animalId } = dropData;
+    dropPieceOnAnimal(pieceId, animalId);
+  };
 
   const handleSubmit = () => {
     const correct = checkActivity04();
@@ -47,8 +56,12 @@ const Activity04 = ({ onContinue }) => {
 
         <ActivityHeader header={data.header} instruction={data.instruction} />
 
-        <ActivityDragAndDrop animals={data.animals}/>
-        <ActivityDrag animals={data.animals}/>
+        <ActivityDragAndDrop
+          animals={data.animals}
+          placements={stateActivity04.placements}
+          handleDropAnimalFace={handleDropAnimalFace}
+        />
+        <ActivityDrag animals={data.animals} />
 
         <ActivityControls completed={completed} actions={activityActions} />
       </div>

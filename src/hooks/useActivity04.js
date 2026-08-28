@@ -17,6 +17,8 @@ const useActivity04 = (activityData) => {
     }));
   };
 
+  
+
   const checkActivity04 = () => {
     return activityData.animals.every((animal) => {
       const placedPiece =
