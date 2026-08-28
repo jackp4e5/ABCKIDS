@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
 import Pencil from "../Pencil/Pencil";
-import styles from "./PencilSelector.module.css"
+import styles from "./PencilSelector.module.css";
 const PencilSelector = ({ pencils }) => {
- 
   return (
     <div className={styles.wrapper}>
       {pencils.map((pencil, index) => (

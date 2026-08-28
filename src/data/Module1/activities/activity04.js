@@ -46,7 +46,7 @@ export const activity04 = {
         image: bearDropLeft,
       },
       piece: {
-        id: "bearRight",
+        id: "bearLeft",
         image: bearRight,
       },
     },
@@ -56,7 +56,7 @@ export const activity04 = {
         image: bearDropRight,
       },
       piece: {
-        id: "bearLeft",
+        id: "bearRight",
         image: bearLeft,
       },
     },

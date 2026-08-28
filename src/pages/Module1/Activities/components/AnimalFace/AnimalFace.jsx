@@ -1,12 +1,15 @@
 import { useState } from "react";
 
-const Pencil = ({ id, name, src }) => {
+const AnimalFace = ({animal, id, src }) => {
   const [isDragging, setIsDragging] = useState(false);
 
-  const handleDragStart = (e) => {
-    e.dataTransfer.setData("pencilId", id);
 
-    e.dataTransfer.effectAllowed = "move";
+  const handleDragStart = (e) => {
+    e.dataTransfer.setData("pieceId", id);
+    console.log(id);
+
+   e.dataTransfer.effectAllowed = "move";
+
     setIsDragging(true);
 
     e.dataTransfer.setDragImage(e.currentTarget, 50, 25);
@@ -19,7 +22,7 @@ const Pencil = ({ id, name, src }) => {
   return (
     <img
       src={src}
-      alt={name}
+      name="cara de animales"
       draggable
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
@@ -30,4 +33,4 @@ const Pencil = ({ id, name, src }) => {
   );
 };
 
-export default Pencil;
+export default AnimalFace;

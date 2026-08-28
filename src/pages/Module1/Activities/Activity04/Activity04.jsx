@@ -4,7 +4,7 @@ import ActivityControls from "../components/ActivityControls/ActivityControls";
 import ActivityHeader from "../components/ActivityHeader/ActivityHeader";
 import FeedbackModal from "../components/FeedbackModal/FeedbackModal";
 
-import hero from "../../../../../public/images/Activity04/hero.png";
+const hero = "/images/Activity04/hero.png";
 
 import styles from "./Activity04.module.css";
 import { activity04 } from "../../../../data/Module1/activities/activity04";

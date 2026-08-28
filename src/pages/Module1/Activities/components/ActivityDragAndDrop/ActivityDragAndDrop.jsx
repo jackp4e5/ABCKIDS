@@ -1,22 +1,28 @@
-import styles from "./ActivityDragAndDrop.module.css"
+import styles from "./ActivityDragAndDrop.module.css";
 
 const ActivityDragAndDrop = ({ animals }) => {
-    
-    const handleDragOver = (event) => {
-        event.preventDefault();
-        console.log("dragOver");
+  const handleDragOver = (event) => {
+    event.preventDefault();
   };
 
-  const handleDrop = (event) => {
+  const handleDrop = (e, id) => {
+    const pieceId = e.dataTransfer.getData("pieceId");
 
-  console.log("handleDrop");
-  
+    const dropData = {
+      pieceId,
+      animalId: id,
+    };
+    console.log("handleDrop", dropData);
   };
 
   return (
     <div className={styles.wrappContent}>
-      {animals.map((animal,index) => (
-        <div key={ animal.id}  onDragOver={handleDragOver} onDrop={handleDrop}>
+      {animals.map((animal) => (
+        <div
+          key={animal.id}
+          onDragOver={handleDragOver}
+          onDrop={(e) => handleDrop(e, animal.id)}
+        >
           <img src={animal.dropZone.image} alt={animal.id} />
         </div>
       ))}
