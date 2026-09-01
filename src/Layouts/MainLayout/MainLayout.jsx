@@ -46,7 +46,6 @@ const MainLayout = () => {
         <Outlet context={{ completeActivity }} />
       </main>
 
-      <Footer/>
     </div>
   );
 };
