@@ -5,6 +5,16 @@ body {
   user-select: none;
 }
 
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  padding: 2%;
+  box-shadow:  0px 0px 13px 4px #ddd7d7 inset;
+  border-radius: 10px;
+}
+
 
 
 

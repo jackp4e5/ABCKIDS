@@ -43,7 +43,7 @@ const Activity03 = ({ onContinue }) => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className="container">
       <img src={hero} className={styles.bgSlide} alt="image hero" />
 
       <div className={styles.activityWrapper}>
