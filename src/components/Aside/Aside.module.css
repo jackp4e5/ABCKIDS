@@ -4,7 +4,7 @@
   height: 88%;
   width: 14%;
   gap: 20px;
-  padding-top: 6%;
+  padding-top: 10%;
   position: absolute;
   top: 12%;
   z-index: 10;
@@ -14,8 +14,14 @@
   box-shadow: -2px -13px 13px rgb(69 71 71 / 10%) inset;
   text-align: center;
 }
+@media (width < 760px) {
+  .aside {
+    width: 50%;
+  }
+}
 
-/* Cuando tiene la clase active, se desliza hacia adentro */
+
+
 .aside.active {
   left: 0px;
 }

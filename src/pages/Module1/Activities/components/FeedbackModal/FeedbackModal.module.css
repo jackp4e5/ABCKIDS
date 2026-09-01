@@ -1,11 +1,12 @@
 .modal {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   background: rgba(129, 129, 129, 0.87);
   position: fixed;
   top: 0;
   left: 0;
   display: grid;
+  overflow-x: auto;
   place-items: center;
   z-index: 200;
 }
