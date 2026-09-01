@@ -6,7 +6,6 @@ const AnimalFace = ({animal, id, src }) => {
 
   const handleDragStart = (e) => {
     e.dataTransfer.setData("pieceId", id);
-    console.log(id);
 
    e.dataTransfer.effectAllowed = "move";
 

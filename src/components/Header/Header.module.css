@@ -1,32 +1,32 @@
-.header{
-
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:0 30px;
-
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
 }
 
-.logo{
+.logo {
+  color: white;
 
-    color:white;
+  font-size: 24px;
 
-    font-size:24px;
-
-    font-weight:bold;
-
+  font-weight: bold;
 }
 
-.title{
+.title {
+  color: white;
 
-    color:white;
-
-    font-size:22px;
-
+  font-size: 22px;
 }
 
-.logo{ 
-    width: 100px;
+.logo {
+  width: 100px;
+}
+
+.button {
+  color: black;
+}
+
+#visible {
+  left: 4px;
 }

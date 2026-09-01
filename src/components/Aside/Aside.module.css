@@ -1,16 +1,40 @@
-.active{
-    color: red;
-    background: #000;
-  
+.aside {
+  display: flex;
+  flex-flow: column;
+  height: 88%;
+  width: 14%;
+  gap: 20px;
+  padding-top: 6%;
+  position: absolute;
+  top: 12%;
+  z-index: 10;
+  transition: all 0.6s ease;
+  left: -130%;
+  background-color: var(--background);
+  box-shadow: -2px -13px 13px rgb(69 71 71 / 10%) inset;
+  text-align: center;
 }
 
-.aside{
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-    min-width: 10%;
-    position: absolute;
-    left: 0;
-    top: 20%;
-    
+/* Cuando tiene la clase active, se desliza hacia adentro */
+.aside.active {
+  left: 0px;
+}
+
+.focus {
+  background: rgba(230, 229, 229, 0.829);
+  text-decoration: none;
+  padding-block: 5px;
+  color: var(--green);
+}
+.link {
+  text-decoration: none;
+  padding-block: 5px;
+  color: var(--text);
+}
+
+/* Responsivo: Si mide menos de 1000px, puedes cambiar qué tan afuera se esconde o su comportamiento */
+@media (width < 1000px) {
+  .aside {
+    left: -100%; /* Se esconde completamente en móviles */
+  }
 }

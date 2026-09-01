@@ -1,4 +1,4 @@
-import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 const Navigation = ({
   previous,
@@ -6,8 +6,8 @@ const Navigation = ({
 }) => {
   return (
     <>
-      {next !== null && <Button>Siguiente</Button>}
-      {previous !== null && <Button>Anterior</Button>}
+      {next !== null && <Link>Siguiente</Link>}
+      {previous !== null && <Link>Anterior</Link>}
     </>
   );
 };

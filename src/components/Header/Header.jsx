@@ -1,10 +1,17 @@
 import Button from "../Button/Button";
 import styles from "./Header.module.css";
 import logo from "../../../public/Logo2.png"
-const Header = () => {
+const Header = ({ onToggle }) => {
+const handleOnclick =() =>{
+  console.log("toggle",aside.current.classList);
+
+  aside.current.classList.toggle(`${styles.visible}`)
+
+}
+  
   return (
     <header className={styles.header}>
-      <Button variant="primary">
+      <Button onClick={onToggle} variant="primary">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
