@@ -1,4 +1,4 @@
-import ImageBlock from "../../../../../components/Blocks/ImageBlock/ImageBlock";
+
 import feedBackModal from "../../../../../data/Module1/FeedbackModal/feedbackModal";
 import styles from "./FeedbackModal.module.css";
 import { Link } from "react-router-dom";
@@ -11,8 +11,6 @@ const FeedbackModal = ({ correct, actions, onContinue }) => {
   const randomItemIncorrect = Math.floor(
     Math.random() * Object.keys(feedBackModal.inCorrect.images).length,
   );
-
-
 
   const correctItem =
     randomItem === 0 ? "correct" : randomItem === 1 ? "correct02" : "correct03";
@@ -31,23 +29,26 @@ const FeedbackModal = ({ correct, actions, onContinue }) => {
 
   return (
     <div className={styles.modal}>
-      <div className={styles.bgSlide}>
-        <ImageBlock
-          src={correct ? imgCorrect : imgIncorrect}
-          name={"Imagen buen trabajo  "}
-        />
+      <div className="container">
+        <div className={styles.bgSlide}>
+          <img
+            className={styles.feedBackImg}
+            src={correct ? imgCorrect : imgIncorrect}
+            name={correct ? "Imagen buen trabajo" : "Imagen intenta de nuevo  "}
+          />
 
-        <audio src={audio} autoPlay />
+          <audio src={audio} autoPlay />
 
-        <div className={styles.buttonsWrapper}>
-          {correct && (
-            <a href="#" onClick={onContinue}>
-              <img src={imgContinue} alt="imagen Continue" />
-            </a>
-          )}
-          <Link className={styles.reset} onClick={actions.reset}>
-            <img src={imgRestart} alt="imagen Restart" />
-          </Link>
+          <div  className={styles.buttonsWrapper}>
+            {correct && (
+              <a href="#" className={styles.continue} onClick={onContinue}>
+                <img src={imgContinue} alt="imagen Continue" />
+              </a>
+            )}
+            <Link className={styles.reset} onClick={actions.reset}>
+              <img src={imgRestart} alt="imagen Restart" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

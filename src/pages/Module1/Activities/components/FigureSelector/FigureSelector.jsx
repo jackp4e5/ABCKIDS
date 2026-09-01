@@ -7,7 +7,6 @@ const FigureSelector = ({
   figures,
   selectedFigures,
   selectFigure,
-  selectedPencil,
 }) => {
 
   
