@@ -2,7 +2,7 @@ export const ROUTES = {
   HOME: "/",
 
   MODULE1: {
-    SCREEN01: "/module-1/screen01",
+    PORTADA: "/portada",
 
     SCREEN02: "/module-1/screen02",
 

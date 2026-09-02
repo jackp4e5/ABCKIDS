@@ -3,6 +3,7 @@ body {
   color: var(--text);
   height: 100vh;
   user-select: none;
+  font-family:  "Comic Relief", system-ui;;
 }
 
 .container {

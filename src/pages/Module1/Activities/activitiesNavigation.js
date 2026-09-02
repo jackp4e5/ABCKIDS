@@ -3,6 +3,12 @@ import { ROUTES } from "../../../router/routes";
 
 const activitiesNavigation = [
   {
+    id: "portada",
+    title: "Portada",
+    route: ROUTES.MODULE1.PORTADA,
+    next:ROUTES.MODULE1.ACTIVITY01
+  },
+  {
     id: "activity01",
     title: "Actividad 1",
     route: ROUTES.MODULE1.ACTIVITY01,
