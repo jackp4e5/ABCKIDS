@@ -14,6 +14,10 @@ const ActivityDragAndDrop = ({ animals, placements, handleDropAnimalFace }) => {
     });
   };
 
+  const handleDragEnter = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div className={styles.wrappContent}>
       {animals.map((animal) => {
@@ -25,6 +29,7 @@ const ActivityDragAndDrop = ({ animals, placements, handleDropAnimalFace }) => {
           <div
             key={animal.id}
             className={styles.dropZone}
+            onDragEnter={handleDragEnter}
             onDragOver={handleDragOver}
             onDrop={(event) => handleDrop(event, animal.id)}
           >

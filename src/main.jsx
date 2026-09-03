@@ -7,6 +7,8 @@ import "./styles/reset.css";
 import "./styles/variables.css";
 import "./styles/globals.css";
 
+import "mobile-drag-drop/default.css";
+
 import { polyfill } from "mobile-drag-drop";
 
 
