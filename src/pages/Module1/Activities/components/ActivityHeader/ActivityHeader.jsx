@@ -11,24 +11,23 @@ const ActivityHeader = ({ header, instruction }) => {
     }
   };
 
-  const { assets } = header;
+ 
   const {
     message,
     assets: { iconAudio },
   } = instruction;
   return (
     <header className={styles.header}>
-      {/*  <ImageBlock src={assets.badge} alt={`Badge Nociones Espaciales`}/> */}
 
       <div className={styles.wrapperContent}>
-        <h3>{header.title}</h3>
+        <h3 className={styles.heading}>{header.title}</h3>
 
         <div className={styles.wrapperImg}>
           <a href="#" onClick={() => handleOnClick()}>
-            <ImageBlock src={iconAudio} alt={"icon Audio"} />
+            <ImageBlock className={styles.iconAudio} src={iconAudio} alt={"icon Audio"} />
             <audio autoPlay src={instruction.audio} />
           </a>
-          <p>{message}</p>
+          <p className={styles.message}>{message}</p>
         </div>
       </div>
     </header>

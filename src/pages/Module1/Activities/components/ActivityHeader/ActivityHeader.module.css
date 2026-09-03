@@ -31,3 +31,12 @@
 .wrapperImg img:hover {
   scale: 1.1;
 }
+
+.heading, .iconAudio{
+  font-size: clamp(0.1rem, 2.5vw, 1.4rem)
+}
+
+.message{
+  font-size: clamp(0.1rem, 2.5vw, 1rem)
+
+}

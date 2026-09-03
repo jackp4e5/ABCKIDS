@@ -22,7 +22,7 @@
 }
 
 .heading {
-  font-size: clamp(0.6rem, 2.5vw, 1.4rem);
+  font-size: clamp(0.1rem, 2.5vw, 1.4rem);
   color: rgb(241, 132, 42);
   text-transform: uppercase;
   /*  text-shadow: 2px 2px 4px rgb(255, 255, 255); */
@@ -38,13 +38,13 @@
 
 .title {
   color: #2396fa;
-  font-size: clamp(0.6rem, 2.5vw, 1.1rem);
+  font-size: clamp(0.1rem, 2.5vw, 1.1rem);
   font-weight: 600;
 }
 
 .sub_title {
   color: #1259df;
-  font-size: clamp(0.6rem, 2.5vw, 1.9rem);
+  font-size: clamp(0.1rem, 2.5vw, 1.9rem);
   font-family: var(--fontFamily);
    font-style: normal;
   font-weight: 600;
