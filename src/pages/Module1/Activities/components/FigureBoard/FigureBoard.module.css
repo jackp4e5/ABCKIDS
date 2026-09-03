@@ -1,11 +1,10 @@
 .wrapper {
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2%;
-  width: clamp(10px, 57vw, 470px);
-  padding: 5px;
-  display: grid;
+  width: clamp(10px, 54vw, 470px);
   position: fixed;
-  top: 29%;
+  top: 31%;
   right: 16%;
 }
 .wrapper img {
