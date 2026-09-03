@@ -49,3 +49,15 @@
    font-style: normal;
   font-weight: 600;
 }
+
+.btnContinue{
+      position: absolute;
+    bottom: 15%;
+    right: 10%;
+    width: clamp(12px, 15vw, 100px);
+    transition: scale .5s ease;
+}
+
+.btnContinue:hover{
+   scale: 1.1;
+}

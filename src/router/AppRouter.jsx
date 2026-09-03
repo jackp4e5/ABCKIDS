@@ -7,8 +7,8 @@ export const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route path="/portada" element={<FrontPage />} />
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<FrontPage />} />
           <Route
             path="module-1/activity/:activityId"
             element={<ActivityRender />}

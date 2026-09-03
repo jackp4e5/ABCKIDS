@@ -1,5 +1,10 @@
+import { Link } from "react-router-dom";
 import FrontPageData from "../../../data/Module1/FrontPage/FrontPage";
+
 import styles from "./FrontPage.module.css";
+
+const send = "./ImagesBtns/btnContinue.png"
+
 FrontPageData;
 const hero = "./images/FrontPage/hero.png";
 const FrontPage = () => {
@@ -15,11 +20,13 @@ const FrontPage = () => {
           </header>
 
           <img src={hero} className={styles.bgSlide} alt="image hero" />
+
+          <Link className={styles.btnContinue}>
+          <img src={send} alt="imagen boton de continuar" />
+          
+          </Link>
         </div>
-        <div className={styles.activityWrapper}>
-          {/*  <audio loop autoPlay src={data.audio} />
-           */}
-        </div>
+     
       </div>
     </div>
   );
