@@ -1,13 +1,24 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import FrontPageData from "../../../data/Module1/FrontPage/FrontPage";
 
 import styles from "./FrontPage.module.css";
+import activitiesNavigation from "../Activities/activitiesNavigation";
 
 const send = "./ImagesBtns/btnContinue.png"
 
 FrontPageData;
 const hero = "./images/FrontPage/hero.png";
 const FrontPage = () => {
+
+const navigate = useNavigate()
+
+  const currentActivity = activitiesNavigation.find(
+    (activity) => activity.id === "portada",
+  );
+
+
+
+
   return (
     <div className={styles.main}>
       <div className="container">
@@ -21,7 +32,7 @@ const FrontPage = () => {
 
           <img src={hero} className={styles.bgSlide} alt="image hero" />
 
-          <Link className={styles.btnContinue}>
+          <Link to={currentActivity.next} className={styles.btnContinue}>
           <img src={send} alt="imagen boton de continuar" />
           
           </Link>

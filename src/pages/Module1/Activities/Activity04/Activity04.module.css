@@ -1,5 +1,3 @@
-
-
 .bgSlide {
   width: 100%;
   height: 100%;
@@ -20,13 +18,6 @@
 .btnReset {
   position: absolute;
   width: clamp(10px, 5vw, 45px);
-  bottom: 39px;
-  right: 11px;
-}
-
-@media (width > 720px) {
-  .btnReset {
-    bottom: 14%;
-    right: 3.6%;
-  }
+  bottom: 16%;
+  right: 3.4%;
 }
