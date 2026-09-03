@@ -1,15 +1,11 @@
 .pieceWrapper {
   position: absolute;
-
-  bottom: 0;
+  bottom: 2%;
   right: 16%;
-
   width: 82%;
-
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-end;
-
   gap: 1%;
 }
 
@@ -22,9 +18,7 @@
 
 .imagesWrapper img {
   display: block;
-
-  height: 100%;
-  width: auto;
-
+  width: clamp(15px, 6vw, 80px);
   object-fit: contain;
+  max-height: 80px;
 }
