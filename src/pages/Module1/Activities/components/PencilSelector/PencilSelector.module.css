@@ -1,8 +1,11 @@
 .wrapper {
-     display: flex;
+-webkit-user-select: none;
+    user-select: none;
     gap: 10px;
     width: 50%;
-    user-select: none;
+    display: flex;
+    position: fixed;
+    top: 17%;
    
 }
 .wrapper img {

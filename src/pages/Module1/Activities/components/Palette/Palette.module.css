@@ -1,9 +1,9 @@
 .aside {
-       display: flex;
-    flex-flow: column;
-    gap: 5px;
-    position: absolute;
-    left: 4%;
-    top: -11%;
-    width: 9%;
+  flex-flow: column;
+  gap: 5px;
+  width: 9%;
+  display: flex;
+  position: fixed;
+  bottom: 6%;
+  left: 4%;
 }
