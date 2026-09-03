@@ -2,16 +2,9 @@
   display: grid;
   place-items: center;
   grid-template-columns: repeat(4, 1fr);
-  width: 60%;
-  height: 97%;
-  position: absolute;
-  bottom: 10px;
-}
-
-@media (width >=760px) {
-  .wrapperContent {
-    bottom: 0px;
-  }
+  width: clamp(100px, 50vw, 470px);
+  position: fixed;
+  bottom: 7%;
 }
 
 /* Fila 1 */
