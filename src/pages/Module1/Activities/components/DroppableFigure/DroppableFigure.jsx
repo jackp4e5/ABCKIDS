@@ -1,5 +1,4 @@
-import styles from "./DroppableFigure.module.css"
-
+import styles from "./DroppableFigure.module.css";
 
 const DroppableFigure = ({ children, id, onFigureDrop }) => {
   const handleDragOver = (event) => {
@@ -8,15 +7,24 @@ const DroppableFigure = ({ children, id, onFigureDrop }) => {
 
   const handleDrop = (event) => {
     const pencilId = event.dataTransfer.getData("pencilId");
-   
-    const dropData  = {
-        pencilId,
-        figureId:id
-    }
-    onFigureDrop(dropData );
+
+    const dropData = {
+      pencilId,
+      figureId: id,
+    };
+    onFigureDrop(dropData);
+  };
+
+  const handleDragEnter = (event) => {
+    event.preventDefault();
   };
   return (
-    <div className={styles.wrapper} onDragOver={handleDragOver} onDrop={handleDrop}>
+    <div
+      className={styles.wrapper}
+      onDragEnter={handleDragEnter}
+      onDragOver={handleDragOver}
+      onDrop={handleDrop}
+    >
       {children}
     </div>
   );

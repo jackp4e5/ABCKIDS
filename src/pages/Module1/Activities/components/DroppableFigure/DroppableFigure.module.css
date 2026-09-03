@@ -1,6 +1,7 @@
 .wrapper{
     display: grid;
     place-items: center;
+    align-items: end;
 }
 .wrapper img{
     height: 70%;
