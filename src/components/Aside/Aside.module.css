@@ -1,12 +1,12 @@
 .aside {
   display: flex;
   flex-flow: column;
-  height: 88%;
+  height: 95%;
   width: 14%;
   gap: 20px;
   padding-top: 10%;
   position: absolute;
-  top: 12%;
+  top: 13%;
   z-index: 10;
   transition: all 0.6s ease;
   left: -130%;
