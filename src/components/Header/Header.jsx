@@ -1,14 +1,44 @@
 import Button from "../Button/Button";
 import styles from "./Header.module.css";
-import logo from "../../../public/Logo2.png"
+import logo from "../../../public/Logo2.png";
+import { useEffect, useState } from "react";
 const Header = ({ onToggle }) => {
-const handleOnclick =() =>{
-  console.log("toggle",aside.current.classList);
+  const handleOnclick = () => {
+    console.log("toggle", aside.current.classList);
 
-  aside.current.classList.toggle(`${styles.visible}`)
+    aside.current.classList.toggle(`${styles.visible}`);
+  };
 
-}
-  
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  // Escuchar cambios en la pantalla completa (por si el usuario sale con la tecla ESC o F11)
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    return () =>
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+  }, []);
+
+  const toggleFullscreen = async () => {
+    try {
+      if (!document.fullscreenElement) {
+        // Entrar en pantalla completa (aplica a toda la página)
+        await document.documentElement.requestFullscreen();
+      } else {
+        // Salir de pantalla completa
+        await document.exitFullscreen();
+      }
+    } catch (error) {
+      console.error(
+        "Error al intentar cambiar el modo de pantalla completa:",
+        error,
+      );
+    }
+  };
+
   return (
     <header className={styles.header}>
       <Button onClick={onToggle} variant="primary">
@@ -32,6 +62,15 @@ const handleOnclick =() =>{
       <a className={styles.logo}>
         <img className={styles.logo} src={logo} alt="imagen logo" />
       </a>
+
+      <button
+        onClick={toggleFullscreen}
+        style={{ padding: "10px 20px", cursor: "pointer" }}
+      >
+        {isFullscreen
+          ? " Salir de Pantalla Completa"
+          : "💻 Pantalla Completa"}
+      </button>
     </header>
   );
 };
