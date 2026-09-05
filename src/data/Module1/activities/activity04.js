@@ -16,7 +16,7 @@ const monkeyRight = "/images/Activity04/monkeyRight.png";
 const monkeyLeft = "/images/Activity04/monkeyLeft.png";
 const heroImg = "/images/Activity04/hero.png";
 const backAudio = "/audio/Activity03/backAudio.mp3";
-const iconAudioImg = "/imagesBtns/iconAudio.png";
+const iconAudioImg = "/ImagesBtns/iconAudio.png";
 
 export const activity04 = {
   id: "activity04",

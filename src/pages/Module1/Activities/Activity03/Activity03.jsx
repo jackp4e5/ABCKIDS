@@ -8,7 +8,7 @@ import ActivityHeader from "../components/ActivityHeader/ActivityHeader";
 import FeedbackModal from "../components/FeedbackModal/FeedbackModal";
 import SolidPalette from "../components/SolidPalette";
 
-import hero from "../../../../../public/images/Activity03/hero.png";
+const hero = "/images/Activity03/hero.png";
 
 import styles from "./Activity03.module.css";
 

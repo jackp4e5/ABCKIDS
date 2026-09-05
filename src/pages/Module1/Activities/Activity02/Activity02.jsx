@@ -11,7 +11,8 @@ import FigureBoard from "../components/FigureBoard/FigureBoard";
 import Palette from "../components/Palette/Palette";
 import PencilSelector from "../components/PencilSelector/PencilSelector";
 
-import hero from "../../../../../public/images/Activity02/hero.png";
+
+const hero = "/images/Activity02/hero.png"
 
 import styles from "./Activity02.module.css";
 
@@ -19,6 +20,9 @@ const Activity02 = ({ onContinue }) => {
   const session = useActivity(activity02);
 
   const { actions, data, state } = session;
+
+  console.log(data.paletteFigures[0].assets.gray);
+  
 
   const {
     stateActivity02,
@@ -53,7 +57,6 @@ const Activity02 = ({ onContinue }) => {
   return (
     <div className="container">
       <img src={hero} className={styles.bgSlide} alt="image hero" />
-
       <div className={styles.activityWrapper}>
         <audio loop autoPlay src={data.audio} />
 

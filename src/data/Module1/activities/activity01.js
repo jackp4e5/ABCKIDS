@@ -2,7 +2,7 @@ const audioEsfera = "/audio/Activity01/audioEsfera.mp3";
 const backAudio = "/audio/Activity01/backAudio.mp3";
 const instructionAudio = "/audio/Activity01/instructionAudio.mp3";
 const instructionImg = "/images/Activity01/instruction.png";
-const iconAudioImg = "/imagesBtns/iconAudio.png";
+const iconAudio = "/ImagesBtns/iconAudio.png";
 const grayCircle = "/images/Activity01/grayCircle.png";
 const activeCircle = "/images/Activity01/activeCircle.png";
 const grayCube = "/images/Activity01/grayCube.png";
@@ -30,7 +30,7 @@ export const activity01 = {
     audio: instructionAudio,
     assets: {
       image: instructionImg,
-      iconAudio: iconAudioImg,
+      iconAudio: iconAudio,
     },
   },
 

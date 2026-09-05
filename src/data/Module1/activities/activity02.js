@@ -1,27 +1,32 @@
 const backAudio = "/audio/Activity02/backAudio.mp3";
 const instructionAudio = "/audio/Activity02/instructionAudio.mp3";
+
 const instructionImg = "/images/Activity02/instructionImg.png";
-const iconAudio = "/ImagesBtns/iconAudio.png";
-const grayBall = "/images/activity02/grayBall.png";
-const ActiveBall = "/images/activity02/ActiveBall.png";
-const grayDie = "/images/activity02/grayDie.png";
-const ActiveDie = "/images/activity02/ActiveDie.png";
-const grayConePartyHat = "/images/activity02/grayConePartyHat.png";
-const activeConePartyHat = "/images/activity02/activeConePartyHat.png";
-const grayBottle = "/images/activity02/grayBottle.png";
-const activeBottle = "/images/activity02/activeBottle.png";
-const graySphere = "/images/activity02/graySphere.png";
-const paletteSphere = "/images/activity02/paletteSphere.png";
-const grayCube = "/images/activity02/grayCube.png";
-const paletteCube = "/images/activity02/paletteCube.png";
-const grayCylinder = "/images/activity02/grayCylinder.png";
-const paletteCylinder = "/images/activity02/paletteCylinder.png";
-const grayTriangle = "/images/activity02/grayTriangle.png";
-const paletteTriangle = "/images/activity02/paletteTriangle.png";
-const bluePencil = "/images/activity02/pencils/bluePencil.png";
-const greenPencil = "/images/activity02/pencils/greenPencil.png";
-const orangePencil = "/images/activity02/pencils/orangePencil.png";
-const purplePencil = "/images/activity02/pencils/purplePencil.png";
+
+const iconAudioImg = "/ImagesBtns/iconAudio.png";
+
+const grayBall = "/images/Activity02/grayBall.png";
+const grayDie = "/images/Activity02/grayDie.png";
+const graySphere = "/images/Activity02/graySphere.png";
+
+const activeBall = "/images/Activity02/activeBall.png";
+
+const ActiveDie = "/images/Activity02/activeDie.png";
+const grayConePartyHat = "/images/Activity02/grayConePartyHat.png";
+const activeConePartyHat = "/images/Activity02/activeConePartyHat.png";
+const grayBottle = "/images/Activity02/grayBottle.png";
+const activeBottle = "/images/Activity02/activeBottle.png";
+const paletteSphere = "/images/Activity02/paletteSphere.png";
+const grayCube = "/images/Activity02/grayCube.png";
+const paletteCube = "/images/Activity02/paletteCube.png";
+const grayCylinder = "/images/Activity02/grayCylinder.png";
+const paletteCylinder = "/images/Activity02/paletteCylinder.png";
+const grayTriangle = "/images/Activity02/grayTriangle.png";
+const paletteTriangle = "/images/Activity02/paletteTriangle.png";
+const bluePencil = "/images/Activity02/pencils/bluePencil.png";
+const greenPencil = "/images/Activity02/pencils/greenPencil.png";
+const orangePencil = "/images/Activity02/pencils/orangePencil.png";
+const purplePencil = "/images/Activity02/pencils/purplePencil.png";
 
 export const activity02 = {
   id: "activity02",
@@ -40,7 +45,7 @@ export const activity02 = {
     audio: instructionAudio,
     assets: {
       image: instructionImg,
-      iconAudio: iconAudio,
+      iconAudio: iconAudioImg,
     },
   },
 
@@ -92,7 +97,7 @@ export const activity02 = {
       color: "blue",
       assets: {
         gray: grayBall,
-        active: ActiveBall,
+        active: activeBall,
       },
     },
     {
